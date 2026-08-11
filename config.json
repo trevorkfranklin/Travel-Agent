@@ -6,8 +6,10 @@
   "kids_event_keyword": "Kids",
   "kids_calendar_name": "Finn and Fallon",
   "notify_email": "trevor.franklin@yahoo.com",
-  "deal_definition": "Round-trip fare that is at least deal_threshold_pct below the best available historical baseline for that specific route in price_history.json (prefer the median of self-logged 'observations' once 3+ exist, otherwise the seeded 'seeded_typical_price_range' low end). Routes with no price_history.json entry fall back to explicit deal-site language (e.g. 'X% off', 'price drop', 'error fare') as a secondary signal — a generic low-looking price with no such framing does not qualify.",
+  "deal_definition": "Round-trip fare that is at least deal_threshold_pct below the best available historical baseline for that specific route in price_history.json (prefer the median of self-logged 'observations' once 3+ exist, otherwise the seeded 'seeded_typical_price_range' low end), OR that the fast-flights library's own 'current_price' classification for the queried dates is 'low'. Routes with no price_history.json entry fall back to explicit deal-site language (e.g. 'X% off', 'price drop', 'error fare') as a secondary signal — a generic low-looking price with no such framing does not qualify.",
   "deal_threshold_pct": 20,
   "state_file": "state/seen_deals.json",
-  "price_history_file": "state/price_history.json"
+  "price_history_file": "state/price_history.json",
+  "daily_route_check_budget": 20,
+  "price_check_tool": "fast-flights (PyPI package, no API key, no rate limit contract but be a polite/moderate caller)"
 }

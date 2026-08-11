@@ -9,8 +9,9 @@ all three before doing anything else:
 - `state/price_history.json` — per-route historical price baseline, keyed by `"ORIGIN-DEST"`.
   Each route has a one-time seeded baseline (`seeded_typical_price_range`, `seeded_price_level`,
   `google_price_history_60d` — ~60 days of real daily Google Flights prices pulled once via
-  SerpApi) plus an `observations` array that YOU grow over time by logging what you find each day.
-  This is real historical data, not guesswork — use it as the primary basis for judging deals.
+  SerpApi), a `last_checked_at` date used for rotation, and an `observations` array that YOU grow
+  over time via daily `fast-flights` checks (see step 6). This is real historical data, not
+  guesswork — use it as the primary basis for judging deals.
 
 ## Steps
 
@@ -27,43 +28,58 @@ all three before doing anything else:
 5. For every **available** weekend, also note any *other* events overlapping that Saturday or
    Sunday (anything not matching the kids keyword). Don't exclude the weekend for these — just
    remember them as "possible conflicts" to flag later.
-6. For each available weekend, check prices from each `origin_airports` code, round trip,
-   matching that weekend's dates (e.g. depart Friday or Saturday, return Sunday). This
-   environment's network access is allowlisted to the deal-aggregator and OTA domains it needs
-   (Going.com, Thrifty Traveler, Dollar Flight Club, Secret Flying, Kayak, Google Flights,
-   Expedia, Skyscanner, Momondo, etc.), so `WebFetch` to those specific sites works directly;
-   `WebSearch` also works for broader queries. You don't need to exhaustively check all ~92
-   origin/destination combinations in `price_history.json` every single day — that's too slow.
-   Use judgment: rotate through a reasonable subset each run (prioritize routes with attractive
-   `seeded_typical_price_range` low ends, and routes you haven't checked recently) so coverage
-   builds up across days. It's fine if any single route only gets a fresh look every few days.
+6. Check real prices via the `fast-flights` Python library (PyPI package; `pip install
+   fast-flights` if not already present) for a rotating batch of routes, sized to
+   `daily_route_check_budget` in config (default 20). `fast-flights` queries Google Flights
+   directly via its own URL/protobuf format — no API key, no headless browser, no JS-rendering
+   problem. Do NOT scrape Kayak/Expedia/Google Flights/Momondo via `WebFetch` — they are
+   JS-rendered apps `WebFetch` can't read, and fighting their bot-detection is out of scope.
 
-   For each route/weekend you check:
-   a. Find the current best round-trip price you can (Google Flights, Kayak, airline sites,
-      deal-aggregator posts, etc.).
-   b. Look up that route's entry in `price_history.json` (key `"{origin}-{destination}"`).
-      - If an entry exists: compute the baseline as the median of its `observations` array if it
-        has 3 or more entries, otherwise use the low end of `seeded_typical_price_range`. The
-        route qualifies as a deal if today's price is at least `deal_threshold_pct` percent below
-        that baseline.
-      - If no entry exists for that route: fall back to evidence-based judging — only qualifies
-        if the source itself explicitly frames the fare as unusual for the route (e.g. "X% off
-        typical", "error fare", "price drop", a stated dollar comparison to a normal fare). A
-        generic low-looking price with no such framing does NOT qualify. Either way, create a new
-        entry in `price_history.json` for this route (empty `seeded_*` fields, one `observations`
-        entry) so it starts building its own baseline.
-   c. Regardless of whether it qualifies as a deal, append `{date, depart_date, return_date,
-      price, source}` to that route's `observations` array in `price_history.json` — this is how
-      the self-built history grows more accurate over time. Save this file at the end of the run
-      (step 8c handles the commit).
+   a. From `price_history.json`, pick the `daily_route_check_budget` routes with the oldest
+      `last_checked_at` (never-checked routes — i.e. not present in the file at all yet — go
+      first, oldest-first after that).
+   b. Pick the target weekend: the soonest **available** weekend from step 4 that is still at
+      least a few days out. Use its Saturday and Sunday (or Friday, if that fits the trip length
+      better) as the query dates.
+   c. For each picked route, call it like:
+      ```python
+      from fast_flights import FlightData, Passengers, get_flights
+      result = get_flights(
+          flight_data=[FlightData(date="{depart_date}", from_airport="{origin}", to_airport="{destination}")],
+          trip="one-way", seat="economy",
+          passengers=Passengers(adults=1, children=0, infants_in_seat=0, infants_on_lap=0),
+      )
+      ```
+      `result.current_price` is Google's own real-time classification ("low" / "typical" /
+      "high") for that route+date — treat it like SerpApi's `price_level`. `result.flights` is
+      the list of options; use the lowest `price` among `is_best=True` entries as today's price.
+      Query the return leg the same way if you want a full round-trip total, or just use the
+      outbound leg's price/classification as a reasonable proxy — either is fine.
+   d. A route/weekend qualifies as a deal if EITHER: `current_price == "low"`, OR today's price
+      is at least `deal_threshold_pct` percent below the route's own baseline (median of
+      `observations` if 3+ exist, else `seeded_typical_price_range` low end).
+   e. Regardless of outcome, update that route's entry in `price_history.json`: append
+      `{date, depart_date, return_date, price, current_price, source: "fast_flights_daily"}` to
+      `observations`, and set `last_checked_at` to today. If the route had no entry yet, create
+      one (empty `seeded_*` fields). This is how the self-built history grows more accurate and
+      the rotation self-balances over time.
+   f. Be a polite caller: this library has no official rate-limit contract since it's not an
+      official API — space out requests a little (don't fire all 20 instantaneously) and stop
+      early if you start seeing errors rather than hammering retries.
+
+   Only fall back to `WebSearch`/blog-post scraping (Going, Thrifty Traveler, Dollar Flight Club,
+   Secret Flying — plain article pages, not live search apps) for spotting deals to destinations
+   outside the 92 seeded routes; judge those by explicit deal-site language per `deal_definition`,
+   not by price alone.
 7. For each qualifying deal, build a dedup key: `{origin}-{destination}-{depart_date}-{return_date}`.
    Skip any deal whose key is already present in `state/seen_deals.json`.
 8. If there is at least one new qualifying deal:
    a. Compose one email via the Gmail MCP tool to `notify_email`. Subject:
       `Flight Deal Alert: N new deal(s) found`. For each deal list: destination, dates, price,
-      the baseline it beat and by how much (e.g. "$310, 28% below your 3-observation median of
-      $430" or "$310, 24% below the seeded typical range of [$410, $650]"), origin airport, and
-      source. If that weekend has a "possible conflict" noted in step 5, add a line like: "Heads
+      the reason it qualified (e.g. "$310, Google Flights classifies this as a low price" or "$310, 28% below your
+      3-observation median of $430" or "$310, 24% below the seeded typical range of
+      [$410, $650]"), origin airport, and source. If that weekend has a "possible conflict" noted
+      in step 5, add a line like: "Heads
       up: you have '<event title>' on <date> that weekend — worth checking if that's missable."
    b. Send the email.
    c. Append the new deals to `state/seen_deals.json` (include today's date as `first_seen`).
