@@ -10,6 +10,6 @@
   "deal_threshold_pct": 20,
   "state_file": "state/seen_deals.json",
   "price_history_file": "state/price_history.json",
-  "daily_route_check_budget": 20,
+  "daily_route_check_budget": 92,
   "price_check_tool": "fast-flights (PyPI package, no API key, no rate limit contract but be a polite/moderate caller)"
 }

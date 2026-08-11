@@ -29,15 +29,17 @@ all three before doing anything else:
    Sunday (anything not matching the kids keyword). Don't exclude the weekend for these — just
    remember them as "possible conflicts" to flag later.
 6. Check real prices via the `fast-flights` Python library (PyPI package; `pip install
-   fast-flights` if not already present) for a rotating batch of routes, sized to
-   `daily_route_check_budget` in config (default 20). `fast-flights` queries Google Flights
-   directly via its own URL/protobuf format — no API key, no headless browser, no JS-rendering
-   problem. Do NOT scrape Kayak/Expedia/Google Flights/Momondo via `WebFetch` — they are
-   JS-rendered apps `WebFetch` can't read, and fighting their bot-detection is out of scope.
+   fast-flights` if not already present, though the environment's setup script should have
+   already installed it) for all routes, up to `daily_route_check_budget` in config (default 92
+   — i.e. all seeded routes, every day). `fast-flights` queries Google Flights directly via its
+   own URL/protobuf format — no API key, no headless browser, no JS-rendering problem. Do NOT
+   scrape Kayak/Expedia/Google Flights/Momondo via `WebFetch` — they are JS-rendered apps
+   `WebFetch` can't read, and fighting their bot-detection is out of scope.
 
-   a. From `price_history.json`, pick the `daily_route_check_budget` routes with the oldest
-      `last_checked_at` (never-checked routes — i.e. not present in the file at all yet — go
-      first, oldest-first after that).
+   a. From `price_history.json`, take all routes (there should be up to `daily_route_check_budget`
+      of them). If for some reason there are more entries than the budget (e.g. new routes were
+      added from the WebSearch fallback), prioritize the ones with the oldest `last_checked_at` —
+      never-checked routes go first.
    b. Pick the target weekend: the soonest **available** weekend from step 4 that is still at
       least a few days out. Use its Saturday and Sunday (or Friday, if that fits the trip length
       better) as the query dates.
@@ -64,8 +66,13 @@ all three before doing anything else:
       one (empty `seeded_*` fields). This is how the self-built history grows more accurate and
       the rotation self-balances over time.
    f. Be a polite caller: this library has no official rate-limit contract since it's not an
-      official API — space out requests a little (don't fire all 20 instantaneously) and stop
-      early if you start seeing errors rather than hammering retries.
+      official API. With ~92 routes checked every day, space requests out over the run (e.g. a
+      short pause of a couple seconds between calls) rather than firing them all at once — this
+      protects against tripping Google's own anti-abuse rate-limiting, which could soft-block the
+      whole cloud environment's IP and break the check for future days too. If you start seeing
+      errors partway through, stop and log what you have rather than hammering retries — a
+      partial day's worth of fresh observations is fine, the rotation isn't needed to fall back
+      on since every route gets attempted daily anyway.
 
    Only fall back to `WebSearch`/blog-post scraping (Going, Thrifty Traveler, Dollar Flight Club,
    Secret Flying — plain article pages, not live search apps) for spotting deals to destinations
