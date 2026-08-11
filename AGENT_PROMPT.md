@@ -9,11 +9,15 @@ config and memory of what's already been alerted on. Read both before doing anyt
 ## Steps
 
 1. Read `config.json` and `state/seen_deals.json`.
-2. Use the Google Calendar MCP tool to fetch all events from today through
-   `calendar_lookahead_months` months out.
+2. Use the Google Calendar MCP tool to first list ALL calendars on the account (not just the
+   primary/default one), then fetch all events from today through `calendar_lookahead_months`
+   months out from every calendar — in particular the calendar named `kids_calendar_name` in
+   config (e.g. "Finn and Fallon"), which is where the custody events actually live. Do not rely
+   on the primary calendar alone; the kids-schedule events are on a separate secondary calendar.
 3. Enumerate every weekend (Saturday + Sunday pair) in that window.
-4. A weekend is **unavailable** if any event whose title contains `kids_event_keyword`
-   (case-insensitive) overlaps that Saturday or Sunday. Skip unavailable weekends entirely.
+4. A weekend is **unavailable** if any event (on any calendar, but especially the
+   `kids_calendar_name` calendar) whose title contains `kids_event_keyword` (case-insensitive)
+   overlaps that Saturday or Sunday. Skip unavailable weekends entirely.
 5. For every **available** weekend, also note any *other* events overlapping that Saturday or
    Sunday (anything not matching the kids keyword). Don't exclude the weekend for these — just
    remember them as "possible conflicts" to flag later.

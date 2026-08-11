@@ -4,6 +4,7 @@
   "calendar_lookahead_months": 6,
   "weekend_span_days": ["Saturday", "Sunday"],
   "kids_event_keyword": "Kids",
+  "kids_calendar_name": "Finn and Fallon",
   "notify_email": "trevor.franklin@yahoo.com",
   "deal_definition": "Round-trip fare that is meaningfully below the typical/average price for that specific route (e.g. explicitly flagged by a source as notably cheaper than usual, not just a generically low number).",
   "state_file": "state/seen_deals.json"
