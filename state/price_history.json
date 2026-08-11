@@ -256,7 +256,17 @@
           871
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 871,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-ATL": {
       "origin": "HOU",
@@ -514,7 +524,17 @@
           407
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 427,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-BNA": {
       "origin": "HOU",
@@ -772,7 +792,17 @@
           852
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 852,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-BTV": {
       "origin": "HOU",
@@ -1030,7 +1060,17 @@
           477
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 1223,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-BZN": {
       "origin": "HOU",
@@ -1288,7 +1328,17 @@
           664
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 799,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-CHS": {
       "origin": "HOU",
@@ -1546,7 +1596,17 @@
           926
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 877,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-COS": {
       "origin": "HOU",
@@ -1804,7 +1864,17 @@
           956
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 956,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-DEN": {
       "origin": "HOU",
@@ -2062,7 +2132,17 @@
           897
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 828,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-ECP": {
       "origin": "HOU",
@@ -2320,7 +2400,17 @@
           759
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 769,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-EWR": {
       "origin": "HOU",
@@ -2578,7 +2668,17 @@
           709
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 834,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-FCA": {
       "origin": "HOU",
@@ -2836,7 +2936,17 @@
           844
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 1079,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-FLL": {
       "origin": "HOU",
@@ -3094,7 +3204,17 @@
           481
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 481,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-JAC": {
       "origin": "HOU",
@@ -3352,7 +3472,17 @@
           1750
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 1316,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-LAX": {
       "origin": "HOU",
@@ -3610,7 +3740,17 @@
           542
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 542,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-MCO": {
       "origin": "HOU",
@@ -3868,7 +4008,17 @@
           949
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 856,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-MIA": {
       "origin": "HOU",
@@ -4126,7 +4276,17 @@
           407
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 447,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-MSY": {
       "origin": "HOU",
@@ -4384,7 +4544,17 @@
           785
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 795,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-MYR": {
       "origin": "HOU",
@@ -4642,7 +4812,17 @@
           975
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 954,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-ORD": {
       "origin": "HOU",
@@ -4900,7 +5080,17 @@
           525
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 525,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-PDX": {
       "origin": "HOU",
@@ -5158,7 +5348,17 @@
           870
         ]
       ],
-      "observations": []
+      "observations": [
+        {
+          "date": "2026-08-11",
+          "depart_date": "2026-08-15",
+          "return_date": "2026-08-16",
+          "price": 870,
+          "current_price": null,
+          "source": "fast_flights_daily"
+        }
+      ],
+      "last_checked_at": "2026-08-11"
     },
     "HOU-PHX": {
       "origin": "HOU",
