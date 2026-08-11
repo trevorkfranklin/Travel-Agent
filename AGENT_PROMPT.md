@@ -17,13 +17,22 @@ config and memory of what's already been alerted on. Read both before doing anyt
 5. For every **available** weekend, also note any *other* events overlapping that Saturday or
    Sunday (anything not matching the kids keyword). Don't exclude the weekend for these — just
    remember them as "possible conflicts" to flag later.
-6. For each available weekend, search the web for flight deals from each `origin_airports` code,
-   round trip, matching that weekend's dates (e.g. depart Friday or Saturday, return Sunday).
-   Look at flight deal sources (Google Flights price insights, Kayak, Going.com, Thrifty
-   Traveler, Dollar Flight Club, airline deal pages, etc.) for fares explicitly indicated as
-   notably below the typical/average price for that specific route — per `deal_definition` in
-   config. Do not alert on merely low-looking prices with no evidence they're unusual for the
-   route.
+6. For each available weekend, use the `WebSearch` tool (not `WebFetch`) to look for flight deals
+   from each `origin_airports` code, round trip, matching that weekend's dates (e.g. depart
+   Friday or Saturday, return Sunday). This sandbox's network egress proxy blocks direct
+   `WebFetch` requests to deal-aggregator sites (Going.com, Thrifty Traveler, Dollar Flight Club,
+   Secret Flying, Kayak, etc.) — `WebSearch` still works and returns usable snippets, so rely on
+   the search results themselves rather than trying to fetch those pages directly.
+   Query variations worth trying: `"[origin] flight deal [destination] [dates]"`,
+   `"cheap flights from Houston this weekend"`, `"IAH OR HOU to [destination] price drop"`,
+   `site:thriftytraveler.com houston`, `site:going.com houston`, `site:google.com/travel/flights`.
+   A result counts as deal evidence per `deal_definition` in config if the snippet itself states
+   or clearly implies the fare is unusual for the route (e.g. "$X, Y% off typical", "error fare",
+   "price drop", "cheaper than usual", a specific dollar comparison to a normal/average fare).
+   Generic low-looking prices from plain OTA listings (Expedia, Skyscanner, Momondo, Kayak search
+   results) with no such comparison language are NOT sufficient evidence — do not alert on those
+   alone. If no search query surfaces qualifying evidence for a given weekend, that's a valid
+   "no deal today" outcome, not a failure.
 7. For each qualifying deal, build a dedup key: `{origin}-{destination}-{depart_date}-{return_date}`.
    Skip any deal whose key is already present in `state/seen_deals.json`.
 8. If there is at least one new qualifying deal:
