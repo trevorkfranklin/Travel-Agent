@@ -40,9 +40,16 @@ all three before doing anything else:
       of them). If for some reason there are more entries than the budget (e.g. new routes were
       added from the WebSearch fallback), prioritize the ones with the oldest `last_checked_at` —
       never-checked routes go first.
-   b. Pick the target weekend: the soonest **available** weekend from step 4 that is still at
-      least a few days out. Use its Saturday and Sunday (or Friday, if that fits the trip length
-      better) as the query dates.
+   b. Pick the target weekend by ROTATING through ALL available weekends found in step 4 — do
+      NOT always target the soonest one. The soonest weekend is usually a short-notice/last-minute
+      booking window with naturally inflated fares, which will almost never look like a "deal"
+      against a baseline built from normal advance-purchase pricing, and fixating on it means the
+      other ~90% of the 6-month window never gets checked at all. Instead: number the available
+      weekends in chronological order (soonest = 0, next = 1, etc.), and pick
+      `weekends[day_of_year % count_of_available_weekends]` as today's target (or any equivalent
+      deterministic rotation) so a different weekend is checked each day and the full list cycles
+      through over time. Use that weekend's Saturday and Sunday (or Friday, if that fits the trip
+      length better) as the query dates.
    c. For each picked route, call it like:
       ```python
       from fast_flights import FlightData, Passengers, get_flights
