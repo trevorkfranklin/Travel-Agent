@@ -10,6 +10,6 @@
   "deal_threshold_pct": 20,
   "state_file": "state/seen_deals.json",
   "price_history_file": "state/price_history.json",
-  "daily_route_check_budget": 92,
-  "price_check_tool": "fast-flights (PyPI package, no API key, no rate limit contract but be a polite/moderate caller)"
+  "route_weekend_check_scope": "full — check every (route, weekend) pair every day, no rotation/cap. Accepted trade-off: this is a much higher volume of automated requests to Google Flights than a conservative rotation, with real (unquantified) risk of tripping Google's own anti-abuse rate-limiting. Prioritized anyway because flight pricing is dynamic and near-real-time freshness matters more here than minimizing that risk.",
+  "price_check_tool": "fast-flights (PyPI package, no API key, no official rate-limit contract — be as polite a caller as full daily coverage allows: pace requests, don't hammer retries on errors)"
 }

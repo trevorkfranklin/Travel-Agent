@@ -31,27 +31,22 @@ all three before doing anything else:
    remember them as "possible conflicts" to flag later.
 6. Check real prices via the `fast-flights` Python library (PyPI package; `pip install
    fast-flights` if not already present, though the environment's setup script should have
-   already installed it) for all routes, up to `daily_route_check_budget` in config (default 92
-   — i.e. all seeded routes, every day). `fast-flights` queries Google Flights directly via its
-   own URL/protobuf format — no API key, no headless browser, no JS-rendering problem. Do NOT
+   already installed it). Per `route_weekend_check_scope` in config: check **every (route,
+   weekend) pair, every day** — every route in `price_history.json` × every **available**
+   weekend from step 4, no rotation, no cap. This is a deliberate choice: flight pricing is
+   dynamic enough that Trevor wants near-real-time freshness across the whole 6-month window,
+   accepting the higher request volume and the (unquantified but real) risk of tripping Google's
+   own anti-abuse rate-limiting as a trade-off. `fast-flights` queries Google Flights directly via
+   its own URL/protobuf format — no API key, no headless browser, no JS-rendering problem. Do NOT
    scrape Kayak/Expedia/Google Flights/Momondo via `WebFetch` — they are JS-rendered apps
    `WebFetch` can't read, and fighting their bot-detection is out of scope.
 
    a. Build the full set of `(route, weekend)` pairs: every route in `price_history.json` ×
-      every **available** weekend from step 4. Do NOT pick one weekend and check all routes
-      against just that one — that only cycles through weekends one at a time (a full 6-month
-      cycle would take as many days as there are weekends) and means most of the window rarely
-      gets checked. Instead, rotate across the whole matrix directly:
-      - For each pair, find its most recent matching observation (an entry in that route's
-        `observations` array whose `depart_date`/`return_date` match that weekend). If none
-        exists, treat it as never-checked (highest priority).
-      - Sort all pairs by that last-checked date, oldest/never-checked first.
-      - Take the top `daily_route_check_budget` pairs for today (default 92 — feel free to check
-        more in one run if you have time budget to spare; the goal is cycling through the full
-        route × weekend matrix in roughly two weeks, not hitting an exact number).
-      This naturally balances coverage across BOTH dimensions over time — every route and every
-      currently-available weekend gets checked on a rolling basis, not one weekend fully before
-      moving to the next.
+      every **available** weekend from step 4 (roughly 90 routes × a dozen-ish weekends —
+      check the actual counts each run since both lists change over time). Check all of them
+      this run. If a hard time/session limit forces you to stop early, prioritize pairs with no
+      matching observation yet (never-checked), then oldest-observed, so partial runs still make
+      balanced progress — but the target is full coverage every day, not a subset.
    b. For each pair, use its weekend's Saturday and Sunday (or Friday, if that fits the trip
       length better) as the query dates.
    c. The installed `fast-flights` version (3.0.2+) has a different API than older docs
@@ -90,14 +85,15 @@ all three before doing anything else:
       record (keyed by its own depart_date/return_date) is what step (a)'s rotation logic reads
       to figure out what's stale — there's no separate `last_checked_at` field to maintain
       anymore, the observations themselves carry that information.
-   f. Be a polite caller: this library has no official rate-limit contract since it's not an
-      official API. With ~92 routes checked every day, space requests out over the run (e.g. a
-      short pause of a couple seconds between calls) rather than firing them all at once — this
-      protects against tripping Google's own anti-abuse rate-limiting, which could soft-block the
-      whole cloud environment's IP and break the check for future days too. If you start seeing
-      errors partway through, stop and log what you have rather than hammering retries — a
-      partial day's worth of fresh observations is fine, the rotation isn't needed to fall back
-      on since every route gets attempted daily anyway.
+   f. This is a large volume of requests in one run (potentially 1,000+ pairs) with no official
+      rate-limit contract, so pace it: a short pause between calls (a second or two) rather than
+      firing everything back-to-back, and consider brief backoff if you see errors clustering.
+      This doesn't eliminate the risk of Google's anti-abuse systems flagging the traffic, but it
+      reduces the chance. If errors start clustering (a sign of an actual block, not just
+      transient failures), stop rather than continuing to hammer it — log whatever was
+      successfully collected, note in your final summary that the run was cut short and why, and
+      let the next day's run pick up the rest (the "no matching observation yet" prioritization in
+      step (a) means nothing gets permanently skipped, it just takes an extra day to catch up).
 
    Only fall back to `WebSearch`/blog-post scraping (Going, Thrifty Traveler, Dollar Flight Club,
    Secret Flying — plain article pages, not live search apps) for spotting deals to destinations
