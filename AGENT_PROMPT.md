@@ -86,6 +86,16 @@ all three before doing anything else:
    d. A route/weekend qualifies as a deal if today's price is at least `deal_threshold_pct`
       percent below the route's own baseline (median of `observations` if 3+ exist, else
       `seeded_typical_price_range` low end).
+      IMPORTANT: "median of observations" means observations for that SAME `(depart_date,
+      return_date)` pair, checked on different days over time — not a median across a route's
+      *different* weekends checked on the same day. Different future dates have genuinely
+      different fare levels (holidays, far-out vs. near-term, day-of-week demand), so pooling
+      them produces a noisy same-day "baseline" and false deals — 48 spurious deals were
+      generated this way on 2026-08-12 before being caught and reverted; none survived
+      per-exact-date-pair baselining (0 qualified that day, all still below the seeded low
+      end). Since each weekend is checked only once per day, it will take several days of
+      rechecking the same `(depart_date, return_date)` pair before its own observation median
+      is usable — until then, fall back to `seeded_typical_price_range` low end for that pair.
    e. Regardless of outcome, append `{date, depart_date, return_date, price, source:
       "fast_flights_daily"}` to that route's `observations` array in `price_history.json`. If the
       route had no entry yet, create one (empty `seeded_*` fields). This per-pair observation
