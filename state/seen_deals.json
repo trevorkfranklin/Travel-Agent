@@ -1,1 +1,101 @@
-[]
+[
+  {
+    "key": "HOU-FCA-2026-10-24-2026-10-25",
+    "origin": "HOU",
+    "destination": "FCA",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 550,
+    "first_seen": "2026-08-12",
+    "reason": "$550, 49.0% below your 3-observation median of $1079, and 14.1% below the seeded typical range low of $640",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "HOU-SAV-2026-10-24-2026-10-25",
+    "origin": "HOU",
+    "destination": "SAV",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 286,
+    "first_seen": "2026-08-12",
+    "reason": "$286, 32.5% below your 3-observation median of $424, and 3.1% below the seeded typical range low of $295",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "HOU-SRQ-2026-09-12-2026-09-13",
+    "origin": "HOU",
+    "destination": "SRQ",
+    "depart_date": "2026-09-12",
+    "return_date": "2026-09-13",
+    "price": 275,
+    "first_seen": "2026-08-12",
+    "reason": "$275, 21.2% below your 3-observation median of $349, and 6.8% below the seeded typical range low of $295",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "HOU-SRQ-2026-10-24-2026-10-25",
+    "origin": "HOU",
+    "destination": "SRQ",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 274,
+    "first_seen": "2026-08-12",
+    "reason": "$274, 21.5% below your 3-observation median of $349, and 7.1% below the seeded typical range low of $295",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "HOU-CZM-2026-09-26-2026-09-27",
+    "origin": "HOU",
+    "destination": "CZM",
+    "depart_date": "2026-09-26",
+    "return_date": "2026-09-27",
+    "price": 576,
+    "first_seen": "2026-08-12",
+    "reason": "$576, 63.3% below your 3-observation median of $1571, and 0.7% below the seeded typical range low of $580",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "IAH-COS-2026-10-24-2026-10-25",
+    "origin": "IAH",
+    "destination": "COS",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 255,
+    "first_seen": "2026-08-12",
+    "reason": "$255, 35.8% below your 3-observation median of $397, and 7.3% below the seeded typical range low of $275",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "IAH-FCA-2026-10-24-2026-10-25",
+    "origin": "IAH",
+    "destination": "FCA",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 403,
+    "first_seen": "2026-08-12",
+    "reason": "$403, 41.2% below your 3-observation median of $685, and 6.3% below the seeded typical range low of $430",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "IAH-PWM-2026-10-24-2026-10-25",
+    "origin": "IAH",
+    "destination": "PWM",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 308,
+    "first_seen": "2026-08-12",
+    "reason": "$308, 38.9% below your 3-observation median of $504, and 10.7% below the seeded typical range low of $345",
+    "source": "fast_flights_daily"
+  },
+  {
+    "key": "IAH-MBJ-2026-10-24-2026-10-25",
+    "origin": "IAH",
+    "destination": "MBJ",
+    "depart_date": "2026-10-24",
+    "return_date": "2026-10-25",
+    "price": 361,
+    "first_seen": "2026-08-12",
+    "reason": "$361, 28.9% below your 3-observation median of $508, and 19.8% below the seeded typical range low of $450",
+    "source": "fast_flights_daily"
+  }
+]
