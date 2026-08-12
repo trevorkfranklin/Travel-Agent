@@ -8265,6 +8265,13 @@
           "current_price": null,
           "source": "fast_flights_daily",
           "price_type": "round_trip_total"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-12",
+          "return_date": "2026-09-13",
+          "price": 2252,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -14027,6 +14034,13 @@
           "current_price": null,
           "source": "fast_flights_daily",
           "price_type": "round_trip_total"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-12",
+          "return_date": "2026-09-13",
+          "price": 461,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
