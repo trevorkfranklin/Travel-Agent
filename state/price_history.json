@@ -272,9 +272,18 @@
           "price": 354,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 403,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-ATL": {
       "origin": "HOU",
@@ -548,9 +557,18 @@
           "price": 147,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 254,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-BNA": {
       "origin": "HOU",
@@ -824,9 +842,18 @@
           "price": 322,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 405,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-BTV": {
       "origin": "HOU",
@@ -1100,9 +1127,18 @@
           "price": 595,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 932,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-BZN": {
       "origin": "HOU",
@@ -1376,9 +1412,18 @@
           "price": 497,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 462,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-CHS": {
       "origin": "HOU",
@@ -1652,9 +1697,18 @@
           "price": 366,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 471,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-COS": {
       "origin": "HOU",
@@ -1928,9 +1982,18 @@
           "price": 297,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 345,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-DEN": {
       "origin": "HOU",
@@ -2204,9 +2267,18 @@
           "price": 268,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 293,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-ECP": {
       "origin": "HOU",
@@ -2480,9 +2552,18 @@
           "price": 274,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 346,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-EWR": {
       "origin": "HOU",
@@ -2756,9 +2837,18 @@
           "price": 514,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 668,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-FCA": {
       "origin": "HOU",
@@ -3032,9 +3122,18 @@
           "price": 1105,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 932,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-FLL": {
       "origin": "HOU",
@@ -3308,9 +3407,18 @@
           "price": 242,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 357,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-JAC": {
       "origin": "HOU",
@@ -3584,9 +3692,18 @@
           "price": 1107,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 1102,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-LAX": {
       "origin": "HOU",
@@ -3860,9 +3977,18 @@
           "price": 376,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 384,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-MCO": {
       "origin": "HOU",
@@ -4136,9 +4262,18 @@
           "price": 340,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 405,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-MIA": {
       "origin": "HOU",
@@ -4412,9 +4547,18 @@
           "price": 264,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 321,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-MSY": {
       "origin": "HOU",
@@ -4688,9 +4832,18 @@
           "price": 249,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 309,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-MYR": {
       "origin": "HOU",
@@ -4964,9 +5117,18 @@
           "price": 452,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 425,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-ORD": {
       "origin": "HOU",
@@ -5240,9 +5402,18 @@
           "price": 312,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 358,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PDX": {
       "origin": "HOU",
@@ -5516,9 +5687,18 @@
           "price": 365,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 408,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PHX": {
       "origin": "HOU",
@@ -5792,9 +5972,18 @@
           "price": 368,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 373,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PNS": {
       "origin": "HOU",
@@ -6068,9 +6257,18 @@
           "price": 297,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 353,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PSP": {
       "origin": "HOU",
@@ -6344,9 +6542,18 @@
           "price": 352,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 475,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PWM": {
       "origin": "HOU",
@@ -6620,9 +6827,18 @@
           "price": 431,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 499,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-RNO": {
       "origin": "HOU",
@@ -6896,9 +7112,18 @@
           "price": 376,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 407,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-RSW": {
       "origin": "HOU",
@@ -7172,9 +7397,18 @@
           "price": 275,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 280,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SAN": {
       "origin": "HOU",
@@ -7448,9 +7682,18 @@
           "price": 385,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 436,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SAV": {
       "origin": "HOU",
@@ -7724,9 +7967,18 @@
           "price": 374,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 424,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SEA": {
       "origin": "HOU",
@@ -8000,9 +8252,18 @@
           "price": 462,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 461,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SFO": {
       "origin": "HOU",
@@ -8276,9 +8537,18 @@
           "price": 327,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 385,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SJU": {
       "origin": "HOU",
@@ -8552,9 +8822,18 @@
           "price": 461,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 434,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SLC": {
       "origin": "HOU",
@@ -8828,9 +9107,18 @@
           "price": 386,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 361,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SRQ": {
       "origin": "HOU",
@@ -9104,9 +9392,18 @@
           "price": 269,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 349,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-TUS": {
       "origin": "HOU",
@@ -9380,9 +9677,18 @@
           "price": 276,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 309,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-TVC": {
       "origin": "HOU",
@@ -9656,9 +9962,18 @@
           "price": 832,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 690,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-TPA": {
       "origin": "HOU",
@@ -9932,9 +10247,18 @@
           "price": 373,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 415,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-VPS": {
       "origin": "HOU",
@@ -10208,9 +10532,18 @@
           "price": 363,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 365,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-CUN": {
       "origin": "HOU",
@@ -10484,9 +10817,18 @@
           "price": 581,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 381,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SJD": {
       "origin": "HOU",
@@ -10760,9 +11102,18 @@
           "price": 533,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 610,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PVR": {
       "origin": "HOU",
@@ -11036,9 +11387,18 @@
           "price": 473,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 516,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-CZM": {
       "origin": "HOU",
@@ -11312,9 +11672,18 @@
           "price": 1571,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 584,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-MEX": {
       "origin": "HOU",
@@ -11588,9 +11957,18 @@
           "price": 1648,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 520,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-SJO": {
       "origin": "HOU",
@@ -11864,9 +12242,18 @@
           "price": 2854,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 568,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-NAS": {
       "origin": "HOU",
@@ -12140,9 +12527,18 @@
           "price": 2252,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 625,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-PUJ": {
       "origin": "HOU",
@@ -12408,9 +12804,18 @@
           "price": 3555,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 760,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "HOU-MBJ": {
       "origin": "HOU",
@@ -12684,9 +13089,18 @@
           "price": 746,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 508,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-ABQ": {
       "origin": "IAH",
@@ -12960,9 +13374,18 @@
           "price": 343,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 397,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-ATL": {
       "origin": "IAH",
@@ -13236,9 +13659,18 @@
           "price": 137,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 144,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-BNA": {
       "origin": "IAH",
@@ -13512,9 +13944,18 @@
           "price": 235,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 249,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-BTV": {
       "origin": "IAH",
@@ -13788,9 +14229,18 @@
           "price": 418,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 518,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-BZN": {
       "origin": "IAH",
@@ -14064,9 +14514,18 @@
           "price": 499,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 683,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-CHS": {
       "origin": "IAH",
@@ -14340,9 +14799,18 @@
           "price": 361,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 432,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-COS": {
       "origin": "IAH",
@@ -14616,9 +15084,18 @@
           "price": 397,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 388,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-DEN": {
       "origin": "IAH",
@@ -14892,9 +15369,18 @@
           "price": 253,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 200,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-ECP": {
       "origin": "IAH",
@@ -15168,9 +15654,18 @@
           "price": 383,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 365,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-EWR": {
       "origin": "IAH",
@@ -15444,9 +15939,18 @@
           "price": 271,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 243,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-FCA": {
       "origin": "IAH",
@@ -15720,9 +16224,18 @@
           "price": 685,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 718,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-FLL": {
       "origin": "IAH",
@@ -15996,9 +16509,18 @@
           "price": 217,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 296,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-JAC": {
       "origin": "IAH",
@@ -16272,9 +16794,18 @@
           "price": 825,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 865,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-LAX": {
       "origin": "IAH",
@@ -16548,9 +17079,18 @@
           "price": 319,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 268,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-MCO": {
       "origin": "IAH",
@@ -16824,9 +17364,18 @@
           "price": 282,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 372,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-MIA": {
       "origin": "IAH",
@@ -17100,9 +17649,18 @@
           "price": 269,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 315,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-MSY": {
       "origin": "IAH",
@@ -17376,9 +17934,18 @@
           "price": 185,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 234,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-MYR": {
       "origin": "IAH",
@@ -17652,9 +18219,18 @@
           "price": 462,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 597,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-ORD": {
       "origin": "IAH",
@@ -17928,9 +18504,18 @@
           "price": 263,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 205,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PDX": {
       "origin": "IAH",
@@ -18204,9 +18789,18 @@
           "price": 320,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 328,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PHX": {
       "origin": "IAH",
@@ -18480,9 +19074,18 @@
           "price": 142,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 241,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PNS": {
       "origin": "IAH",
@@ -18756,9 +19359,18 @@
           "price": 196,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 198,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PSP": {
       "origin": "IAH",
@@ -19032,9 +19644,18 @@
           "price": 451,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 428,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PWM": {
       "origin": "IAH",
@@ -19308,9 +19929,18 @@
           "price": 348,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 504,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-RNO": {
       "origin": "IAH",
@@ -19584,9 +20214,18 @@
           "price": 407,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 379,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-RSW": {
       "origin": "IAH",
@@ -19860,9 +20499,18 @@
           "price": 338,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 350,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SAN": {
       "origin": "IAH",
@@ -20136,9 +20784,18 @@
           "price": 329,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 297,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SAV": {
       "origin": "IAH",
@@ -20412,9 +21069,18 @@
           "price": 295,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 403,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SEA": {
       "origin": "IAH",
@@ -20688,9 +21354,18 @@
           "price": 395,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 286,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SFO": {
       "origin": "IAH",
@@ -20964,9 +21639,18 @@
           "price": 250,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 260,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SJU": {
       "origin": "IAH",
@@ -21240,9 +21924,18 @@
           "price": 396,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 396,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SLC": {
       "origin": "IAH",
@@ -21516,9 +22209,18 @@
           "price": 216,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 252,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SRQ": {
       "origin": "IAH",
@@ -21792,9 +22494,18 @@
           "price": 390,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 559,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-TUS": {
       "origin": "IAH",
@@ -22068,9 +22779,18 @@
           "price": 343,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 293,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-TVC": {
       "origin": "IAH",
@@ -22344,9 +23064,18 @@
           "price": 606,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 601,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-TPA": {
       "origin": "IAH",
@@ -22620,9 +23349,18 @@
           "price": 279,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 253,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-VPS": {
       "origin": "IAH",
@@ -22896,9 +23634,18 @@
           "price": 438,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 467,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-CUN": {
       "origin": "IAH",
@@ -23172,9 +23919,18 @@
           "price": 387,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 354,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SJD": {
       "origin": "IAH",
@@ -23448,9 +24204,18 @@
           "price": 362,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 459,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PVR": {
       "origin": "IAH",
@@ -23724,9 +24489,18 @@
           "price": 2497,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 379,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-CZM": {
       "origin": "IAH",
@@ -24000,9 +24774,18 @@
           "price": 1184,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 644,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-MEX": {
       "origin": "IAH",
@@ -24276,9 +25059,18 @@
           "price": 605,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 501,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-SJO": {
       "origin": "IAH",
@@ -24552,9 +25344,18 @@
           "price": 1105,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 532,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-NAS": {
       "origin": "IAH",
@@ -24828,9 +25629,18 @@
           "price": 625,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 423,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-PUJ": {
       "origin": "IAH",
@@ -25104,9 +25914,18 @@
           "price": 506,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 530,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     },
     "IAH-MBJ": {
       "origin": "IAH",
@@ -25380,9 +26199,18 @@
           "price": 508,
           "current_price": null,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-12",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 438,
+          "current_price": null,
+          "source": "fast_flights_daily",
+          "price_type": "round_trip_total"
         }
       ],
-      "last_checked_at": "2026-08-11"
+      "last_checked_at": "2026-08-12"
     }
   }
 }
