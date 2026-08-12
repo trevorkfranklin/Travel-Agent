@@ -102,12 +102,37 @@ all three before doing anything else:
 7. For each qualifying deal, build a dedup key: `{origin}-{destination}-{depart_date}-{return_date}`.
    Skip any deal whose key is already present in `state/seen_deals.json`.
 8. If there is at least one new qualifying deal:
-   a. Compose one email to `notify_email`. Subject: `Flight Deal Alert: N new deal(s) found`.
-      For each deal list: destination, dates, price, the reason it qualified (e.g. "$310, 28%
-      below your 3-observation median of $430" or "$310, 24% below the seeded typical range of
-      [$410, $650]"), origin airport, and source. If that weekend has a "possible conflict" noted
-      in step 5, add a line like: "Heads up: you have '<event title>' on <date> that weekend —
-      worth checking if that's missable."
+   a. Compose one HTML email to `notify_email`. Subject: `Flight Deal Alert: N new deal(s) found`.
+      Build an inline-styled HTML table (email clients strip `<style>` blocks and don't support
+      CSS custom properties or dark-mode media queries reliably, so every style must be inline on
+      the element itself — no `<style>` tag, no `var()`, no `@media`) with one row per deal:
+
+      Columns: **Destination** (linked — see below) | **Dates** | **Price** | **Savings** |
+      **Origin** | **Heads up** (only if that weekend has a possible-conflict note from step 5,
+      otherwise leave blank).
+
+      Compute each deal's discount percent vs. its baseline (already calculated in step 6d) and
+      color the row's left border and a small tier label by tier:
+      - 20–29% below baseline → **Good deal** → `#fff3cd` background / `#856404` text (amber)
+      - 30–49% below baseline → **Great deal** → `#d4edda` background / `#155724` text (green)
+      - 50%+ below baseline → **Exceptional deal** → `#c3e6cb` background / `#0b3d0b` text,
+        bold (dark green)
+      Never rely on color alone — always print the tier label as text next to/within the row, not
+      just the background color, so it still reads correctly if colors don't render.
+
+      Above the table, include a one-line legend explaining the three tiers with small colored
+      swatches (inline-styled `<span>` blocks), e.g.:
+      `🟡 Good (20-29% off)  🟢 Great (30-49% off)  🟩 Exceptional (50%+ off)`
+
+      Link each destination cell's text to a Google Flights search for that exact route/dates:
+      `https://www.google.com/travel/flights?q=Flights%20to%20{destination}%20from%20{origin}%20on%20{depart_date}%20through%20{return_date}`
+      (URL-encode the airport codes and dates; Google Flights' `q` param accepts this natural
+      -language form reliably enough for a deep link — it doesn't need to be exact, just get
+      Trevor looking at the right route and dates).
+
+      Also include a brief plain-text summary line per deal in an `alt` fallback paragraph before
+      the table (some webmail clients render HTML oddly) — e.g. "CUN from HOU, $310 (28% below
+      typical) — Sep 26-27".
    b. Send it via the Gmail REST API over HTTPS (NOT SMTP — this sandbox's network policy
       blocks port 587 entirely; the Gmail MCP connector also has no send capability, only draft
       creation — don't use either for this). `GMAIL_OAUTH_CLIENT_ID`, `GMAIL_OAUTH_CLIENT_SECRET`,
@@ -128,7 +153,7 @@ all three before doing anything else:
       with urllib.request.urlopen(req) as resp:
           access_token = json.load(resp)["access_token"]
 
-      msg = MIMEText(body_text)
+      msg = MIMEText(html_body, "html")  # html_body is the inline-styled table from step 8a
       msg["Subject"] = subject
       msg["From"] = "tkfred02ram@gmail.com"
       msg["To"] = notify_email  # from config.json
