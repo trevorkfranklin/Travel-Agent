@@ -1,8 +1,9 @@
 # Travel Deal Agent
 
 A scheduled cloud agent (Claude Code routine) that checks Trevor's Google Calendar for free
-weekends over the next 6 months, searches for flight deals from HOU/IAH for those weekends, and
-emails trevor.franklin@yahoo.com when it finds a genuinely good, new deal.
+weekends over the next `calendar_lookahead_months` (3 months), checks real round-trip prices via
+`fast-flights` for every origin/destination route × every free weekend, every day, and emails
+trevor.franklin@yahoo.com when it finds a genuinely good, new deal.
 
 - `config.json` — settings (airports, calendar rules, notify email, deal definition)
 - `state/seen_deals.json` — dedup memory so the same deal isn't emailed twice

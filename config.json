@@ -1,7 +1,7 @@
 {
   "origin_airports": ["HOU", "IAH"],
   "destinations": "any",
-  "calendar_lookahead_months": 6,
+  "calendar_lookahead_months": 3,
   "weekend_span_days": ["Saturday", "Sunday"],
   "kids_event_keyword": "Kids",
   "kids_calendar_name": "Finn and Fallon",

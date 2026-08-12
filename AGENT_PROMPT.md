@@ -34,7 +34,7 @@ all three before doing anything else:
    already installed it). Per `route_weekend_check_scope` in config: check **every (route,
    weekend) pair, every day** — every route in `price_history.json` × every **available**
    weekend from step 4, no rotation, no cap. This is a deliberate choice: flight pricing is
-   dynamic enough that Trevor wants near-real-time freshness across the whole 6-month window,
+   dynamic enough that Trevor wants near-real-time freshness across the whole lookahead window,
    accepting the higher request volume and the (unquantified but real) risk of tripping Google's
    own anti-abuse rate-limiting as a trade-off. `fast-flights` queries Google Flights directly via
    its own URL/protobuf format — no API key, no headless browser, no JS-rendering problem. Do NOT
