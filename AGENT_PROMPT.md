@@ -50,20 +50,34 @@ all three before doing anything else:
       deterministic rotation) so a different weekend is checked each day and the full list cycles
       through over time. Use that weekend's Saturday and Sunday (or Friday, if that fits the trip
       length better) as the query dates.
-   c. For each picked route, call it like:
+   c. The installed `fast-flights` version (3.0.2+) has a different API than older docs
+      describe — use this actual working form:
       ```python
-      from fast_flights import FlightData, Passengers, get_flights
-      result = get_flights(
-          flight_data=[FlightData(date="{depart_date}", from_airport="{origin}", to_airport="{destination}")],
-          trip="one-way", seat="economy",
+      from fast_flights import FlightQuery, Passengers, create_query, get_flights
+      q = create_query(
+          flights=[
+              FlightQuery(date="{depart_date}", from_airport="{origin}", to_airport="{destination}"),
+              FlightQuery(date="{return_date}", from_airport="{destination}", to_airport="{origin}"),
+          ],
+          trip="round-trip", seat="economy",
           passengers=Passengers(adults=1, children=0, infants_in_seat=0, infants_on_lap=0),
       )
+      result = get_flights(q)  # a list of Flights; each .price is a full round-trip total
+      price = min(f.price for f in result)
       ```
-      `result.current_price` is Google's own real-time classification ("low" / "typical" /
-      "high") for that route+date — treat it like SerpApi's `price_level`. `result.flights` is
-      the list of options; use the lowest `price` among `is_best=True` entries as today's price.
-      Query the return leg the same way if you want a full round-trip total, or just use the
-      outbound leg's price/classification as a reasonable proxy — either is fine.
+      There is no `current_price` low/typical/high classification in this version — rely on
+      the price-vs-baseline comparison only (the `current_price == "low"` branch of the deal
+      definition is effectively unavailable; treat `current_price` as null in observations).
+      IMPORTANT: `seeded_typical_price_range` and `deal_definition` are denominated in
+      **round-trip totals**. Always query both legs in one `round-trip` call as shown above —
+      querying only the one-way outbound leg and comparing it to the round-trip baseline
+      produces a false "50%+ off" reading on nearly every route (the one-way price is roughly
+      half the round-trip total). This exact bug happened on 2026-08-12 and was caught only
+      because the false-deal rate was implausibly high (~90% of routes); don't reintroduce it.
+      Also run `fast_flights` calls with `https_proxy`/`HTTPS_PROXY`/`http_proxy`/`HTTP_PROXY`
+      unset (its underlying `primp` HTTP client fails to connect through the session's agent
+      proxy but succeeds with a direct connection) — e.g.
+      `env -u https_proxy -u HTTPS_PROXY -u http_proxy -u HTTP_PROXY python3 your_script.py`.
    d. A route/weekend qualifies as a deal if EITHER: `current_price == "low"`, OR today's price
       is at least `deal_threshold_pct` percent below the route's own baseline (median of
       `observations` if 3+ exist, else `seeded_typical_price_range` low end).
