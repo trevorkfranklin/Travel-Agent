@@ -108,26 +108,44 @@ all three before doing anything else:
       [$410, $650]"), origin airport, and source. If that weekend has a "possible conflict" noted
       in step 5, add a line like: "Heads up: you have '<event title>' on <date> that weekend —
       worth checking if that's missable."
-   b. Send it via direct SMTP (the Gmail MCP connector has no send capability, only draft
-      creation — don't use it for this). `GMAIL_SENDER_ADDRESS` and `GMAIL_APP_PASSWORD` are
-      available as environment variables. Send with Python's `smtplib`, e.g.:
+   b. Send it via the Gmail REST API over HTTPS (NOT SMTP — this sandbox's network policy
+      blocks port 587 entirely; the Gmail MCP connector also has no send capability, only draft
+      creation — don't use either for this). `GMAIL_OAUTH_CLIENT_ID`, `GMAIL_OAUTH_CLIENT_SECRET`,
+      and `GMAIL_OAUTH_REFRESH_TOKEN` are available as environment variables, scoped only to
+      `gmail.send` for `tkfred02ram@gmail.com`. Exchange the refresh token for a short-lived
+      access token, then call the Gmail API directly:
       ```python
-      import smtplib, os
+      import base64, json, os, urllib.request, urllib.parse
       from email.mime.text import MIMEText
 
-      sender = os.environ["GMAIL_SENDER_ADDRESS"]
+      token_data = urllib.parse.urlencode({
+          "client_id": os.environ["GMAIL_OAUTH_CLIENT_ID"],
+          "client_secret": os.environ["GMAIL_OAUTH_CLIENT_SECRET"],
+          "refresh_token": os.environ["GMAIL_OAUTH_REFRESH_TOKEN"],
+          "grant_type": "refresh_token",
+      }).encode()
+      req = urllib.request.Request("https://oauth2.googleapis.com/token", data=token_data)
+      with urllib.request.urlopen(req) as resp:
+          access_token = json.load(resp)["access_token"]
+
       msg = MIMEText(body_text)
       msg["Subject"] = subject
-      msg["From"] = sender
+      msg["From"] = "tkfred02ram@gmail.com"
       msg["To"] = notify_email  # from config.json
+      raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
 
-      with smtplib.SMTP("smtp.gmail.com", 587) as s:
-          s.starttls()
-          s.login(sender, os.environ["GMAIL_APP_PASSWORD"])
-          s.send_message(msg)
+      send_req = urllib.request.Request(
+          "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+          data=json.dumps({"raw": raw}).encode(),
+          headers={"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"},
+          method="POST",
+      )
+      urllib.request.urlopen(send_req)
       ```
-      Do not print, log, or write `GMAIL_APP_PASSWORD`'s value anywhere (commits, other files,
-      your final summary) — only pass it to `s.login()`.
+      Do not print, log, or write `GMAIL_OAUTH_CLIENT_SECRET` or `GMAIL_OAUTH_REFRESH_TOKEN`'s
+      values anywhere (commits, other files, your final summary) — only pass them to the token
+      exchange request. The short-lived access token is fine to hold in memory for the request
+      but don't persist it either (it expires in ~1 hour anyway, so there's no reason to).
    c. Append the new deals to `state/seen_deals.json` (include today's date as `first_seen`).
 9. Whether or not any deal qualified, `git add`, `git commit`, and `git push` the updated
    `state/price_history.json` (new observations from step 6c) and, if changed, `state/seen_deals.json`.
