@@ -47,8 +47,15 @@ all three before doing anything else:
       this run. If a hard time/session limit forces you to stop early, prioritize pairs with no
       matching observation yet (never-checked), then oldest-observed, so partial runs still make
       balanced progress — but the target is full coverage every day, not a subset.
-   b. For each pair, use its weekend's Saturday and Sunday (or Friday, if that fits the trip
-      length better) as the query dates.
+   b. For each pair, the trip is **Friday departure → Sunday return** (a 2-night weekend trip),
+      NOT Saturday-to-Sunday (that's only a 1-night stay and not what Trevor wants). Use the
+      Friday immediately before that weekend's Saturday as `depart_date`, and the Sunday as
+      `return_date`. Trevor is free from Thursday evening through Sunday on any weekend that
+      passed the step 4 availability check (kids-custody weekends are all-or-nothing across that
+      whole span, no partial-week overlap), so no extra Friday-specific availability check is
+      needed. Thursday evening is also an acceptable alternative departure Trevor would consider,
+      but Friday is the default for the daily automated check — don't double the query volume by
+      checking both Thursday and Friday departures for every pair.
    c. The installed `fast-flights` version (3.0.2+) has a different API than older docs
       describe — use this actual working form:
       ```python

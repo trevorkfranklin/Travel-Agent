@@ -3,6 +3,7 @@
   "destinations": "any",
   "calendar_lookahead_months": 3,
   "weekend_span_days": ["Saturday", "Sunday"],
+  "trip_pattern": "Depart Friday, return Sunday (2-night weekend trip) — NOT Saturday-to-Sunday. weekend_span_days is only used for the calendar-availability check; kids-custody weekends are all-or-nothing across Thu evening-Sun, so no separate Friday availability check is needed. Thursday evening is an acceptable alternative departure Trevor would consider, but Friday is the automated default.",
   "kids_event_keyword": "Kids",
   "kids_calendar_name": "Finn and Fallon",
   "notify_email": "trevor.franklin@yahoo.com",
