@@ -11,5 +11,6 @@
   "state_file": "state/seen_deals.json",
   "price_history_file": "state/price_history.json",
   "route_weekend_check_scope": "full — check every (route, weekend) pair every day, no rotation/cap. Accepted trade-off: this is a much higher volume of automated requests to Google Flights than a conservative rotation, with real (unquantified) risk of tripping Google's own anti-abuse rate-limiting. Prioritized anyway because flight pricing is dynamic and near-real-time freshness matters more here than minimizing that risk.",
-  "price_check_tool": "fast-flights (PyPI package, no API key, no official rate-limit contract — be as polite a caller as full daily coverage allows: pace requests, don't hammer retries on errors)"
+  "price_check_tool": "fast-flights (PyPI package, no API key, no official rate-limit contract — be as polite a caller as full daily coverage allows: pace requests, don't hammer retries on errors)",
+  "email_send_method": "Direct SMTP via smtp.gmail.com:587 using GMAIL_SENDER_ADDRESS and GMAIL_APP_PASSWORD env vars (see AGENT_PROMPT.md step 8b). The Gmail MCP connector has no send capability, only draft creation, so it's not used for delivery."
 }

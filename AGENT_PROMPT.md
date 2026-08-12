@@ -102,13 +102,32 @@ all three before doing anything else:
 7. For each qualifying deal, build a dedup key: `{origin}-{destination}-{depart_date}-{return_date}`.
    Skip any deal whose key is already present in `state/seen_deals.json`.
 8. If there is at least one new qualifying deal:
-   a. Compose one email via the Gmail MCP tool to `notify_email`. Subject:
-      `Flight Deal Alert: N new deal(s) found`. For each deal list: destination, dates, price,
-      the reason it qualified (e.g. "$310, 28% below your 3-observation median of $430" or
-      "$310, 24% below the seeded typical range of [$410, $650]"), origin airport, and source.
-      If that weekend has a "possible conflict" noted in step 5, add a line like: "Heads up: you
-      have '<event title>' on <date> that weekend — worth checking if that's missable."
-   b. Send the email.
+   a. Compose one email to `notify_email`. Subject: `Flight Deal Alert: N new deal(s) found`.
+      For each deal list: destination, dates, price, the reason it qualified (e.g. "$310, 28%
+      below your 3-observation median of $430" or "$310, 24% below the seeded typical range of
+      [$410, $650]"), origin airport, and source. If that weekend has a "possible conflict" noted
+      in step 5, add a line like: "Heads up: you have '<event title>' on <date> that weekend —
+      worth checking if that's missable."
+   b. Send it via direct SMTP (the Gmail MCP connector has no send capability, only draft
+      creation — don't use it for this). `GMAIL_SENDER_ADDRESS` and `GMAIL_APP_PASSWORD` are
+      available as environment variables. Send with Python's `smtplib`, e.g.:
+      ```python
+      import smtplib, os
+      from email.mime.text import MIMEText
+
+      sender = os.environ["GMAIL_SENDER_ADDRESS"]
+      msg = MIMEText(body_text)
+      msg["Subject"] = subject
+      msg["From"] = sender
+      msg["To"] = notify_email  # from config.json
+
+      with smtplib.SMTP("smtp.gmail.com", 587) as s:
+          s.starttls()
+          s.login(sender, os.environ["GMAIL_APP_PASSWORD"])
+          s.send_message(msg)
+      ```
+      Do not print, log, or write `GMAIL_APP_PASSWORD`'s value anywhere (commits, other files,
+      your final summary) — only pass it to `s.login()`.
    c. Append the new deals to `state/seen_deals.json` (include today's date as `first_seen`).
 9. Whether or not any deal qualified, `git add`, `git commit`, and `git push` the updated
    `state/price_history.json` (new observations from step 6c) and, if changed, `state/seen_deals.json`.
