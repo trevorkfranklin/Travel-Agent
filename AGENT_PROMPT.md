@@ -9,9 +9,10 @@ all three before doing anything else:
 - `state/price_history.json` — per-route historical price baseline, keyed by `"ORIGIN-DEST"`.
   Each route has a one-time seeded baseline (`seeded_typical_price_range`, `seeded_price_level`,
   `google_price_history_60d` — ~60 days of real daily Google Flights prices pulled once via
-  SerpApi), a `last_checked_at` date used for rotation, and an `observations` array that YOU grow
-  over time via daily `fast-flights` checks (see step 6). This is real historical data, not
-  guesswork — use it as the primary basis for judging deals.
+  SerpApi) and an `observations` array that YOU grow over time via daily `fast-flights` checks
+  (see step 6) — each observation records its own `depart_date`/`return_date`, which is what
+  drives the route × weekend rotation (no separate "last checked" field to maintain). This is
+  real historical data, not guesswork — use it as the primary basis for judging deals.
 
 ## Steps
 
@@ -36,19 +37,22 @@ all three before doing anything else:
    scrape Kayak/Expedia/Google Flights/Momondo via `WebFetch` — they are JS-rendered apps
    `WebFetch` can't read, and fighting their bot-detection is out of scope.
 
-   a. From `price_history.json`, take all routes (there should be up to `daily_route_check_budget`
-      of them). If for some reason there are more entries than the budget (e.g. new routes were
-      added from the WebSearch fallback), prioritize the ones with the oldest `last_checked_at` —
-      never-checked routes go first.
-   b. Pick the target weekend by ROTATING through ALL available weekends found in step 4 — do
-      NOT always target the soonest one. The soonest weekend is usually a short-notice/last-minute
-      booking window with naturally inflated fares, which will almost never look like a "deal"
-      against a baseline built from normal advance-purchase pricing, and fixating on it means the
-      other ~90% of the 6-month window never gets checked at all. Instead: number the available
-      weekends in chronological order (soonest = 0, next = 1, etc.), and pick
-      `weekends[day_of_year % count_of_available_weekends]` as today's target (or any equivalent
-      deterministic rotation) so a different weekend is checked each day and the full list cycles
-      through over time. Use that weekend's Saturday and Sunday (or Friday, if that fits the trip
+   a. Build the full set of `(route, weekend)` pairs: every route in `price_history.json` ×
+      every **available** weekend from step 4. Do NOT pick one weekend and check all routes
+      against just that one — that only cycles through weekends one at a time (a full 6-month
+      cycle would take as many days as there are weekends) and means most of the window rarely
+      gets checked. Instead, rotate across the whole matrix directly:
+      - For each pair, find its most recent matching observation (an entry in that route's
+        `observations` array whose `depart_date`/`return_date` match that weekend). If none
+        exists, treat it as never-checked (highest priority).
+      - Sort all pairs by that last-checked date, oldest/never-checked first.
+      - Take the top `daily_route_check_budget` pairs for today (default 92 — feel free to check
+        more in one run if you have time budget to spare; the goal is cycling through the full
+        route × weekend matrix in roughly two weeks, not hitting an exact number).
+      This naturally balances coverage across BOTH dimensions over time — every route and every
+      currently-available weekend gets checked on a rolling basis, not one weekend fully before
+      moving to the next.
+   b. For each pair, use its weekend's Saturday and Sunday (or Friday, if that fits the trip
       length better) as the query dates.
    c. The installed `fast-flights` version (3.0.2+) has a different API than older docs
       describe — use this actual working form:
@@ -66,8 +70,7 @@ all three before doing anything else:
       price = min(f.price for f in result)
       ```
       There is no `current_price` low/typical/high classification in this version — rely on
-      the price-vs-baseline comparison only (the `current_price == "low"` branch of the deal
-      definition is effectively unavailable; treat `current_price` as null in observations).
+      the price-vs-baseline comparison only (see step d).
       IMPORTANT: `seeded_typical_price_range` and `deal_definition` are denominated in
       **round-trip totals**. Always query both legs in one `round-trip` call as shown above —
       querying only the one-way outbound leg and comparing it to the round-trip baseline
@@ -78,14 +81,15 @@ all three before doing anything else:
       unset (its underlying `primp` HTTP client fails to connect through the session's agent
       proxy but succeeds with a direct connection) — e.g.
       `env -u https_proxy -u HTTPS_PROXY -u http_proxy -u HTTP_PROXY python3 your_script.py`.
-   d. A route/weekend qualifies as a deal if EITHER: `current_price == "low"`, OR today's price
-      is at least `deal_threshold_pct` percent below the route's own baseline (median of
-      `observations` if 3+ exist, else `seeded_typical_price_range` low end).
-   e. Regardless of outcome, update that route's entry in `price_history.json`: append
-      `{date, depart_date, return_date, price, current_price, source: "fast_flights_daily"}` to
-      `observations`, and set `last_checked_at` to today. If the route had no entry yet, create
-      one (empty `seeded_*` fields). This is how the self-built history grows more accurate and
-      the rotation self-balances over time.
+   d. A route/weekend qualifies as a deal if today's price is at least `deal_threshold_pct`
+      percent below the route's own baseline (median of `observations` if 3+ exist, else
+      `seeded_typical_price_range` low end).
+   e. Regardless of outcome, append `{date, depart_date, return_date, price, source:
+      "fast_flights_daily"}` to that route's `observations` array in `price_history.json`. If the
+      route had no entry yet, create one (empty `seeded_*` fields). This per-pair observation
+      record (keyed by its own depart_date/return_date) is what step (a)'s rotation logic reads
+      to figure out what's stale — there's no separate `last_checked_at` field to maintain
+      anymore, the observations themselves carry that information.
    f. Be a polite caller: this library has no official rate-limit contract since it's not an
       official API. With ~92 routes checked every day, space requests out over the run (e.g. a
       short pause of a couple seconds between calls) rather than firing them all at once — this
@@ -104,11 +108,10 @@ all three before doing anything else:
 8. If there is at least one new qualifying deal:
    a. Compose one email via the Gmail MCP tool to `notify_email`. Subject:
       `Flight Deal Alert: N new deal(s) found`. For each deal list: destination, dates, price,
-      the reason it qualified (e.g. "$310, Google Flights classifies this as a low price" or "$310, 28% below your
-      3-observation median of $430" or "$310, 24% below the seeded typical range of
-      [$410, $650]"), origin airport, and source. If that weekend has a "possible conflict" noted
-      in step 5, add a line like: "Heads
-      up: you have '<event title>' on <date> that weekend — worth checking if that's missable."
+      the reason it qualified (e.g. "$310, 28% below your 3-observation median of $430" or
+      "$310, 24% below the seeded typical range of [$410, $650]"), origin airport, and source.
+      If that weekend has a "possible conflict" noted in step 5, add a line like: "Heads up: you
+      have '<event title>' on <date> that weekend — worth checking if that's missable."
    b. Send the email.
    c. Append the new deals to `state/seen_deals.json` (include today's date as `first_seen`).
 9. Whether or not any deal qualified, `git add`, `git commit`, and `git push` the updated
