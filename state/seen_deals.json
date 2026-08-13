@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "key": "IAH-PNS-2026-09-25-2026-09-27",
+    "origin": "IAH",
+    "destination": "PNS",
+    "depart_date": "2026-09-25",
+    "return_date": "2026-09-27",
+    "price": 175,
+    "baseline": 225,
+    "discount_pct": 22.2,
+    "tier": "Good deal",
+    "first_seen": "2026-08-13"
+  },
+  {
+    "key": "IAH-PNS-2026-10-23-2026-10-25",
+    "origin": "IAH",
+    "destination": "PNS",
+    "depart_date": "2026-10-23",
+    "return_date": "2026-10-25",
+    "price": 175,
+    "baseline": 225,
+    "discount_pct": 22.2,
+    "tier": "Good deal",
+    "first_seen": "2026-08-13"
+  }
+]
