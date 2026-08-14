@@ -22,5 +22,65 @@
     "discount_pct": 22.2,
     "tier": "Good deal",
     "first_seen": "2026-08-13"
+  },
+  {
+    "key": "HOU-JAC-2026-11-13-2026-11-15",
+    "origin": "HOU",
+    "destination": "JAC",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 539,
+    "baseline": 680,
+    "discount_pct": 20.7,
+    "tier": "Good deal",
+    "first_seen": "2026-08-14"
+  },
+  {
+    "key": "HOU-PNS-2026-09-25-2026-09-27",
+    "origin": "HOU",
+    "destination": "PNS",
+    "depart_date": "2026-09-25",
+    "return_date": "2026-09-27",
+    "price": 282,
+    "baseline": 353,
+    "discount_pct": 20.1,
+    "tier": "Good deal",
+    "first_seen": "2026-08-14"
+  },
+  {
+    "key": "IAH-MIA-2026-09-25-2026-09-27",
+    "origin": "IAH",
+    "destination": "MIA",
+    "depart_date": "2026-09-25",
+    "return_date": "2026-09-27",
+    "price": 235,
+    "baseline": 315,
+    "discount_pct": 25.4,
+    "tier": "Good deal",
+    "first_seen": "2026-08-14"
+  },
+  {
+    "key": "IAH-MIA-2026-10-23-2026-10-25",
+    "origin": "IAH",
+    "destination": "MIA",
+    "depart_date": "2026-10-23",
+    "return_date": "2026-10-25",
+    "price": 185,
+    "baseline": 337,
+    "discount_pct": 45.1,
+    "tier": "Great deal",
+    "first_seen": "2026-08-14"
+  },
+  {
+    "key": "IAH-PVR-2026-09-11-2026-09-13",
+    "origin": "IAH",
+    "destination": "PVR",
+    "depart_date": "2026-09-11",
+    "return_date": "2026-09-13",
+    "price": 396,
+    "baseline": 526,
+    "discount_pct": 24.7,
+    "tier": "Good deal",
+    "first_seen": "2026-08-14"
   }
 ]
