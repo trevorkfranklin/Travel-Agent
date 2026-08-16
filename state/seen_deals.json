@@ -142,5 +142,41 @@
     "discount_pct": 31.4,
     "tier": "Great deal",
     "first_seen": "2026-08-15"
+  },
+  {
+    "key": "HOU-ATL-2026-10-09-2026-10-11",
+    "origin": "HOU",
+    "destination": "ATL",
+    "depart_date": "2026-10-09",
+    "return_date": "2026-10-11",
+    "price": 195,
+    "baseline": 317,
+    "discount_pct": 38.5,
+    "tier": "Great deal",
+    "first_seen": "2026-08-16"
+  },
+  {
+    "key": "IAH-ATL-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "ATL",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 98,
+    "baseline": 138,
+    "discount_pct": 29.0,
+    "tier": "Good deal",
+    "first_seen": "2026-08-16"
+  },
+  {
+    "key": "HOU-ATL-2026-09-25-2026-09-27",
+    "origin": "HOU",
+    "destination": "ATL",
+    "depart_date": "2026-09-25",
+    "return_date": "2026-09-27",
+    "price": 237,
+    "baseline": 297,
+    "discount_pct": 20.2,
+    "tier": "Good deal",
+    "first_seen": "2026-08-16"
   }
 ]
