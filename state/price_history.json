@@ -644,6 +644,48 @@
           "return_date": "2026-11-15",
           "price": 368,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 947,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 366,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 366,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 463,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 356,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 356,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -1291,6 +1333,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 197,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 697,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 305,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 283,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 215,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 257,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 177,
           "source": "fast_flights_daily"
         }
       ],
@@ -1940,6 +2024,48 @@
           "return_date": "2026-11-15",
           "price": 369,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 637,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 342,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 426,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 410,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 346,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 346,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -2584,6 +2710,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 484,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 487,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 677,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 809,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 1150,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 470,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 484,
@@ -3242,6 +3410,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 379,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 514,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 497,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 489,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 489,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 589,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 374,
           "source": "fast_flights_daily"
         }
       ],
@@ -3905,6 +4115,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 388,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 827,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 451,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 441,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 520,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 468,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 367,
           "source": "fast_flights_daily"
         }
       ],
@@ -4571,6 +4823,48 @@
           "return_date": "2026-11-15",
           "price": 304,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 897,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 419,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 409,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 384,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 338,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 294,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -5175,6 +5469,48 @@
           "return_date": "2026-11-15",
           "price": 483,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 437,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 442,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 396,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 560,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 428,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 455,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -5725,6 +6061,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 600,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 1400,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 576,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 584,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 679,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 584,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 580,
           "source": "fast_flights_daily"
         }
       ],
@@ -6385,6 +6763,48 @@
           "return_date": "2026-11-15",
           "price": 314,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 655,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 295,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 326,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 285,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -6977,6 +7397,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 277,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 661,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 301,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 320,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 399,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 306,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 277,
@@ -7577,6 +8039,48 @@
           "return_date": "2026-11-15",
           "price": 420,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 594,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 624,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 445,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 987,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 468,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 410,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -8165,6 +8669,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 679,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 1191,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 1215,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 2460,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 977,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 629,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 564,
           "source": "fast_flights_daily"
         }
       ],
@@ -8758,6 +9304,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 239,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 441,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 244,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 292,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 347,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 312,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 239,
@@ -9366,6 +9954,41 @@
           "return_date": "2026-11-15",
           "price": 539,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 1281,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 1174,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 1275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 704,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 539,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -9962,6 +10585,48 @@
           "return_date": "2026-11-15",
           "price": 389,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 569,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 371,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 381,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 387,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 381,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 371,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -10485,6 +11150,34 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 558,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 797,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 605,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 540,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 498,
           "source": "fast_flights_daily"
         }
       ],
@@ -11082,6 +11775,48 @@
           "return_date": "2026-11-15",
           "price": 323,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 724,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 341,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 445,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 441,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 374,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 374,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -11626,6 +12361,34 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 520,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 605,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 529,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 445,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 519,
           "source": "fast_flights_daily"
         }
       ],
@@ -12231,6 +12994,48 @@
           "return_date": "2026-11-15",
           "price": 299,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 417,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 382,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 387,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 417,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 382,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 339,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -12826,6 +13631,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 319,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 627,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 235,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 298,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 272,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 256,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 478,
           "source": "fast_flights_daily"
         }
       ],
@@ -13423,6 +14270,48 @@
           "return_date": "2026-11-15",
           "price": 496,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 837,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 473,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 432,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 514,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 416,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 371,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -13943,6 +14832,41 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 645,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 760,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 565,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 475,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 475,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 475,
           "source": "fast_flights_daily"
         }
       ],
@@ -14540,6 +15464,48 @@
           "return_date": "2026-11-15",
           "price": 339,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 593,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 511,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 331,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 567,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 437,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 359,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -15132,6 +16098,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 415,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 757,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 470,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 434,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 421,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 415,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 415,
@@ -15732,6 +16740,48 @@
           "return_date": "2026-11-15",
           "price": 329,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 519,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 388,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 339,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 394,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 329,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 329,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -16324,6 +17374,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 292,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 579,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 312,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 328,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 384,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 297,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 292,
@@ -16924,6 +18016,48 @@
           "return_date": "2026-11-15",
           "price": 464,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 514,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 428,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 485,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 540,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 467,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 434,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -17504,6 +18638,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 694,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 800,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 609,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 713,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 845,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 574,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 648,
           "source": "fast_flights_daily"
         }
       ],
@@ -18109,6 +19285,48 @@
           "return_date": "2026-11-15",
           "price": 623,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 798,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 542,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 534,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 591,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 600,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 553,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -18713,6 +19931,48 @@
           "return_date": "2026-11-15",
           "price": 544,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 574,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 449,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 524,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 530,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 420,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 385,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -19305,6 +20565,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 359,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 549,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 419,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 419,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 439,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 419,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 359,
@@ -19905,6 +21207,48 @@
           "return_date": "2026-11-15",
           "price": 304,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 409,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 319,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 324,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 358,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 331,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 333,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -20501,6 +21845,48 @@
           "return_date": "2026-11-15",
           "price": 408,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 836,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 383,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 427,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 427,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 383,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 393,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -21093,6 +22479,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 363,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 739,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 404,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 409,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 475,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 367,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 363,
@@ -21693,6 +23121,48 @@
           "return_date": "2026-11-15",
           "price": 442,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 797,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 447,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 447,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 487,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 447,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 442,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -22285,6 +23755,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 379,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 569,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 389,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 379,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 384,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 379,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 379,
@@ -22885,6 +24397,48 @@
           "return_date": "2026-11-15",
           "price": 623,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 818,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 544,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 710,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 883,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 628,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 544,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -23481,6 +25035,48 @@
           "return_date": "2026-11-15",
           "price": 598,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 798,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 564,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 490,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 846,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 515,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 490,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -23932,6 +25528,27 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 486,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 452,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 432,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 452,
           "source": "fast_flights_daily"
         }
       ],
@@ -24529,6 +26146,48 @@
           "return_date": "2026-11-15",
           "price": 379,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 756,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 444,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 364,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 379,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 374,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 354,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -25124,6 +26783,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 304,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 771,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 401,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 347,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 389,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 364,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 418,
           "source": "fast_flights_daily"
         }
       ],
@@ -25721,6 +27422,48 @@
           "return_date": "2026-11-15",
           "price": 395,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 669,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 407,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 373,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 393,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 363,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 363,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -26313,6 +28056,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 298,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 474,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 315,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 310,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 382,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 303,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 298,
@@ -26913,6 +28698,48 @@
           "return_date": "2026-11-15",
           "price": 596,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 907,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 966,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 757,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 818,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 519,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 596,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -27508,6 +29335,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 318,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 431,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 440,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 422,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 345,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 320,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 320,
           "source": "fast_flights_daily"
         }
       ],
@@ -28105,6 +29974,48 @@
           "return_date": "2026-11-15",
           "price": 368,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 812,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 366,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 356,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 527,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 366,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 366,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -28694,6 +30605,48 @@
           "return_date": "2026-11-15",
           "price": 138,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 185,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 165,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 193,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 138,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 157,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -29279,6 +31232,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 236,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 236,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 350,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 236,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 236,
@@ -29879,6 +31874,48 @@
           "return_date": "2026-11-15",
           "price": 359,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 477,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 547,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 504,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 665,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 394,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 359,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -30471,6 +32508,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 334,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 499,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 672,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 574,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 621,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 489,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 334,
@@ -31071,6 +33150,48 @@
           "return_date": "2026-11-15",
           "price": 398,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 817,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 367,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 478,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 433,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 478,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 367,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -31660,6 +33781,48 @@
           "return_date": "2026-11-15",
           "price": 304,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 907,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 478,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 501,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 499,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 304,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 378,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -32248,6 +34411,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 342,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 394,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 488,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 320,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 349,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 363,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 331,
           "source": "fast_flights_daily"
         }
       ],
@@ -32845,6 +35050,48 @@
           "return_date": "2026-11-15",
           "price": 600,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 760,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 1102,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 584,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 827,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 584,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 580,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -33441,6 +35688,48 @@
           "return_date": "2026-11-15",
           "price": 308,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 339,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 275,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 275,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -34036,6 +36325,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 349,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 661,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 702,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 423,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 496,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 478,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 301,
           "source": "fast_flights_daily"
         }
       ],
@@ -34637,6 +36968,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 256,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 369,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 256,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 231,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 329,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 256,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 256,
@@ -35245,6 +37618,48 @@
           "return_date": "2026-11-15",
           "price": 437,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 680,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 639,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 631,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 634,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 451,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 451,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -35837,6 +38252,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 229,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 299,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 229,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 229,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 196,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 229,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 229,
@@ -36437,6 +38894,48 @@
           "return_date": "2026-11-15",
           "price": 539,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 891,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 759,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 907,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 881,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 673,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 539,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -37032,6 +39531,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 276,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 559,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 317,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 267,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 317,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 286,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 267,
           "source": "fast_flights_daily"
         }
       ],
@@ -37629,6 +40170,48 @@
           "return_date": "2026-11-15",
           "price": 553,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 676,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 581,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 540,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 700,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 493,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 493,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -38221,6 +40804,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 313,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 249,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 279,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 262,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 313,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 313,
@@ -38821,6 +41446,48 @@
           "return_date": "2026-11-15",
           "price": 501,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 281,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 501,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 313,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 300,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 302,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 501,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -39416,6 +42083,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 259,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 407,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 212,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 367,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 174,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 403,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 299,
           "source": "fast_flights_daily"
         }
       ],
@@ -40013,6 +42722,48 @@
           "return_date": "2026-11-15",
           "price": 240,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 207,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 194,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 290,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 209,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 219,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -40605,6 +43356,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 496,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 617,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 536,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 535,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 735,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 566,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 496,
@@ -41205,6 +43998,48 @@
           "return_date": "2026-11-15",
           "price": 495,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 821,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 565,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 478,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 552,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 471,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 471,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -41800,6 +44635,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 207,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 227,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 263,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 296,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 204,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 227,
           "source": "fast_flights_daily"
         }
       ],
@@ -42397,6 +45274,48 @@
           "return_date": "2026-11-15",
           "price": 373,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 418,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 460,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 407,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 409,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 301,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 407,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -42993,6 +45912,48 @@
           "return_date": "2026-11-15",
           "price": 308,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 232,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 329,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 217,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 252,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 217,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -43585,6 +46546,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 210,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 209,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 193,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 668,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 210,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 210,
@@ -44185,6 +47188,48 @@
           "return_date": "2026-11-15",
           "price": 339,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 509,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 447,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 439,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 573,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 454,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 391,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -44780,6 +47825,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 526,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 800,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 555,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 591,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 785,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 511,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 536,
           "source": "fast_flights_daily"
         }
       ],
@@ -45377,6 +48464,48 @@
           "return_date": "2026-11-15",
           "price": 369,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 459,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 483,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 333,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 304,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 336,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 392,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -45969,6 +49098,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 374,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 569,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 559,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 552,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 524,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 460,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 374,
@@ -46569,6 +49740,48 @@
           "return_date": "2026-11-15",
           "price": 354,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 360,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 357,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 410,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 416,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 305,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 354,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -47161,6 +50374,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 299,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 409,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 415,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 354,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 427,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 387,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 299,
@@ -47761,6 +51016,48 @@
           "return_date": "2026-11-15",
           "price": 283,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 836,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 288,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 283,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 283,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 283,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 283,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -48353,6 +51650,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 353,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 749,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 364,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 443,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 464,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 469,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 353,
@@ -48953,6 +52292,48 @@
           "return_date": "2026-11-15",
           "price": 298,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 418,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 333,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 298,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 338,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 298,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 315,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -49549,6 +52930,48 @@
           "return_date": "2026-11-15",
           "price": 250,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 380,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 250,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 250,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 313,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 265,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 250,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -50116,6 +53539,41 @@
           "depart_date": "2026-10-23",
           "return_date": "2026-10-25",
           "price": 629,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 491,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 503,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 502,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 477,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 482,
           "source": "fast_flights_daily"
         }
       ],
@@ -50713,6 +54171,48 @@
           "return_date": "2026-11-15",
           "price": 588,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 903,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 908,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 490,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 564,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 490,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 485,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -51305,6 +54805,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 396,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 496,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 396,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 396,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 396,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 396,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 396,
@@ -51905,6 +55447,48 @@
           "return_date": "2026-11-15",
           "price": 250,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 265,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 250,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 250,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 250,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 250,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -52500,6 +56084,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 399,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 771,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 400,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 558,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 752,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 593,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 386,
           "source": "fast_flights_daily"
         }
       ],
@@ -53097,6 +56723,48 @@
           "return_date": "2026-11-15",
           "price": 262,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 340,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 243,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 243,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 284,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 243,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 243,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -53693,6 +57361,48 @@
           "return_date": "2026-11-15",
           "price": 298,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 469,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 309,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 343,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 532,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 359,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 302,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-08-12"
@@ -54285,6 +57995,48 @@
         },
         {
           "date": "2026-08-17",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 369,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 513,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 764,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 723,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 524,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 462,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 369,
@@ -54884,6 +58636,48 @@
           "depart_date": "2026-11-13",
           "return_date": "2026-11-15",
           "price": 318,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-08-28",
+          "return_date": "2026-08-30",
+          "price": 535,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-11",
+          "return_date": "2026-09-13",
+          "price": 653,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-09-25",
+          "return_date": "2026-09-27",
+          "price": 507,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-09",
+          "return_date": "2026-10-11",
+          "price": 750,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-10-23",
+          "return_date": "2026-10-25",
+          "price": 516,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-08-19",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 313,
           "source": "fast_flights_daily"
         }
       ],
