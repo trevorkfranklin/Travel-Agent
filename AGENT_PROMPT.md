@@ -17,6 +17,20 @@ all three before doing anything else:
 ## Steps
 
 1. Read `config.json` and `state/seen_deals.json`.
+   a. Check Gmail OAuth token health BEFORE anything else. Compute
+      `days_since_issued = today - gmail_oauth_issued_at` (from config.json). The token expires
+      exactly `gmail_oauth_token_lifetime_days` (7) days after issuance because the OAuth consent
+      screen is unverified (Testing status) — Trevor opted for manual periodic re-authorization
+      over buying a domain for full Google verification (see `gmail_oauth_reminder_note` in
+      config). If `days_since_issued >= 6` (i.e. the token will expire within a day), send Trevor
+      a short separate reminder email FIRST, before doing anything else this run, subject
+      `Gmail token needs refresh soon` — plain text is fine, no need for the HTML deal-table
+      format: "The Travel Deal Agent's Gmail token expires in ~1 day. Message Claude Code and
+      ask it to refresh the Gmail OAuth token to keep deal alerts working." Send this via the
+      same Gmail API method as step 8b (the token is still valid today, that's the whole point of
+      warning early). If the send itself fails with `invalid_grant`, the token already expired —
+      note that clearly in your final summary so Trevor sees it next time he checks in, but don't
+      loop retrying.
 2. Use the Google Calendar MCP tool to first list ALL calendars on the account (not just the
    primary/default one), then fetch all events from today through `calendar_lookahead_months`
    months out from every calendar — in particular the calendar named `kids_calendar_name` in
