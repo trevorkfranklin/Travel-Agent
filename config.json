@@ -22,7 +22,7 @@
     "BZN": "Bozeman", "CHS": "Charleston", "COS": "Colorado Springs", "DEN": "Denver",
     "ECP": "Panama City Beach", "EWR": "Newark", "FCA": "Kalispell/Glacier Park",
     "FLL": "Fort Lauderdale", "JAC": "Jackson Hole", "LAX": "Los Angeles", "MCO": "Orlando",
-    "MIA": "Miami", "MSY": "New Orleans", "MYR": "Myrtle Beach", "ORD": "Chicago",
+    "MIA": "Miami", "MSY": "New Orleans", "MYR": "Myrtle Beach", "ORD": "Chicago (O'Hare)",
     "PDX": "Portland, OR", "PHX": "Phoenix", "PNS": "Pensacola", "PSP": "Palm Springs",
     "PWM": "Portland, ME", "RNO": "Reno", "RSW": "Fort Myers", "SAN": "San Diego",
     "SAV": "Savannah", "SEA": "Seattle", "SFO": "San Francisco", "SJU": "San Juan",
@@ -30,6 +30,10 @@
     "TPA": "Tampa", "VPS": "Destin/Fort Walton Beach",
     "CUN": "Cancún", "SJD": "Los Cabos", "PVR": "Puerto Vallarta", "CZM": "Cozumel",
     "MEX": "Mexico City", "SJO": "San José, Costa Rica", "NAS": "Nassau", "PUJ": "Punta Cana",
-    "MBJ": "Montego Bay"
+    "MBJ": "Montego Bay",
+    "JFK": "New York (JFK)", "LGA": "New York (LaGuardia)",
+    "BUR": "Burbank", "LGB": "Long Beach", "ONT": "Ontario, CA", "SNA": "Orange County, CA",
+    "MDW": "Chicago (Midway)",
+    "OAK": "Oakland", "SJC": "San Jose"
   }
 }
