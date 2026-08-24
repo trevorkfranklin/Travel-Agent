@@ -16,5 +16,20 @@
   "email_send_method": "Gmail REST API over HTTPS (gmail.googleapis.com), authenticated via OAuth refresh token scoped only to gmail.send for tkfred02ram@gmail.com. Uses GMAIL_OAUTH_CLIENT_ID, GMAIL_OAUTH_CLIENT_SECRET, GMAIL_OAUTH_REFRESH_TOKEN env vars (see AGENT_PROMPT.md step 8b). Chosen over SMTP because this sandbox's network policy blocks port 587 entirely; chosen over third-party ESPs (Resend/SendGrid/Brevo) because they require an owned+authenticated domain to deliver reliably to Gmail/Yahoo/Microsoft, which this account doesn't have. The Gmail MCP connector has no send capability at all, only draft creation.",
   "gmail_oauth_issued_at": "2026-08-24",
   "gmail_oauth_token_lifetime_days": 7,
-  "gmail_oauth_reminder_note": "The OAuth consent screen is in Google's 'Testing' publishing status (unverified app), so refresh tokens expire exactly 7 days after issuance — no way around this short of buying a domain and completing Google's full app verification, which Trevor opted not to do. See AGENT_PROMPT.md step 1b for the proactive reminder-email logic that warns before each expiry. When Trevor re-authorizes (re-running the local OAuth flow and updating GMAIL_OAUTH_REFRESH_TOKEN in the cloud environment), update gmail_oauth_issued_at to that day's date."
+  "gmail_oauth_reminder_note": "The OAuth consent screen is in Google's 'Testing' publishing status (unverified app), so refresh tokens expire exactly 7 days after issuance — no way around this short of buying a domain and completing Google's full app verification, which Trevor opted not to do. See AGENT_PROMPT.md step 1b for the proactive reminder-email logic that warns before each expiry. When Trevor re-authorizes (re-running the local OAuth flow and updating GMAIL_OAUTH_REFRESH_TOKEN in the cloud environment), update gmail_oauth_issued_at to that day's date.",
+  "destination_city_names": {
+    "ABQ": "Albuquerque", "ATL": "Atlanta", "BNA": "Nashville", "BTV": "Burlington",
+    "BZN": "Bozeman", "CHS": "Charleston", "COS": "Colorado Springs", "DEN": "Denver",
+    "ECP": "Panama City Beach", "EWR": "Newark", "FCA": "Kalispell/Glacier Park",
+    "FLL": "Fort Lauderdale", "JAC": "Jackson Hole", "LAX": "Los Angeles", "MCO": "Orlando",
+    "MIA": "Miami", "MSY": "New Orleans", "MYR": "Myrtle Beach", "ORD": "Chicago",
+    "PDX": "Portland, OR", "PHX": "Phoenix", "PNS": "Pensacola", "PSP": "Palm Springs",
+    "PWM": "Portland, ME", "RNO": "Reno", "RSW": "Fort Myers", "SAN": "San Diego",
+    "SAV": "Savannah", "SEA": "Seattle", "SFO": "San Francisco", "SJU": "San Juan",
+    "SLC": "Salt Lake City", "SRQ": "Sarasota", "TUS": "Tucson", "TVC": "Traverse City",
+    "TPA": "Tampa", "VPS": "Destin/Fort Walton Beach",
+    "CUN": "Cancún", "SJD": "Los Cabos", "PVR": "Puerto Vallarta", "CZM": "Cozumel",
+    "MEX": "Mexico City", "SJO": "San José, Costa Rica", "NAS": "Nassau", "PUJ": "Punta Cana",
+    "MBJ": "Montego Bay"
+  }
 }

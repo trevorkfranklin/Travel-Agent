@@ -142,6 +142,12 @@ all three before doing anything else:
       **Origin** | **Heads up** (only if that weekend has a possible-conflict note from step 5,
       otherwise leave blank).
 
+      Show the destination as its **city name**, not the airport code — look it up in
+      `destination_city_names` in config.json (e.g. `CUN` → "Cancún", `PDX` → "Portland, OR").
+      If a destination code isn't in that map (shouldn't normally happen since it only covers the
+      92 seeded routes, but could for a WebSearch-fallback destination), fall back to showing the
+      raw airport code rather than guessing a city name.
+
       Compute each deal's discount percent vs. its baseline (already calculated in step 6d) and
       color the row's left border and a small tier label by tier:
       - 20–29% below baseline → **Good deal** → `#fff3cd` background / `#856404` text (amber)
@@ -155,14 +161,16 @@ all three before doing anything else:
       swatches (inline-styled `<span>` blocks), e.g.:
       `🟡 Good (20-29% off)  🟢 Great (30-49% off)  🟩 Exceptional (50%+ off)`
 
-      Link each destination cell's text to a Google Flights search for that exact route/dates:
-      `https://www.google.com/travel/flights?q=Flights%20to%20{destination}%20from%20{origin}%20on%20{depart_date}%20through%20{return_date}`
+      Link each destination cell's text (the city name) to a Google Flights search for that exact
+      route/dates — use the airport CODE in the URL itself (city names aren't reliable airport
+      search terms), but the visible link text stays the city name:
+      `https://www.google.com/travel/flights?q=Flights%20to%20{destination_code}%20from%20{origin}%20on%20{depart_date}%20through%20{return_date}`
       (URL-encode the airport codes and dates; Google Flights' `q` param accepts this natural
       -language form reliably enough for a deep link — it doesn't need to be exact, just get
       Trevor looking at the right route and dates).
 
       Also include a brief plain-text summary line per deal in an `alt` fallback paragraph before
-      the table (some webmail clients render HTML oddly) — e.g. "CUN from HOU, $310 (28% below
+      the table (some webmail clients render HTML oddly) — e.g. "Cancún from HOU, $310 (28% below
       typical) — Sep 26-27".
    b. Send it via the Gmail REST API over HTTPS (NOT SMTP — this sandbox's network policy
       blocks port 587 entirely; the Gmail MCP connector also has no send capability, only draft
