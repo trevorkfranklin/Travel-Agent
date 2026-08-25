@@ -478,5 +478,65 @@
     "discount_pct": 22.6,
     "tier": "Good deal",
     "first_seen": "2026-08-24"
+  },
+  {
+    "key": "IAH-ATL-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "ATL",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 223,
+    "baseline": 285.0,
+    "discount_pct": 21.8,
+    "tier": "Good deal",
+    "first_seen": "2026-08-25"
+  },
+  {
+    "key": "IAH-FLL-2026-10-23-2026-10-25",
+    "origin": "IAH",
+    "destination": "FLL",
+    "depart_date": "2026-10-23",
+    "return_date": "2026-10-25",
+    "price": 175,
+    "baseline": 229.0,
+    "discount_pct": 23.6,
+    "tier": "Good deal",
+    "first_seen": "2026-08-25"
+  },
+  {
+    "key": "IAH-LAX-2026-08-28-2026-08-30",
+    "origin": "IAH",
+    "destination": "LAX",
+    "depart_date": "2026-08-28",
+    "return_date": "2026-08-30",
+    "price": 400,
+    "baseline": 546.0,
+    "discount_pct": 26.7,
+    "tier": "Good deal",
+    "first_seen": "2026-08-25"
+  },
+  {
+    "key": "IAH-MEX-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "MEX",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 301,
+    "baseline": 501.0,
+    "discount_pct": 39.9,
+    "tier": "Great deal",
+    "first_seen": "2026-08-25"
+  },
+  {
+    "key": "IAH-SAN-2026-08-28-2026-08-30",
+    "origin": "IAH",
+    "destination": "SAN",
+    "depart_date": "2026-08-28",
+    "return_date": "2026-08-30",
+    "price": 400,
+    "baseline": 535.5,
+    "discount_pct": 25.3,
+    "tier": "Good deal",
+    "first_seen": "2026-08-25"
   }
 ]
