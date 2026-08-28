@@ -562,5 +562,101 @@
     "discount_pct": 21.0,
     "tier": "Good deal",
     "first_seen": "2026-08-27"
+  },
+  {
+    "key": "HOU-SJO-2026-10-09-2026-10-11",
+    "origin": "HOU",
+    "destination": "SJO",
+    "depart_date": "2026-10-09",
+    "return_date": "2026-10-11",
+    "price": 469,
+    "baseline": 618,
+    "discount_pct": 24.1,
+    "tier": "Good deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-BZN-2026-09-11-2026-09-13",
+    "origin": "IAH",
+    "destination": "BZN",
+    "depart_date": "2026-09-11",
+    "return_date": "2026-09-13",
+    "price": 564,
+    "baseline": 725,
+    "discount_pct": 22.2,
+    "tier": "Good deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-CUN-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "CUN",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 320,
+    "baseline": 408,
+    "discount_pct": 21.6,
+    "tier": "Good deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-LGB-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "LGB",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 360,
+    "baseline": 570,
+    "discount_pct": 36.8,
+    "tier": "Great deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-MCO-2026-09-25-2026-09-27",
+    "origin": "IAH",
+    "destination": "MCO",
+    "depart_date": "2026-09-25",
+    "return_date": "2026-09-27",
+    "price": 222,
+    "baseline": 329,
+    "discount_pct": 32.5,
+    "tier": "Great deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-MDW-2026-09-25-2026-09-27",
+    "origin": "IAH",
+    "destination": "MDW",
+    "depart_date": "2026-09-25",
+    "return_date": "2026-09-27",
+    "price": 869,
+    "baseline": 1149,
+    "discount_pct": 24.4,
+    "tier": "Good deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-ONT-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "ONT",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 373,
+    "baseline": 506,
+    "discount_pct": 26.3,
+    "tier": "Good deal",
+    "first_seen": "2026-08-28"
+  },
+  {
+    "key": "IAH-SJO-2026-10-09-2026-10-11",
+    "origin": "IAH",
+    "destination": "SJO",
+    "depart_date": "2026-10-09",
+    "return_date": "2026-10-11",
+    "price": 469,
+    "baseline": 598,
+    "discount_pct": 21.6,
+    "tier": "Good deal",
+    "first_seen": "2026-08-28"
   }
 ]
