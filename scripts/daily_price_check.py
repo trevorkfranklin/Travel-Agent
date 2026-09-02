@@ -11,16 +11,16 @@ from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
 REPO = "/home/user/Travel-Agent"
 PRICE_HISTORY_PATH = f"{REPO}/state/price_history.json"
-TODAY = "2026-08-27"
+TODAY = "2026-09-02"
 
 WEEKENDS = [
-    ("2026-08-28", "2026-08-30"),
     ("2026-09-11", "2026-09-13"),
     ("2026-09-25", "2026-09-27"),
     ("2026-10-09", "2026-10-11"),
     ("2026-10-23", "2026-10-25"),
     ("2026-11-13", "2026-11-15"),
     ("2026-11-20", "2026-11-22"),
+    ("2026-11-27", "2026-11-29"),
 ]
 
 DEAL_THRESHOLD_PCT = 20
