@@ -11,8 +11,11 @@ from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
 REPO = "/home/user/Travel-Agent"
 PRICE_HISTORY_PATH = f"{REPO}/state/price_history.json"
-TODAY = "2026-09-05"
+TODAY = "2026-09-11"
 
+# Available weekends per today's calendar check (kids_event_keyword "Kids" on the
+# "Finn and Fallon" calendar excludes 9/19-20, 10/3-4, 10/17-18, 10/31-11/1, 11/7-8,
+# 12/5-6 and beyond within the 3-month lookahead).
 WEEKENDS = [
     ("2026-09-11", "2026-09-13"),
     ("2026-09-25", "2026-09-27"),
@@ -71,9 +74,14 @@ def main():
     routes = data["routes"]
     route_keys = sorted(routes.keys())
 
-    pairs = [(rk, w) for rk in route_keys for w in WEEKENDS]
+    all_pairs = [(rk, w) for rk in route_keys for w in WEEKENDS]
+    total_all = len(all_pairs)
+
+    start_idx = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+    end_idx = int(sys.argv[2]) if len(sys.argv) > 2 else total_all
+    pairs = all_pairs[start_idx:end_idx]
     total = len(pairs)
-    print(f"Total pairs to check: {total}", flush=True)
+    print(f"Total pairs overall: {total_all}; this chunk: [{start_idx}:{end_idx}] = {total} pairs", flush=True)
 
     consecutive_errors = 0
     checked = 0
