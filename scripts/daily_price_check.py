@@ -11,12 +11,12 @@ from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
 REPO = "/home/user/Travel-Agent"
 PRICE_HISTORY_PATH = f"{REPO}/state/price_history.json"
-TODAY = "2026-09-12"
+TODAY = "2026-09-13"
 
 # Available weekends per today's calendar check (kids_event_keyword "Kids" on the
 # "Finn and Fallon" calendar excludes 9/19-20, 10/3-4, 10/17-18, 10/31-11/1, 11/7-8,
-# 12/5-6 within the 3-month lookahead; 9/12-13 dropped since its Friday departure
-# (9/11) is already in the past; 12/12-13 newly in-window with valid Friday 12/11 departure).
+# 12/5-6 within the 3-month lookahead). Same 7 weekends as yesterday's run (window
+# shifted by 1 day, no change to which Fri-Sun spans are in range).
 WEEKENDS = [
     ("2026-09-25", "2026-09-27"),
     ("2026-10-09", "2026-10-11"),
@@ -91,8 +91,8 @@ def main():
     stopped_early = False
 
     log_path = f"{REPO}/scripts/price_check_progress.log"
-    with open(log_path, "w") as logf:
-        logf.write(f"start {datetime.datetime.now().isoformat()} total={total}\n")
+    with open(log_path, "a") as logf:
+        logf.write(f"start {datetime.datetime.now().isoformat()} chunk=[{start_idx}:{end_idx}] total={total}\n")
         logf.flush()
 
         for i, (route_key, (depart_date, return_date)) in enumerate(pairs):
@@ -105,10 +105,10 @@ def main():
             except Exception as e:
                 errored += 1
                 consecutive_errors += 1
-                logf.write(f"[{i+1}/{total}] ERROR {route_key} {depart_date}/{return_date}: {e}\n")
+                logf.write(f"[{start_idx+i+1}/{total_all}] ERROR {route_key} {depart_date}/{return_date}: {e}\n")
                 logf.flush()
                 if consecutive_errors >= 8:
-                    logf.write(f"STOPPING EARLY: {consecutive_errors} consecutive errors at pair {i+1}/{total}\n")
+                    logf.write(f"STOPPING EARLY: {consecutive_errors} consecutive errors at pair {start_idx+i+1}/{total_all}\n")
                     logf.flush()
                     stopped_early = True
                     break
@@ -149,9 +149,9 @@ def main():
                     "discount_pct": discount_pct,
                     "tier": tier,
                 })
-                logf.write(f"[{i+1}/{total}] DEAL {route_key} {depart_date}/{return_date} ${price} vs baseline ${baseline} ({discount_pct}% off, {baseline_source}) -> {tier}\n")
+                logf.write(f"[{start_idx+i+1}/{total_all}] DEAL {route_key} {depart_date}/{return_date} ${price} vs baseline ${baseline} ({discount_pct}% off, {baseline_source}) -> {tier}\n")
             else:
-                logf.write(f"[{i+1}/{total}] ok {route_key} {depart_date}/{return_date} ${price} baseline={baseline} ({baseline_source}) discount={discount_pct}\n")
+                logf.write(f"[{start_idx+i+1}/{total_all}] ok {route_key} {depart_date}/{return_date} ${price} baseline={baseline} ({baseline_source}) discount={discount_pct}\n")
             logf.flush()
 
             if (i + 1) % 10 == 0:
@@ -162,13 +162,25 @@ def main():
     save_history(data)
 
     summary = {
-        "total_pairs": total,
+        "chunk": [start_idx, end_idx],
+        "total_pairs_overall": total_all,
+        "total_pairs_chunk": total,
         "checked": checked,
         "errored": errored,
         "stopped_early": stopped_early,
         "deals": deals,
     }
-    with open(f"{REPO}/scripts/price_check_summary.json", "w") as f:
+    prior_summary_path = f"{REPO}/scripts/price_check_summary.json"
+    all_deals = list(deals)
+    if os.path.exists(prior_summary_path):
+        try:
+            with open(prior_summary_path) as f:
+                prior = json.load(f)
+            all_deals = prior.get("deals", []) + deals
+        except Exception:
+            pass
+    summary["deals"] = all_deals
+    with open(prior_summary_path, "w") as f:
         json.dump(summary, f, indent=2)
     print(json.dumps(summary, indent=2))
 
