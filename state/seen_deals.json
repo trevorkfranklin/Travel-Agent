@@ -1039,5 +1039,83 @@
     "tier": "Good deal",
     "first_seen": "2026-09-15",
     "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "HOU-MBJ-2026-12-11-2026-12-13",
+    "origin": "HOU",
+    "destination": "MBJ",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 442,
+    "baseline": 577.0,
+    "discount_pct": 23.4,
+    "tier": "Good deal",
+    "first_seen": "2026-09-16",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-CHS-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "CHS",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 473,
+    "baseline": 628.0,
+    "discount_pct": 24.7,
+    "tier": "Good deal",
+    "first_seen": "2026-09-16",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-SEA-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "SEA",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 278,
+    "baseline": 378.0,
+    "discount_pct": 26.5,
+    "tier": "Good deal",
+    "first_seen": "2026-09-16",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-SJC-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "SJC",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 338,
+    "baseline": 439,
+    "discount_pct": 23.0,
+    "tier": "Good deal",
+    "first_seen": "2026-09-16",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-TPA-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "TPA",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 216,
+    "baseline": 289,
+    "discount_pct": 25.3,
+    "tier": "Good deal",
+    "first_seen": "2026-09-16",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-VPS-2026-10-23-2026-10-25",
+    "origin": "IAH",
+    "destination": "VPS",
+    "depart_date": "2026-10-23",
+    "return_date": "2026-10-25",
+    "price": 402,
+    "baseline": 520,
+    "discount_pct": 22.7,
+    "tier": "Good deal",
+    "first_seen": "2026-09-16",
+    "alerted_via": "push_notification_gmail_oauth_expired"
   }
 ]
