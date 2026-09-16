@@ -11,11 +11,11 @@ from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
 REPO = "/home/user/Travel-Agent"
 PRICE_HISTORY_PATH = f"{REPO}/state/price_history.json"
-TODAY = "2026-09-15"
+TODAY = "2026-09-16"
 
 # Available weekends per today's calendar check (kids_event_keyword "Kids" on the
-# "Finn and Fallon" calendar excludes 9/19-20, 10/3-4, 10/17-18, 10/31-11/1, 11/7-8,
-# 12/5-6 within the 3-month lookahead). Same 7 weekends as yesterday's run (window
+# "Finn and Fallon" calendar excludes 9/18-20, 10/2-4, 10/16-18, 10/30-11/1, 11/6-8,
+# 12/4-6 within the 3-month lookahead). Same 7 weekends as yesterday's run (window
 # shifted by 1 day, no change to which Fri-Sun spans are in range).
 WEEKENDS = [
     ("2026-09-25", "2026-09-27"),
