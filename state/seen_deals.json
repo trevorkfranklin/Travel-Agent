@@ -1565,5 +1565,31 @@
     "tier": "Good deal",
     "first_seen": "2026-09-21",
     "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-MIA-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "MIA",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 150,
+    "baseline": 279,
+    "discount_pct": 46.2,
+    "tier": "Great deal",
+    "first_seen": "2026-09-22",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-SNA-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "SNA",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 259,
+    "baseline": 335,
+    "discount_pct": 22.7,
+    "tier": "Good deal",
+    "first_seen": "2026-09-22",
+    "alerted_via": "push_notification_gmail_oauth_expired"
   }
 ]
