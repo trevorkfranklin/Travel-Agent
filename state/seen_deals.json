@@ -1687,5 +1687,31 @@
     "discount_pct": 27.7,
     "tier": "Good deal",
     "first_seen": "2026-09-24"
+  },
+  {
+    "key": "IAH-MDW-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "MDW",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 480,
+    "baseline": 964.0,
+    "discount_pct": 50.2,
+    "tier": "Exceptional deal",
+    "first_seen": "2026-09-25",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-SJU-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "SJU",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 307,
+    "baseline": 396.0,
+    "discount_pct": 22.5,
+    "tier": "Good deal",
+    "first_seen": "2026-09-25",
+    "alerted_via": "push_notification_gmail_oauth_expired"
   }
 ]
