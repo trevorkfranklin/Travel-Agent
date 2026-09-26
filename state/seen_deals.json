@@ -1713,5 +1713,77 @@
     "tier": "Good deal",
     "first_seen": "2026-09-25",
     "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "HOU-MIA-2026-11-13-2026-11-15",
+    "origin": "HOU",
+    "destination": "MIA",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 269,
+    "baseline": 347,
+    "discount_pct": 22.5,
+    "tier": "Good deal",
+    "first_seen": "2026-09-26"
+  },
+  {
+    "key": "IAH-DEN-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "DEN",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 185,
+    "baseline": 287,
+    "discount_pct": 35.5,
+    "tier": "Great deal",
+    "first_seen": "2026-09-26"
+  },
+  {
+    "key": "IAH-FLL-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "FLL",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 248,
+    "baseline": 414.0,
+    "discount_pct": 40.1,
+    "tier": "Great deal",
+    "first_seen": "2026-09-26"
+  },
+  {
+    "key": "IAH-PHX-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "PHX",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 261,
+    "baseline": 354,
+    "discount_pct": 26.3,
+    "tier": "Good deal",
+    "first_seen": "2026-09-26"
+  },
+  {
+    "key": "IAH-TPA-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "TPA",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 179,
+    "baseline": 233,
+    "discount_pct": 23.2,
+    "tier": "Good deal",
+    "first_seen": "2026-09-26"
+  },
+  {
+    "key": "HOU-JFK-2026-10-23-2026-10-25",
+    "origin": "HOU",
+    "destination": "JFK",
+    "depart_date": "2026-10-23",
+    "return_date": "2026-10-25",
+    "price": 414,
+    "baseline": 578.0,
+    "discount_pct": 28.4,
+    "tier": "Good deal",
+    "first_seen": "2026-09-26"
   }
 ]
