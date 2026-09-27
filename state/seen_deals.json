@@ -1785,5 +1785,44 @@
     "discount_pct": 28.4,
     "tier": "Good deal",
     "first_seen": "2026-09-26"
+  },
+  {
+    "key": "HOU-JFK-2026-11-27-2026-11-29",
+    "origin": "HOU",
+    "destination": "JFK",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 870,
+    "baseline": 1106.0,
+    "discount_pct": 21.3,
+    "tier": "Good deal",
+    "first_seen": "2026-09-27",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "HOU-MIA-2026-12-11-2026-12-13",
+    "origin": "HOU",
+    "destination": "MIA",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 262,
+    "baseline": 332,
+    "discount_pct": 21.1,
+    "tier": "Good deal",
+    "first_seen": "2026-09-27",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-MEX-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "MEX",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 339,
+    "baseline": 519,
+    "discount_pct": 34.7,
+    "tier": "Great deal",
+    "first_seen": "2026-09-27",
+    "alerted_via": "push_notification_gmail_oauth_expired"
   }
 ]
