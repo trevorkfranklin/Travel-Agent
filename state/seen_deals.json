@@ -1824,5 +1824,44 @@
     "tier": "Great deal",
     "first_seen": "2026-09-27",
     "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-DEN-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "DEN",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 221,
+    "baseline": 348.0,
+    "discount_pct": 36.5,
+    "tier": "Great deal",
+    "first_seen": "2026-09-28",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-MSY-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "MSY",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 179,
+    "baseline": 228.5,
+    "discount_pct": 21.7,
+    "tier": "Good deal",
+    "first_seen": "2026-09-28",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-MDW-2026-11-13-2026-11-15",
+    "origin": "IAH",
+    "destination": "MDW",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 492,
+    "baseline": 616,
+    "discount_pct": 20.1,
+    "tier": "Good deal",
+    "first_seen": "2026-09-28",
+    "alerted_via": "push_notification_gmail_oauth_expired"
   }
 ]
