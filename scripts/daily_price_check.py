@@ -1,24 +1,14 @@
-import json
-import os
-import random
-import statistics
-import time
-import sys
-import datetime
-
-sys.path.insert(0, "/usr/local/lib/python3.11/dist-packages")
-from fast_flights import FlightQuery, Passengers, create_query, get_flights
+import json, os, random, statistics, subprocess, sys, time
+from datetime import date
 
 REPO = "/home/user/Travel-Agent"
-PRICE_HISTORY_PATH = f"{REPO}/state/price_history.json"
-TODAY = "2026-09-22"
+PH_PATH = f"{REPO}/state/price_history.json"
+SEEN_PATH = f"{REPO}/state/seen_deals.json"
+CONFIG_PATH = f"{REPO}/config.json"
+TODAY = "2026-10-01"
+DEAL_THRESHOLD_PCT = 20
 
-# Available weekends per today's calendar check (kids_event_keyword "Kids" on the
-# "Finn and Fallon" calendar excludes 10/3-4, 10/17-18, 10/31-11/1, 11/7-8, 12/5-6,
-# 12/19-20 within the 3-month lookahead, 2026-09-22 through 2026-12-22). Same 7
-# weekends as recent runs (custody pattern is stable week to week).
-WEEKENDS = [
-    ("2026-09-25", "2026-09-27"),
+AVAILABLE_WEEKENDS = [
     ("2026-10-09", "2026-10-11"),
     ("2026-10-23", "2026-10-25"),
     ("2026-11-13", "2026-11-15"),
@@ -27,162 +17,150 @@ WEEKENDS = [
     ("2026-12-11", "2026-12-13"),
 ]
 
-DEAL_THRESHOLD_PCT = 20
+os.environ.pop("https_proxy", None)
+os.environ.pop("HTTPS_PROXY", None)
+os.environ.pop("http_proxy", None)
+os.environ.pop("HTTP_PROXY", None)
+
+from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
 
-def load_history():
-    with open(PRICE_HISTORY_PATH) as f:
+def load(path):
+    with open(path) as f:
         return json.load(f)
 
 
-def save_history(data):
-    tmp = PRICE_HISTORY_PATH + ".tmp"
+def save(path, data):
+    tmp = path + ".tmp"
     with open(tmp, "w") as f:
         json.dump(data, f, indent=2)
-    os.replace(tmp, PRICE_HISTORY_PATH)
+    os.replace(tmp, path)
 
 
-def get_baseline(route_entry, depart_date, return_date):
-    obs = [
-        o for o in route_entry.get("observations", [])
-        if o["depart_date"] == depart_date and o["return_date"] == return_date
-    ]
-    if len(obs) >= 3:
-        return statistics.median(o["price"] for o in obs), "observation_median"
-    low = route_entry.get("seeded_typical_price_range", [None, None])[0]
-    return low, "seeded_low"
+def git_commit(message):
+    subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True)
+    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
+    if result.returncode == 0:
+        return  # nothing staged
+    subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True)
 
 
-def check_price(origin, destination, depart_date, return_date):
+def query_price(origin, dest, depart, ret):
     q = create_query(
         flights=[
-            FlightQuery(date=depart_date, from_airport=origin, to_airport=destination),
-            FlightQuery(date=return_date, from_airport=destination, to_airport=origin),
+            FlightQuery(date=depart, from_airport=origin, to_airport=dest),
+            FlightQuery(date=ret, from_airport=dest, to_airport=origin),
         ],
-        trip="round-trip",
-        seat="economy",
+        trip="round-trip", seat="economy",
         passengers=Passengers(adults=1, children=0, infants_in_seat=0, infants_on_lap=0),
     )
     result = get_flights(q)
-    prices = [f.price for f in result if getattr(f, "price", None)]
-    if not prices:
-        raise ValueError("no prices returned")
-    return min(prices)
+    return min(f.price for f in result)
+
+
+def tier_for(discount_pct):
+    if discount_pct >= 50:
+        return "Exceptional deal"
+    if discount_pct >= 30:
+        return "Great deal"
+    if discount_pct >= 20:
+        return "Good deal"
+    return None
 
 
 def main():
-    data = load_history()
-    routes = data["routes"]
-    route_keys = sorted(routes.keys())
+    ph = load(PH_PATH)
+    routes = ph["routes"]
+    seen = load(SEEN_PATH)
+    seen_keys = {d["key"] for d in seen}
 
-    all_pairs = [(rk, w) for rk in route_keys for w in WEEKENDS]
-    total_all = len(all_pairs)
+    pairs = []
+    for route_key, route in routes.items():
+        origin = route["origin"]
+        dest = route["destination"]
+        for depart, ret in AVAILABLE_WEEKENDS:
+            has_obs = any(
+                o.get("depart_date") == depart and o.get("return_date") == ret
+                for o in route.get("observations", [])
+            )
+            pairs.append((route_key, origin, dest, depart, ret, has_obs))
 
-    start_idx = int(sys.argv[1]) if len(sys.argv) > 1 else 0
-    end_idx = int(sys.argv[2]) if len(sys.argv) > 2 else total_all
-    pairs = all_pairs[start_idx:end_idx]
+    # prioritize never-checked pairs first (shouldn't matter much since we aim for full coverage)
+    pairs.sort(key=lambda p: p[5])
+
     total = len(pairs)
-    print(f"Total pairs overall: {total_all}; this chunk: [{start_idx}:{end_idx}] = {total} pairs", flush=True)
-
+    ok_count = 0
+    err_count = 0
     consecutive_errors = 0
-    checked = 0
-    errored = 0
-    deals = []
-    stopped_early = False
+    new_deals = []
+    log_lines = []
 
-    log_path = f"{REPO}/scripts/price_check_progress.log"
-    with open(log_path, "a") as logf:
-        logf.write(f"start {datetime.datetime.now().isoformat()} chunk=[{start_idx}:{end_idx}] total={total}\n")
-        logf.flush()
+    for i, (route_key, origin, dest, depart, ret, has_obs) in enumerate(pairs, 1):
+        try:
+            price = query_price(origin, dest, depart, ret)
+            ok_count += 1
+            consecutive_errors = 0
 
-        for i, (route_key, (depart_date, return_date)) in enumerate(pairs):
-            origin, destination = route_key.split("-")
-            route_entry = routes[route_key]
+            route = routes[route_key]
+            obs_list = route.setdefault("observations", [])
+            same_pair_obs = [
+                o["price"] for o in obs_list
+                if o.get("depart_date") == depart and o.get("return_date") == ret
+            ]
+            obs_list.append({
+                "date": TODAY, "depart_date": depart, "return_date": ret,
+                "price": price, "source": "fast_flights_daily",
+            })
 
-            try:
-                price = check_price(origin, destination, depart_date, return_date)
-                consecutive_errors = 0
-            except Exception as e:
-                errored += 1
-                consecutive_errors += 1
-                logf.write(f"[{start_idx+i+1}/{total_all}] ERROR {route_key} {depart_date}/{return_date}: {e}\n")
-                logf.flush()
-                if consecutive_errors >= 8:
-                    logf.write(f"STOPPING EARLY: {consecutive_errors} consecutive errors at pair {start_idx+i+1}/{total_all}\n")
-                    logf.flush()
-                    stopped_early = True
-                    break
-                time.sleep(3)
-                continue
+            if len(same_pair_obs) >= 3:
+                baseline = statistics.median(same_pair_obs)
+            else:
+                baseline = route.get("seeded_typical_price_range", [None, None])[0]
 
-            checked += 1
-            baseline, baseline_source = get_baseline(route_entry, depart_date, return_date)
-
-            obs_entry = {
-                "date": TODAY,
-                "depart_date": depart_date,
-                "return_date": return_date,
-                "price": price,
-                "source": "fast_flights_daily",
-            }
-            route_entry.setdefault("observations", []).append(obs_entry)
-
-            discount_pct = None
             if baseline:
                 discount_pct = round((baseline - price) / baseline * 100, 1)
+                tier = tier_for(discount_pct)
+                if tier:
+                    key = f"{origin}-{dest}-{depart}-{ret}"
+                    if key not in seen_keys:
+                        new_deals.append({
+                            "key": key, "origin": origin, "destination": dest,
+                            "depart_date": depart, "return_date": ret,
+                            "price": price, "baseline": baseline,
+                            "discount_pct": discount_pct, "tier": tier,
+                            "first_seen": TODAY,
+                        })
+                        seen_keys.add(key)
+            log_lines.append(f"OK {route_key} {depart}->{ret} ${price}")
+        except Exception as e:
+            err_count += 1
+            consecutive_errors += 1
+            log_lines.append(f"ERR {route_key} {depart}->{ret} {e!r}")
 
-            is_deal = discount_pct is not None and discount_pct >= DEAL_THRESHOLD_PCT
-            if is_deal:
-                tier = (
-                    "Exceptional deal" if discount_pct >= 50 else
-                    "Great deal" if discount_pct >= 30 else
-                    "Good deal"
-                )
-                deals.append({
-                    "origin": origin,
-                    "destination": destination,
-                    "depart_date": depart_date,
-                    "return_date": return_date,
-                    "price": price,
-                    "baseline": baseline,
-                    "baseline_source": baseline_source,
-                    "discount_pct": discount_pct,
-                    "tier": tier,
-                })
-                logf.write(f"[{start_idx+i+1}/{total_all}] DEAL {route_key} {depart_date}/{return_date} ${price} vs baseline ${baseline} ({discount_pct}% off, {baseline_source}) -> {tier}\n")
-            else:
-                logf.write(f"[{start_idx+i+1}/{total_all}] ok {route_key} {depart_date}/{return_date} ${price} baseline={baseline} ({baseline_source}) discount={discount_pct}\n")
-            logf.flush()
+        if i % 60 == 0 or i == total:
+            save(PH_PATH, ph)
+            git_commit(f"Daily deal check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors)")
+            print(f"checkpoint {i}/{total} ok={ok_count} err={err_count} new_deals_so_far={len(new_deals)}", flush=True)
 
-            if (i + 1) % 10 == 0:
-                save_history(data)
+        if consecutive_errors >= 15:
+            print(f"ABORTING at {i}/{total}: {consecutive_errors} consecutive errors (likely rate-limited)", flush=True)
+            save(PH_PATH, ph)
+            git_commit(f"Daily deal check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors) - cut short, error clustering")
+            break
 
-            time.sleep(1.5 + random.random())
+        sleep_s = random.uniform(1.0, 2.2)
+        if consecutive_errors > 0:
+            sleep_s += min(consecutive_errors * 1.5, 15)
+        time.sleep(sleep_s)
 
-    save_history(data)
+    save(PH_PATH, ph)
 
-    summary = {
-        "chunk": [start_idx, end_idx],
-        "total_pairs_overall": total_all,
-        "total_pairs_chunk": total,
-        "checked": checked,
-        "errored": errored,
-        "stopped_early": stopped_early,
-        "deals": deals,
-    }
-    prior_summary_path = f"{REPO}/scripts/price_check_summary.json"
-    all_deals = list(deals)
-    if os.path.exists(prior_summary_path):
-        try:
-            with open(prior_summary_path) as f:
-                prior = json.load(f)
-            all_deals = prior.get("deals", []) + deals
-        except Exception:
-            pass
-    summary["deals"] = all_deals
-    with open(prior_summary_path, "w") as f:
-        json.dump(summary, f, indent=2)
-    print(json.dumps(summary, indent=2))
+    with open(f"{REPO}/scripts/new_deals_today.json", "w") as f:
+        json.dump(new_deals, f, indent=2)
+    with open(f"{REPO}/scripts/run_log.txt", "w") as f:
+        f.write("\n".join(log_lines))
+
+    print(f"DONE total={total} ok={ok_count} err={err_count} new_deals={len(new_deals)}")
 
 
 if __name__ == "__main__":
