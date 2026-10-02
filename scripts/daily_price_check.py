@@ -5,7 +5,7 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-01"
+TODAY = "2026-10-02"
 DEAL_THRESHOLD_PCT = 20
 
 AVAILABLE_WEEKENDS = [
@@ -15,6 +15,7 @@ AVAILABLE_WEEKENDS = [
     ("2026-11-20", "2026-11-22"),
     ("2026-11-27", "2026-11-29"),
     ("2026-12-11", "2026-12-13"),
+    ("2027-01-01", "2027-01-03"),
 ]
 
 os.environ.pop("https_proxy", None)
@@ -43,6 +44,12 @@ def git_commit(message):
     if result.returncode == 0:
         return  # nothing staged
     subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True)
+    for attempt in range(4):
+        r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True)
+        if r.returncode == 0:
+            return
+        time.sleep(2 ** (attempt + 1))
+    print("WARN: push failed after retries", flush=True)
 
 
 def query_price(origin, dest, depart, ret):
