@@ -2110,5 +2110,70 @@
     "tier": "Good deal",
     "first_seen": "2026-10-02",
     "alerted_via": "push_notification_gmail_credential_action_denied"
+  },
+  {
+    "key": "HOU-ECP-2026-11-27-2026-11-29",
+    "origin": "HOU",
+    "destination": "ECP",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 648,
+    "baseline": 835.0,
+    "discount_pct": 22.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-03",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "HOU-MCO-2026-11-20-2026-11-22",
+    "origin": "HOU",
+    "destination": "MCO",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 363,
+    "baseline": 467.5,
+    "discount_pct": 22.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-03",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "HOU-MIA-2026-11-20-2026-11-22",
+    "origin": "HOU",
+    "destination": "MIA",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 269,
+    "baseline": 402,
+    "discount_pct": 33.1,
+    "tier": "Great deal",
+    "first_seen": "2026-10-03",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-BZN-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "BZN",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 456,
+    "baseline": 579.0,
+    "discount_pct": 21.2,
+    "tier": "Good deal",
+    "first_seen": "2026-10-03",
+    "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "IAH-SRQ-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "SRQ",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 439,
+    "baseline": 576.0,
+    "discount_pct": 23.8,
+    "tier": "Good deal",
+    "first_seen": "2026-10-03",
+    "alerted_via": "push_notification_gmail_oauth_expired"
   }
 ]
