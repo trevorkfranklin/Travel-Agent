@@ -2175,5 +2175,41 @@
     "tier": "Good deal",
     "first_seen": "2026-10-03",
     "alerted_via": "push_notification_gmail_oauth_expired"
+  },
+  {
+    "key": "HOU-FCA-2026-11-13-2026-11-15",
+    "origin": "HOU",
+    "destination": "FCA",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 389,
+    "baseline": 489.0,
+    "discount_pct": 20.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-04"
+  },
+  {
+    "key": "HOU-ONT-2026-11-20-2026-11-22",
+    "origin": "HOU",
+    "destination": "ONT",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 391,
+    "baseline": 509,
+    "discount_pct": 23.2,
+    "tier": "Good deal",
+    "first_seen": "2026-10-04"
+  },
+  {
+    "key": "IAH-MDW-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "MDW",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 407,
+    "baseline": 549.0,
+    "discount_pct": 25.9,
+    "tier": "Good deal",
+    "first_seen": "2026-10-04"
   }
 ]
