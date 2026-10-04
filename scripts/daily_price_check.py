@@ -5,7 +5,7 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-03"
+TODAY = "2026-10-04"
 DEAL_THRESHOLD_PCT = 20
 
 AVAILABLE_WEEKENDS = [
