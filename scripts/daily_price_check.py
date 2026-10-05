@@ -1,4 +1,4 @@
-import json, os, random, statistics, subprocess, sys, time
+import contextlib, json, os, random, statistics, subprocess, sys, time
 from datetime import date
 
 REPO = "/home/user/Travel-Agent"
@@ -19,11 +19,23 @@ AVAILABLE_WEEKENDS = [
 ]
 
 PROXY_VARS = ["https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY"]
-GIT_ENV = {k: v for k, v in os.environ.items()}  # keep proxy vars for git (needs them); fast_flights does not
-for v in PROXY_VARS:
-    os.environ.pop(v, None)
 
 from fast_flights import FlightQuery, Passengers, create_query, get_flights
+
+
+@contextlib.contextmanager
+def no_proxy():
+    # fast_flights' underlying HTTP client fails through the session's agent proxy but
+    # works with a direct connection; git push, however, NEEDS the proxy to reach
+    # github.com, so only strip the proxy vars around the fast_flights call itself
+    # rather than for the whole process (doing it process-wide broke every git push).
+    saved = {v: os.environ.pop(v, None) for v in PROXY_VARS}
+    try:
+        yield
+    finally:
+        for k, val in saved.items():
+            if val is not None:
+                os.environ[k] = val
 
 
 def load(path):
@@ -39,13 +51,13 @@ def save(path, data):
 
 
 def git_commit(message):
-    subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True, env=GIT_ENV)
-    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO, env=GIT_ENV)
+    subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True)
+    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
     if result.returncode == 0:
         return  # nothing staged
-    subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True, env=GIT_ENV)
+    subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True)
     for attempt in range(4):
-        r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True, env=GIT_ENV)
+        r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True)
         if r.returncode == 0:
             return
         print(f"push attempt {attempt+1} failed: {r.stderr.strip()[-300:]}", flush=True)
@@ -62,7 +74,8 @@ def query_price(origin, dest, depart, ret):
         trip="round-trip", seat="economy",
         passengers=Passengers(adults=1, children=0, infants_in_seat=0, infants_on_lap=0),
     )
-    result = get_flights(q)
+    with no_proxy():
+        result = get_flights(q)
     return min(f.price for f in result)
 
 
