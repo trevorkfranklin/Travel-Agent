@@ -18,10 +18,10 @@ AVAILABLE_WEEKENDS = [
     ("2027-01-01", "2027-01-03"),
 ]
 
-os.environ.pop("https_proxy", None)
-os.environ.pop("HTTPS_PROXY", None)
-os.environ.pop("http_proxy", None)
-os.environ.pop("HTTP_PROXY", None)
+PROXY_VARS = ["https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY"]
+GIT_ENV = {k: v for k, v in os.environ.items()}  # keep proxy vars for git (needs them); fast_flights does not
+for v in PROXY_VARS:
+    os.environ.pop(v, None)
 
 from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
@@ -39,15 +39,16 @@ def save(path, data):
 
 
 def git_commit(message):
-    subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True)
-    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
+    subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True, env=GIT_ENV)
+    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO, env=GIT_ENV)
     if result.returncode == 0:
         return  # nothing staged
-    subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True)
+    subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True, env=GIT_ENV)
     for attempt in range(4):
-        r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True)
+        r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True, env=GIT_ENV)
         if r.returncode == 0:
             return
+        print(f"push attempt {attempt+1} failed: {r.stderr.strip()[-300:]}", flush=True)
         time.sleep(2 ** (attempt + 1))
     print("WARN: push failed after retries", flush=True)
 
@@ -82,15 +83,22 @@ def main():
     seen_keys = {d["key"] for d in seen}
 
     pairs = []
+    skipped_already_today = 0
     for route_key, route in routes.items():
         origin = route["origin"]
         dest = route["destination"]
         for depart, ret in AVAILABLE_WEEKENDS:
-            has_obs = any(
-                o.get("depart_date") == depart and o.get("return_date") == ret
-                for o in route.get("observations", [])
-            )
+            obs_for_pair = [
+                o for o in route.get("observations", [])
+                if o.get("depart_date") == depart and o.get("return_date") == ret
+            ]
+            if any(o.get("date") == TODAY for o in obs_for_pair):
+                skipped_already_today += 1
+                continue  # resume support: already checked this pair today in an earlier (killed) run
+            has_obs = len(obs_for_pair) > 0
             pairs.append((route_key, origin, dest, depart, ret, has_obs))
+    if skipped_already_today:
+        print(f"Resuming: skipping {skipped_already_today} pairs already checked today", flush=True)
 
     # prioritize never-checked pairs first (shouldn't matter much since we aim for full coverage)
     pairs.sort(key=lambda p: p[5])
