@@ -2585,5 +2585,53 @@
     "discount_pct": 36.0,
     "tier": "Great deal",
     "first_seen": "2026-10-09"
+  },
+  {
+    "key": "HOU-PNS-2026-11-27-2026-11-29",
+    "origin": "HOU",
+    "destination": "PNS",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 441,
+    "baseline": 598,
+    "discount_pct": 26.3,
+    "tier": "Good deal",
+    "first_seen": "2026-10-10"
+  },
+  {
+    "key": "IAH-OAK-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "OAK",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 440,
+    "baseline": 623.0,
+    "discount_pct": 29.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-10"
+  },
+  {
+    "key": "IAH-SJC-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "SJC",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 544,
+    "baseline": 700.0,
+    "discount_pct": 22.3,
+    "tier": "Good deal",
+    "first_seen": "2026-10-10"
+  },
+  {
+    "key": "IAH-SJC-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "SJC",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 440,
+    "baseline": 577.5,
+    "discount_pct": 23.8,
+    "tier": "Good deal",
+    "first_seen": "2026-10-10"
   }
 ]
