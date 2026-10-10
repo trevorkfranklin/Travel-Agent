@@ -5,17 +5,20 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-08"
+TODAY = "2026-10-10"
 DEAL_THRESHOLD_PCT = 20
 
+# Weekends available per calendar check on 2026-10-10 (today, Sat Oct 10, is already
+# mid-weekend with Friday departure in the past, so the first candidate is next week).
+# Unavailable weekends (Kids-event overlap): Oct17/18, Oct31/Nov1, Nov7/8, Dec5/6, Dec19/20, Dec26/27.
 AVAILABLE_WEEKENDS = [
-    ("2026-10-09", "2026-10-11"),
     ("2026-10-23", "2026-10-25"),
     ("2026-11-13", "2026-11-15"),
     ("2026-11-20", "2026-11-22"),
     ("2026-11-27", "2026-11-29"),
     ("2026-12-11", "2026-12-13"),
     ("2027-01-01", "2027-01-03"),
+    ("2027-01-08", "2027-01-10"),
 ]
 
 PROXY_VARS = ["https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY"]
@@ -25,10 +28,6 @@ from fast_flights import FlightQuery, Passengers, create_query, get_flights
 
 @contextlib.contextmanager
 def no_proxy():
-    # fast_flights' underlying HTTP client fails through the session's agent proxy but
-    # works with a direct connection; git push, however, NEEDS the proxy to reach
-    # github.com, so only strip the proxy vars around the fast_flights call itself
-    # rather than for the whole process (doing it process-wide broke every git push).
     saved = {v: os.environ.pop(v, None) for v in PROXY_VARS}
     try:
         yield
@@ -54,7 +53,7 @@ def git_commit(message):
     subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True)
     result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
     if result.returncode == 0:
-        return  # nothing staged
+        return
     subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True)
     for attempt in range(4):
         r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True)
@@ -107,13 +106,12 @@ def main():
             ]
             if any(o.get("date") == TODAY for o in obs_for_pair):
                 skipped_already_today += 1
-                continue  # resume support: already checked this pair today in an earlier (killed) run
+                continue
             has_obs = len(obs_for_pair) > 0
             pairs.append((route_key, origin, dest, depart, ret, has_obs))
     if skipped_already_today:
         print(f"Resuming: skipping {skipped_already_today} pairs already checked today", flush=True)
 
-    # prioritize never-checked pairs first (shouldn't matter much since we aim for full coverage)
     pairs.sort(key=lambda p: p[5])
 
     total = len(pairs)
