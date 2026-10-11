@@ -2633,5 +2633,41 @@
     "discount_pct": 23.8,
     "tier": "Good deal",
     "first_seen": "2026-10-10"
+  },
+  {
+    "key": "HOU-BTV-2027-01-01-2027-01-03",
+    "origin": "HOU",
+    "destination": "BTV",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 878,
+    "baseline": 1124,
+    "discount_pct": 21.9,
+    "tier": "Good deal",
+    "first_seen": "2026-10-11"
+  },
+  {
+    "key": "IAH-FCA-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "FCA",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 685,
+    "baseline": 951,
+    "discount_pct": 28.0,
+    "tier": "Good deal",
+    "first_seen": "2026-10-11"
+  },
+  {
+    "key": "IAH-MSY-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "MSY",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 227,
+    "baseline": 285,
+    "discount_pct": 20.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-11"
   }
 ]
