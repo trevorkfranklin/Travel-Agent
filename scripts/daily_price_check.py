@@ -5,12 +5,18 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-10"
+TODAY = "2026-10-12"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-10 (today, Sat Oct 10, is already
-# mid-weekend with Friday departure in the past, so the first candidate is next week).
+# Weekends available per calendar check on 2026-10-12 (all calendars incl. Finn and Fallon).
 # Unavailable weekends (Kids-event overlap): Oct17/18, Oct31/Nov1, Nov7/8, Dec5/6, Dec19/20, Dec26/27.
+# Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
+#   Oct24-25: Trevor already has a "Sleepy Hollow Trip" booked (Oct23-26, NY).
+#   Nov14-15: Texas A&M (football) vs Tennessee on Sat Nov14 (minor/TV only).
+#   Nov21-22: Texas A&M @ Oklahoma (football) on Sat Nov21 (minor/TV only).
+#   Dec12-13: Trevor already has a Cancun trip booked (Haven Riviera Cancun, Dec10-14).
+#   Jan2-3: Texas A&M (basketball) vs Auburn on Sat Jan2 (minor/TV only).
+#   Jan9-10: Texas A&M @ South Carolina (basketball) on Sat Jan9 (minor/TV only).
 AVAILABLE_WEEKENDS = [
     ("2026-10-23", "2026-10-25"),
     ("2026-11-13", "2026-11-15"),
