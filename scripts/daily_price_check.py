@@ -139,7 +139,11 @@ def main():
 
     for i, (route_key, origin, dest, depart, ret, has_obs) in enumerate(pairs, 1):
         try:
-            price = query_price(origin, dest, depart, ret)
+            try:
+                price = query_price(origin, dest, depart, ret)
+            except Exception:
+                time.sleep(3)
+                price = query_price(origin, dest, depart, ret)
             ok_count += 1
             consecutive_errors = 0
 
