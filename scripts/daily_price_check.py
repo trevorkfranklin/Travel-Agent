@@ -5,15 +5,19 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-12"
+TODAY = "2026-10-13"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-12 (all calendars incl. Finn and Fallon).
-# Unavailable weekends (Kids-event overlap): Oct17/18, Oct31/Nov1, Nov7/8, Dec5/6, Dec19/20, Dec26/27.
+# Weekends available per calendar check on 2026-10-13 (all calendars incl. Finn and Fallon).
+# Unavailable weekends (Kids-event overlap): Oct17/18 (Fri-Sun block Oct16-18), Oct31/Nov1
+# (Fri-Sun block Oct30-Nov1), Nov7/8 (Fri-Sun block Nov6-8), Dec5/6 (Fri-Sun block Dec4-6),
+# Dec19/20 and Dec26/27 (an extended Dec18-28 holiday-break block).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
-#   Oct24-25: Trevor already has a "Sleepy Hollow Trip" booked (Oct23-26, NY).
+#   Oct24-25: Trevor already has a "Sleepy Hollow Trip" booked (Oct23-26, NY); kids also have
+#     Celtics-10UG vs Jazz-10UG (Sat AM) and Patriots-10U vs Vikings (Sat PM) games this weekend.
 #   Nov14-15: Texas A&M (football) vs Tennessee on Sat Nov14 (minor/TV only).
 #   Nov21-22: Texas A&M @ Oklahoma (football) on Sat Nov21 (minor/TV only).
+#   Nov28-29: no conflicts (TAMU football/Marquette hoops games fall on Fri Nov27, outside Sat/Sun).
 #   Dec12-13: Trevor already has a Cancun trip booked (Haven Riviera Cancun, Dec10-14).
 #   Jan2-3: Texas A&M (basketball) vs Auburn on Sat Jan2 (minor/TV only).
 #   Jan9-10: Texas A&M @ South Carolina (basketball) on Sat Jan9 (minor/TV only).
@@ -55,12 +59,18 @@ def save(path, data):
     os.replace(tmp, path)
 
 
+ATTRIBUTION = (
+    "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
+    "Claude-Session: https://claude.ai/code/session_01CndfqdxpmymPkpFgwNTJcQ"
+)
+
+
 def git_commit(message):
     subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True)
     result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
     if result.returncode == 0:
         return
-    subprocess.run(["git", "commit", "-m", message], cwd=REPO, check=True)
+    subprocess.run(["git", "commit", "-m", message + ATTRIBUTION], cwd=REPO, check=True)
     for attempt in range(4):
         r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True)
         if r.returncode == 0:
