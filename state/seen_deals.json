@@ -2837,5 +2837,17 @@
     "discount_pct": 34.2,
     "tier": "Great deal",
     "first_seen": "2026-10-14"
+  },
+  {
+    "key": "IAH-OAK-2027-01-08-2027-01-10",
+    "origin": "IAH",
+    "destination": "OAK",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 240,
+    "baseline": 438,
+    "discount_pct": 45.2,
+    "tier": "Great deal",
+    "first_seen": "2026-10-14"
   }
 ]
