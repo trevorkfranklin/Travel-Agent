@@ -2849,5 +2849,17 @@
     "discount_pct": 45.2,
     "tier": "Great deal",
     "first_seen": "2026-10-14"
+  },
+  {
+    "key": "IAH-RNO-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "RNO",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 275,
+    "baseline": 359,
+    "discount_pct": 23.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-14"
   }
 ]
