@@ -2861,5 +2861,17 @@
     "discount_pct": 23.4,
     "tier": "Good deal",
     "first_seen": "2026-10-14"
+  },
+  {
+    "key": "IAH-SRQ-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "SRQ",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 513,
+    "baseline": 647,
+    "discount_pct": 20.7,
+    "tier": "Good deal",
+    "first_seen": "2026-10-14"
   }
 ]
