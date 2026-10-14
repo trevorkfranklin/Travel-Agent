@@ -2777,5 +2777,29 @@
     "discount_pct": 47.8,
     "tier": "Great deal",
     "first_seen": "2026-10-14"
+  },
+  {
+    "key": "IAH-DEN-2026-11-20-2026-11-22",
+    "origin": "IAH",
+    "destination": "DEN",
+    "depart_date": "2026-11-20",
+    "return_date": "2026-11-22",
+    "price": 226,
+    "baseline": 329,
+    "discount_pct": 31.3,
+    "tier": "Great deal",
+    "first_seen": "2026-10-14"
+  },
+  {
+    "key": "IAH-DEN-2027-01-08-2027-01-10",
+    "origin": "IAH",
+    "destination": "DEN",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 214,
+    "baseline": 319,
+    "discount_pct": 32.9,
+    "tier": "Great deal",
+    "first_seen": "2026-10-14"
   }
 ]
