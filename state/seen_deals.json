@@ -2765,5 +2765,17 @@
     "discount_pct": 30.1,
     "tier": "Great deal",
     "first_seen": "2026-10-13"
+  },
+  {
+    "key": "HOU-FCA-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "FCA",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 997,
+    "baseline": 1911,
+    "discount_pct": 47.8,
+    "tier": "Great deal",
+    "first_seen": "2026-10-14"
   }
 ]
