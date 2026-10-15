@@ -5,10 +5,13 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-13"
+TODAY = "2026-10-15"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-13 (all calendars incl. Finn and Fallon).
+# Weekends available per calendar check on 2026-10-15 (all calendars incl. Finn and Fallon).
+# Re-verified 2026-10-15: identical block/available set to 10-12/10-13 runs (no new Kids events,
+# lookahead end moved from Jan13 to Jan15 but the next weekend after Jan8-10 is Jan16-17, still
+# outside the window).
 # Unavailable weekends (Kids-event overlap): Oct17/18 (Fri-Sun block Oct16-18), Oct31/Nov1
 # (Fri-Sun block Oct30-Nov1), Nov7/8 (Fri-Sun block Nov6-8), Dec5/6 (Fri-Sun block Dec4-6),
 # Dec19/20 and Dec26/27 (an extended Dec18-28 holiday-break block).
@@ -61,7 +64,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01CndfqdxpmymPkpFgwNTJcQ"
+    "Claude-Session: https://claude.ai/code/session_01KVEqb1mJBjvHVp68Mkund3"
 )
 
 
