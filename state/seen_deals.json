@@ -3161,5 +3161,77 @@
     "discount_pct": 42.8,
     "tier": "Great deal",
     "first_seen": "2026-10-16"
+  },
+  {
+    "key": "HOU-MEX-2026-10-23-2026-10-25",
+    "origin": "HOU",
+    "destination": "MEX",
+    "depart_date": "2026-10-23",
+    "return_date": "2026-10-25",
+    "price": 834,
+    "baseline": 1146.0,
+    "discount_pct": 27.2,
+    "tier": "Good deal",
+    "first_seen": "2026-10-17"
+  },
+  {
+    "key": "HOU-LAX-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "LAX",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 287,
+    "baseline": 410.0,
+    "discount_pct": 30.0,
+    "tier": "Great deal",
+    "first_seen": "2026-10-17"
+  },
+  {
+    "key": "HOU-MCO-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "MCO",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 212,
+    "baseline": 271,
+    "discount_pct": 21.8,
+    "tier": "Good deal",
+    "first_seen": "2026-10-17"
+  },
+  {
+    "key": "HOU-SFO-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "SFO",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 307,
+    "baseline": 386.0,
+    "discount_pct": 20.5,
+    "tier": "Good deal",
+    "first_seen": "2026-10-17"
+  },
+  {
+    "key": "IAH-MCO-2027-01-08-2027-01-10",
+    "origin": "IAH",
+    "destination": "MCO",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 124,
+    "baseline": 228,
+    "discount_pct": 45.6,
+    "tier": "Great deal",
+    "first_seen": "2026-10-17"
+  },
+  {
+    "key": "IAH-PHX-2027-01-08-2027-01-10",
+    "origin": "IAH",
+    "destination": "PHX",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 237,
+    "baseline": 308.0,
+    "discount_pct": 23.1,
+    "tier": "Good deal",
+    "first_seen": "2026-10-17"
   }
 ]
