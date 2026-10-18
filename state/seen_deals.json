@@ -3233,5 +3233,41 @@
     "discount_pct": 23.1,
     "tier": "Good deal",
     "first_seen": "2026-10-17"
+  },
+  {
+    "key": "HOU-MYR-2027-01-01-2027-01-03",
+    "origin": "HOU",
+    "destination": "MYR",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 479,
+    "baseline": 614.0,
+    "discount_pct": 22.0,
+    "tier": "Good deal",
+    "first_seen": "2026-10-18"
+  },
+  {
+    "key": "HOU-PHX-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "PHX",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 247,
+    "baseline": 323.5,
+    "discount_pct": 23.6,
+    "tier": "Good deal",
+    "first_seen": "2026-10-18"
+  },
+  {
+    "key": "HOU-RNO-2026-11-27-2026-11-29",
+    "origin": "HOU",
+    "destination": "RNO",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 449,
+    "baseline": 567.5,
+    "discount_pct": 20.9,
+    "tier": "Good deal",
+    "first_seen": "2026-10-18"
   }
 ]
