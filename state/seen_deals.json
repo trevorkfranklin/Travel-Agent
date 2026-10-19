@@ -3269,5 +3269,65 @@
     "discount_pct": 20.9,
     "tier": "Good deal",
     "first_seen": "2026-10-18"
+  },
+  {
+    "key": "HOU-MIA-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "MIA",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 225,
+    "baseline": 298,
+    "discount_pct": 24.5,
+    "tier": "Good deal",
+    "first_seen": "2026-10-19"
+  },
+  {
+    "key": "HOU-RNO-2026-11-13-2026-11-15",
+    "origin": "HOU",
+    "destination": "RNO",
+    "depart_date": "2026-11-13",
+    "return_date": "2026-11-15",
+    "price": 279,
+    "baseline": 360.5,
+    "discount_pct": 22.6,
+    "tier": "Good deal",
+    "first_seen": "2026-10-19"
+  },
+  {
+    "key": "HOU-RNO-2026-12-11-2026-12-13",
+    "origin": "HOU",
+    "destination": "RNO",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 279,
+    "baseline": 379,
+    "discount_pct": 26.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-19"
+  },
+  {
+    "key": "HOU-RNO-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "RNO",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 279,
+    "baseline": 379.0,
+    "discount_pct": 26.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-19"
+  },
+  {
+    "key": "HOU-SNA-2027-01-08-2027-01-10",
+    "origin": "HOU",
+    "destination": "SNA",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 319,
+    "baseline": 399,
+    "discount_pct": 20.1,
+    "tier": "Good deal",
+    "first_seen": "2026-10-19"
   }
 ]
