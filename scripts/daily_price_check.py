@@ -5,27 +5,24 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-18"
+TODAY = "2026-10-19"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-18 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Same available set as prior runs (no new Kids events; lookahead
-# window is now today (Oct 18) through Jan 18, so Jan8-10 is still the last weekend in-window;
-# Jan16/17 falls on the far edge but Jan16 is itself a Kids day so that weekend is unavailable
-# anyway, and nothing past it is in-window).
+# Weekends available per calendar check on 2026-10-19 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Oct 19) through Jan 19, 2027.
 # Unavailable weekends (Kids-event overlap): Oct31/Nov1, Nov7/8, Dec5/6, Dec19/20, Dec26/27,
 # Jan16/17 (2027).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
-#   Oct24-25: Trevor already has a "Sleepy Hollow Trip" booked (Oct23-26, NY) plus Lantern Tour/
-#     Headless Horsemen/Jack O Lantern Blaze events; kids also have Jazz-10UG vs Celtics (Sat AM)
-#     and Patriots-10U vs Vikings (Sat PM)/Eagles (Sun) games this weekend.
-#   Nov14-15: no conflicts found this run.
-#   Nov21-22: no conflicts found this run.
+#   Oct24-25: Sleepy Hollow Trip already booked (Oct23-25, NY) plus Lantern Tour/Headless
+#     Horsemen/Jack O Lantern Blaze events; TAMU football @ Alabama (Oct24); kids' Jazz-10UG vs
+#     Celtics (Sat AM) and Patriots-10U vs Vikings (Sat PM) / Eagles (Sun) games this weekend.
+#   Nov14-15: TAMU football home game vs Tennessee (Sat Nov14).
+#   Nov21-22: TAMU football @ Oklahoma (Sat Nov21).
 #   Nov28-29: no conflicts found this run.
 #   Dec12-13: Trevor already has a Cancun trip booked (Haven Riviera Cancun, Dec10-14) covering
 #     this entire weekend.
-#   Jan2-3 (2027): no conflicts found this run.
-#   Jan9-10 (2027): no conflicts found this run.
+#   Jan2-3 (2027): TAMU basketball vs Auburn (Sat Jan2).
+#   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9).
 AVAILABLE_WEEKENDS = [
     ("2026-10-23", "2026-10-25"),
     ("2026-11-13", "2026-11-15"),
@@ -66,7 +63,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01MBfUCU7DmH8dVaeR41J5Fe"
+    "Claude-Session: https://claude.ai/code/session_01E7mEYbRLKt6U8vChMjjtzH"
 )
 
 
