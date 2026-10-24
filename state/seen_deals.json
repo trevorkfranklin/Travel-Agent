@@ -4073,5 +4073,29 @@
     "discount_pct": 27.1,
     "tier": "Good deal",
     "first_seen": "2026-10-23"
+  },
+  {
+    "key": "IAH-BNA-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "BNA",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 211,
+    "baseline": 289.0,
+    "discount_pct": 27.0,
+    "tier": "Good deal",
+    "first_seen": "2026-10-24"
+  },
+  {
+    "key": "IAH-LAX-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "LAX",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 155,
+    "baseline": 210.0,
+    "discount_pct": 26.2,
+    "tier": "Good deal",
+    "first_seen": "2026-10-24"
   }
 ]
