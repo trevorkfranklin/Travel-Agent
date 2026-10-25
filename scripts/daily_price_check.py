@@ -5,32 +5,30 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-19"
+TODAY = "2026-10-25"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-19 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Oct 19) through Jan 19, 2027.
-# Unavailable weekends (Kids-event overlap): Oct31/Nov1, Nov7/8, Dec5/6, Dec19/20, Dec26/27,
-# Jan16/17 (2027).
+# Weekends available per calendar check on 2026-10-25 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Oct 25) through Jan 25, 2027.
+# Unavailable weekends (Kids-event overlap): Oct31/Nov1 (Kids Oct30-Nov1), Nov7/8 (Kids Nov6-8),
+# Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
+# (Kids Jan15-18).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
-#   Oct24-25: Sleepy Hollow Trip already booked (Oct23-25, NY) plus Lantern Tour/Headless
-#     Horsemen/Jack O Lantern Blaze events; TAMU football @ Alabama (Oct24); kids' Jazz-10UG vs
-#     Celtics (Sat AM) and Patriots-10U vs Vikings (Sat PM) / Eagles (Sun) games this weekend.
 #   Nov14-15: TAMU football home game vs Tennessee (Sat Nov14).
 #   Nov21-22: TAMU football @ Oklahoma (Sat Nov21).
-#   Nov28-29: no conflicts found this run.
-#   Dec12-13: Trevor already has a Cancun trip booked (Haven Riviera Cancun, Dec10-14) covering
-#     this entire weekend.
+#   Nov28-29: no conflicts found this run (Thanksgiving week; kids day is Thu Nov26 only).
+#   Dec12-13: no conflicts found this run (Cancun trip, Dec10-11, ends before this weekend).
 #   Jan2-3 (2027): TAMU basketball vs Auburn (Sat Jan2).
 #   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9).
+#   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23).
 AVAILABLE_WEEKENDS = [
-    ("2026-10-23", "2026-10-25"),
     ("2026-11-13", "2026-11-15"),
     ("2026-11-20", "2026-11-22"),
     ("2026-11-27", "2026-11-29"),
     ("2026-12-11", "2026-12-13"),
     ("2027-01-01", "2027-01-03"),
     ("2027-01-08", "2027-01-10"),
+    ("2027-01-22", "2027-01-24"),
 ]
 
 PROXY_VARS = ["https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY"]
@@ -63,7 +61,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01E7mEYbRLKt6U8vChMjjtzH"
+    "Claude-Session: https://claude.ai/code/session_01Qa3Z5xpjVteMARQPnDe195"
 )
 
 
@@ -169,8 +167,28 @@ def main():
                 discount_pct = round((baseline - price) / baseline * 100, 1)
                 tier = tier_for(discount_pct)
                 if tier:
+                    seeded_low = route.get("seeded_typical_price_range", [None, None])[0]
+                    # Scraper-artifact guard (see config.json observation_baseline_quality_note):
+                    # withhold if price isn't actually below the seeded low end, or the pair's
+                    # observation series shows long (4+) runs of exact-duplicate prices spanning
+                    # a >2x range (bimodal low-frequency-route artifact).
+                    is_artifact = False
+                    if seeded_low is not None and price >= seeded_low:
+                        is_artifact = True
+                    else:
+                        run_len = 1
+                        max_run = 1
+                        for j in range(1, len(same_pair_obs)):
+                            if same_pair_obs[j] == same_pair_obs[j - 1]:
+                                run_len += 1
+                                max_run = max(max_run, run_len)
+                            else:
+                                run_len = 1
+                        if max_run >= 4 and same_pair_obs and (max(same_pair_obs) > 2 * min(same_pair_obs)):
+                            is_artifact = True
+
                     key = f"{origin}-{dest}-{depart}-{ret}"
-                    if key not in seen_keys:
+                    if key not in seen_keys and not is_artifact:
                         new_deals.append({
                             "key": key, "origin": origin, "destination": dest,
                             "depart_date": depart, "return_date": ret,
@@ -179,6 +197,11 @@ def main():
                             "first_seen": TODAY,
                         })
                         seen_keys.add(key)
+                    elif is_artifact:
+                        log_lines.append(
+                            f"WITHHELD (artifact-suspect) {route_key} {depart}->{ret} "
+                            f"${price} vs baseline ${baseline} seeded_low={seeded_low}"
+                        )
             log_lines.append(f"OK {route_key} {depart}->{ret} ${price}")
         except Exception as e:
             err_count += 1
