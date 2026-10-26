@@ -5,19 +5,20 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-25"
+TODAY = "2026-10-26"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-25 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Oct 25) through Jan 25, 2027.
+# Weekends available per calendar check on 2026-10-26 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Oct 26) through Jan 26, 2027.
 # Unavailable weekends (Kids-event overlap): Oct31/Nov1 (Kids Oct30-Nov1), Nov7/8 (Kids Nov6-8),
 # Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
-# (Kids Jan15-18).
+# (Kids Jan15-18). Same kids schedule as the 2026-10-25 run - no changes.
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
 #   Nov14-15: TAMU football home game vs Tennessee (Sat Nov14).
 #   Nov21-22: TAMU football @ Oklahoma (Sat Nov21).
 #   Nov28-29: no conflicts found this run (Thanksgiving week; kids day is Thu Nov26 only).
-#   Dec12-13: no conflicts found this run (Cancun trip, Dec10-11, ends before this weekend).
+#   Dec12-13: Trevor's own "Cancun (Haven Riviera Cancun)" trip (primary calendar) runs
+#     Dec10-13 and overlaps this weekend directly - he'd already be in Cancun. Flag clearly.
 #   Jan2-3 (2027): TAMU basketball vs Auburn (Sat Jan2).
 #   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9).
 #   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23).
@@ -30,6 +31,15 @@ AVAILABLE_WEEKENDS = [
     ("2027-01-08", "2027-01-10"),
     ("2027-01-22", "2027-01-24"),
 ]
+
+CONFLICT_NOTES = {
+    ("2026-11-13", "2026-11-15"): "TAMU football vs Tennessee (Sat Nov 14)",
+    ("2026-11-20", "2026-11-22"): "TAMU football @ Oklahoma (Sat Nov 21)",
+    ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13",
+    ("2027-01-01", "2027-01-03"): "TAMU basketball vs Auburn (Sat Jan 2)",
+    ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9)",
+    ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23)",
+}
 
 PROXY_VARS = ["https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY"]
 
@@ -61,7 +71,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01Qa3Z5xpjVteMARQPnDe195"
+    "Claude-Session: https://claude.ai/code/session_01FRXee9CwvuFGoU5LDGgRwR"
 )
 
 
@@ -195,6 +205,7 @@ def main():
                             "price": price, "baseline": baseline,
                             "discount_pct": discount_pct, "tier": tier,
                             "first_seen": TODAY,
+                            "conflict_note": CONFLICT_NOTES.get((depart, ret)),
                         })
                         seen_keys.add(key)
                     elif is_artifact:
