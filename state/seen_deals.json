@@ -4097,5 +4097,17 @@
     "discount_pct": 26.2,
     "tier": "Good deal",
     "first_seen": "2026-10-24"
+  },
+  {
+    "key": "IAH-LGA-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "LGA",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 176,
+    "baseline": 255,
+    "discount_pct": 31.0,
+    "tier": "Great deal",
+    "first_seen": "2026-10-26"
   }
 ]
