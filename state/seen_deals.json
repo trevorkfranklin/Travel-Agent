@@ -4421,5 +4421,29 @@
     "discount_pct": 29.0,
     "tier": "Good deal",
     "first_seen": "2026-10-28"
+  },
+  {
+    "key": "IAH-BNA-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "BNA",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 288,
+    "baseline": 376.5,
+    "discount_pct": 23.5,
+    "tier": "Good deal",
+    "first_seen": "2026-10-29"
+  },
+  {
+    "key": "IAH-PHX-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "PHX",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 170,
+    "baseline": 234,
+    "discount_pct": 27.4,
+    "tier": "Good deal",
+    "first_seen": "2026-10-29"
   }
 ]
