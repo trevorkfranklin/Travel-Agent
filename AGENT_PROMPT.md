@@ -81,10 +81,18 @@ all three before doing anything else:
           ],
           trip="round-trip", seat="economy",
           passengers=Passengers(adults=1, children=0, infants_in_seat=0, infants_on_lap=0),
+          language="en", currency="USD",
       )
       result = get_flights(q)  # a list of Flights; each .price is a full round-trip total
       price = min(f.price for f in result)
       ```
+      IMPORTANT: `language="en", currency="USD"` are required. Without them, `create_query()`
+      on fast-flights 3.1.0+ causes nearly every query to fail with `FlightsNotFound: no
+      flights found; received error` (Google's response comes back with `errorHasStatus:
+      true`), even for major routes with near-term dates. Discovered 2026-10-29 — see
+      `fast_flights_language_currency_note` in config.json. With the fix applied, expect an
+      ordinary ~10-20% transient "no flights found" failure rate that a simple retry resolves;
+      that's normal flakiness, not Google blocking the traffic.
       There is no `current_price` low/typical/high classification in this version — rely on
       the price-vs-baseline comparison only (see step d).
       IMPORTANT: `seeded_typical_price_range` and `deal_definition` are denominated in
