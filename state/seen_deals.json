@@ -4445,5 +4445,29 @@
     "discount_pct": 27.4,
     "tier": "Good deal",
     "first_seen": "2026-10-29"
+  },
+  {
+    "key": "IAH-SEA-2027-01-08-2027-01-10",
+    "origin": "IAH",
+    "destination": "SEA",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 221,
+    "baseline": 279.5,
+    "discount_pct": 20.9,
+    "tier": "Good deal",
+    "first_seen": "2026-10-30"
+  },
+  {
+    "key": "HOU-JAC-2027-01-22-2027-01-24",
+    "origin": "HOU",
+    "destination": "JAC",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 672,
+    "baseline": 845.0,
+    "discount_pct": 20.5,
+    "tier": "Good deal",
+    "first_seen": "2026-10-30"
   }
 ]
