@@ -1,18 +1,17 @@
-import contextlib, json, os, random, statistics, subprocess, sys, time
-from datetime import date
+import json, os, random, statistics, subprocess, sys, time
 
 REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-26"
+TODAY = "2026-10-31"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-26 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Oct 26) through Jan 26, 2027.
-# Unavailable weekends (Kids-event overlap): Oct31/Nov1 (Kids Oct30-Nov1), Nov7/8 (Kids Nov6-8),
-# Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
-# (Kids Jan15-18). Same kids schedule as the 2026-10-25 run - no changes.
+# Weekends available per calendar check on 2026-10-31 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Oct 31) through Jan 31, 2027.
+# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Nov6-8), Dec5/6 (Kids Dec4-6),
+# Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027 (Kids Jan15-18),
+# Jan30/31 2027 (Kids Jan29-31). Same kids schedule as the 2026-10-30 run - no changes.
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
 #   Nov14-15: TAMU football home game vs Tennessee (Sat Nov14).
 #   Nov21-22: TAMU football @ Oklahoma (Sat Nov21).
@@ -41,20 +40,7 @@ CONFLICT_NOTES = {
     ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23)",
 }
 
-PROXY_VARS = ["https_proxy", "HTTPS_PROXY", "http_proxy", "HTTP_PROXY"]
-
 from fast_flights import FlightQuery, Passengers, create_query, get_flights
-
-
-@contextlib.contextmanager
-def no_proxy():
-    saved = {v: os.environ.pop(v, None) for v in PROXY_VARS}
-    try:
-        yield
-    finally:
-        for k, val in saved.items():
-            if val is not None:
-                os.environ[k] = val
 
 
 def load(path):
@@ -71,7 +57,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01FRXee9CwvuFGoU5LDGgRwR"
+    "Claude-Session: https://claude.ai/code/session_01BomdJV2VgQGXhL9gVQHKqU"
 )
 
 
@@ -98,9 +84,9 @@ def query_price(origin, dest, depart, ret):
         ],
         trip="round-trip", seat="economy",
         passengers=Passengers(adults=1, children=0, infants_in_seat=0, infants_on_lap=0),
+        language="en", currency="USD",
     )
-    with no_proxy():
-        result = get_flights(q)
+    result = get_flights(q)
     return min(f.price for f in result)
 
 
