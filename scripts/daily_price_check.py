@@ -4,14 +4,16 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-10-31"
+TODAY = "2026-11-01"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-10-31 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Oct 31) through Jan 31, 2027.
-# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Nov6-8), Dec5/6 (Kids Dec4-6),
-# Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027 (Kids Jan15-18),
-# Jan30/31 2027 (Kids Jan29-31). Same kids schedule as the 2026-10-30 run - no changes.
+# Weekends available per calendar check on 2026-11-01 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Nov 1) through Feb 1, 2027.
+# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Oct30-Nov2 and Nov5-9), Dec5/6
+# (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
+# (Kids Jan15-18), Jan30/31 2027 (Kids Jan29-31). Same kids schedule as the 2026-10-31 run -
+# no changes; 7 available weekends identical to yesterday (lookahead window just rolled
+# forward by one day, no new/dropped weekend at either edge).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
 #   Nov14-15: TAMU football home game vs Tennessee (Sat Nov14).
 #   Nov21-22: TAMU football @ Oklahoma (Sat Nov21).
@@ -57,7 +59,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01BomdJV2VgQGXhL9gVQHKqU"
+    "Claude-Session: https://claude.ai/code/session_01BomdJUYauA7tKWV95fjPSp"
 )
 
 
