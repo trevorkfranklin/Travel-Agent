@@ -4505,5 +4505,29 @@
     "discount_pct": 24.5,
     "tier": "Good deal",
     "first_seen": "2026-10-31"
+  },
+  {
+    "key": "IAH-JAC-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "JAC",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 441,
+    "baseline": 586,
+    "discount_pct": 24.7,
+    "tier": "Good deal",
+    "first_seen": "2026-11-01"
+  },
+  {
+    "key": "IAH-SAN-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "SAN",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 170,
+    "baseline": 227.0,
+    "discount_pct": 25.1,
+    "tier": "Good deal",
+    "first_seen": "2026-11-01"
   }
 ]
