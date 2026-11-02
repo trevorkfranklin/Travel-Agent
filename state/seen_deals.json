@@ -4529,5 +4529,41 @@
     "discount_pct": 25.1,
     "tier": "Good deal",
     "first_seen": "2026-11-01"
+  },
+  {
+    "key": "IAH-RNO-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "RNO",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 459,
+    "baseline": 580,
+    "discount_pct": 20.9,
+    "tier": "Good deal",
+    "first_seen": "2026-11-02"
+  },
+  {
+    "key": "IAH-MBJ-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "MBJ",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 822,
+    "baseline": 1322,
+    "discount_pct": 37.8,
+    "tier": "Great deal",
+    "first_seen": "2026-11-02"
+  },
+  {
+    "key": "IAH-SJO-2027-01-08-2027-01-10",
+    "origin": "IAH",
+    "destination": "SJO",
+    "depart_date": "2027-01-08",
+    "return_date": "2027-01-10",
+    "price": 660,
+    "baseline": 854.0,
+    "discount_pct": 22.7,
+    "tier": "Good deal",
+    "first_seen": "2026-11-02"
   }
 ]
