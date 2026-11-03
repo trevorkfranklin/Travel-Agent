@@ -4565,5 +4565,89 @@
     "discount_pct": 22.7,
     "tier": "Good deal",
     "first_seen": "2026-11-02"
+  },
+  {
+    "key": "HOU-FLL-2027-01-22-2027-01-24",
+    "origin": "HOU",
+    "destination": "FLL",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 202,
+    "baseline": 254.0,
+    "discount_pct": 20.5,
+    "tier": "Good deal",
+    "first_seen": "2026-11-03"
+  },
+  {
+    "key": "HOU-JFK-2027-01-22-2027-01-24",
+    "origin": "HOU",
+    "destination": "JFK",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 297,
+    "baseline": 380.0,
+    "discount_pct": 21.8,
+    "tier": "Good deal",
+    "first_seen": "2026-11-03"
+  },
+  {
+    "key": "IAH-ATL-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "ATL",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 113,
+    "baseline": 153,
+    "discount_pct": 26.1,
+    "tier": "Good deal",
+    "first_seen": "2026-11-03"
+  },
+  {
+    "key": "IAH-MIA-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "MIA",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 248,
+    "baseline": 363,
+    "discount_pct": 31.7,
+    "tier": "Great deal",
+    "first_seen": "2026-11-03"
+  },
+  {
+    "key": "IAH-PDX-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "PDX",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 284,
+    "baseline": 359.0,
+    "discount_pct": 20.9,
+    "tier": "Good deal",
+    "first_seen": "2026-11-03"
+  },
+  {
+    "key": "IAH-PSP-2026-11-27-2026-11-29",
+    "origin": "IAH",
+    "destination": "PSP",
+    "depart_date": "2026-11-27",
+    "return_date": "2026-11-29",
+    "price": 489,
+    "baseline": 614,
+    "discount_pct": 20.4,
+    "tier": "Good deal",
+    "first_seen": "2026-11-03"
+  },
+  {
+    "key": "IAH-SNA-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "SNA",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 217,
+    "baseline": 379,
+    "discount_pct": 42.7,
+    "tier": "Great deal",
+    "first_seen": "2026-11-03"
   }
 ]
