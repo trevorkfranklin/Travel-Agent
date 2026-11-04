@@ -34807,6 +34807,34 @@
           "return_date": "2026-11-29",
           "price": 885,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 1851,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 857,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 657,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 657,
+          "source": "fast_flights_daily"
         }
       ],
       "last_checked_at": "2026-11-04"
@@ -38630,9 +38658,51 @@
           "return_date": "2027-01-24",
           "price": 318,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 731,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 437,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 318,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 407,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 318,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 318,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-ECP": {
       "origin": "HOU",
@@ -42509,9 +42579,51 @@
           "return_date": "2027-01-24",
           "price": 297,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 731,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 679,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 318,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 428,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 315,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 302,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-EWR": {
       "origin": "HOU",
@@ -46367,9 +46479,44 @@
           "return_date": "2027-01-24",
           "price": 411,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 599,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 528,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 859,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 416,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 416,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-FCA": {
       "origin": "HOU",
@@ -50260,9 +50407,51 @@
           "return_date": "2027-01-24",
           "price": 1168,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 603,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 4871,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 898,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 4951,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 2736,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 1139,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-FLL": {
       "origin": "HOU",
@@ -54048,9 +54237,51 @@
           "return_date": "2027-01-24",
           "price": 202,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 257,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 558,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 254,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 543,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 296,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 312,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-JAC": {
       "origin": "HOU",
@@ -57807,9 +58038,51 @@
           "return_date": "2027-01-24",
           "price": 741,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 944,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 1400,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 645,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 1214,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 650,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 751,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-LAX": {
       "origin": "HOU",
@@ -61679,9 +61952,51 @@
           "return_date": "2027-01-24",
           "price": 287,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 549,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 481,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 297,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 523,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 297,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 297,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-MBJ": {
       "origin": "HOU",
@@ -64891,9 +65206,30 @@
           "return_date": "2027-01-24",
           "price": 569,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-13",
+          "return_date": "2026-11-15",
+          "price": 827,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-11-27",
+          "return_date": "2026-11-29",
+          "price": 743,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-04",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 750,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-10-20"
+      "last_checked_at": "2026-11-04"
     },
     "HOU-MCO": {
       "origin": "HOU",
