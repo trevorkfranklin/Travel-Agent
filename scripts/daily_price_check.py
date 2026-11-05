@@ -4,28 +4,27 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-11-01"
+TODAY = "2026-11-05"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-11-01 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Nov 1) through Feb 1, 2027.
-# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Oct30-Nov2 and Nov5-9), Dec5/6
-# (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
-# (Kids Jan15-18), Jan30/31 2027 (Kids Jan29-31). Same kids schedule as the 2026-10-31 run -
-# no changes; 7 available weekends identical to yesterday (lookahead window just rolled
-# forward by one day, no new/dropped weekend at either edge).
+# Weekends available per calendar check on 2026-11-05 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Nov 5) through Feb 5, 2027.
+# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Nov5-7), Nov21/22 (new Kids event
+# added 2026-11-02, was available in the 2026-11-01 run before that event existed), Dec5/6
+# (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027 (Kids
+# Jan15-17), Jan30/31 2027 (Kids Jan29-31).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
-#   Nov14-15: TAMU football home game vs Tennessee (Sat Nov14).
-#   Nov21-22: TAMU football @ Oklahoma (Sat Nov21).
-#   Nov28-29: no conflicts found this run (Thanksgiving week; kids day is Thu Nov26 only).
+#   Nov14-15: TAMU football vs Tennessee (Sat Nov14); Ren Fest (Nov14-15); Fallon soccer
+#     championship game early Sun morning (Nov15).
+#   Nov28-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day).
 #   Dec12-13: Trevor's own "Cancun (Haven Riviera Cancun)" trip (primary calendar) runs
 #     Dec10-13 and overlaps this weekend directly - he'd already be in Cancun. Flag clearly.
+#     Also TAMU basketball vs Florida State (Sat Dec12).
 #   Jan2-3 (2027): TAMU basketball vs Auburn (Sat Jan2).
 #   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9).
 #   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23).
 AVAILABLE_WEEKENDS = [
     ("2026-11-13", "2026-11-15"),
-    ("2026-11-20", "2026-11-22"),
     ("2026-11-27", "2026-11-29"),
     ("2026-12-11", "2026-12-13"),
     ("2027-01-01", "2027-01-03"),
@@ -34,8 +33,8 @@ AVAILABLE_WEEKENDS = [
 ]
 
 CONFLICT_NOTES = {
-    ("2026-11-13", "2026-11-15"): "TAMU football vs Tennessee (Sat Nov 14)",
-    ("2026-11-20", "2026-11-22"): "TAMU football @ Oklahoma (Sat Nov 21)",
+    ("2026-11-13", "2026-11-15"): "TAMU football vs Tennessee (Sat Nov 14); Fallon soccer championship (Sun Nov 15 AM)",
+    ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening)",
     ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13",
     ("2027-01-01", "2027-01-03"): "TAMU basketball vs Auburn (Sat Jan 2)",
     ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9)",
@@ -59,7 +58,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01BomdJUYauA7tKWV95fjPSp"
+    "Claude-Session: https://claude.ai/code/session_01BomdJTPkJBPzk7QnEmcyEt"
 )
 
 
@@ -166,23 +165,25 @@ def main():
                 tier = tier_for(discount_pct)
                 if tier:
                     seeded_low = route.get("seeded_typical_price_range", [None, None])[0]
-                    # Scraper-artifact guard (see config.json observation_baseline_quality_note):
-                    # withhold if price isn't actually below the seeded low end, or the pair's
-                    # observation series shows long (4+) runs of exact-duplicate prices spanning
-                    # a >2x range (bimodal low-frequency-route artifact).
+                    # Scraper-artifact guard (see config.json observation_baseline_quality_note,
+                    # refined 2026-11-04): withhold only if price isn't actually below the
+                    # seeded low end, or the pair's observation series shows >=3 big jumps
+                    # (adjacent-observation ratio >=1.8x) or an extreme sustained range
+                    # (>=3.5x max/min) with >=10 observations.
                     is_artifact = False
                     if seeded_low is not None and price >= seeded_low:
                         is_artifact = True
                     else:
-                        run_len = 1
-                        max_run = 1
+                        big_jumps = 0
                         for j in range(1, len(same_pair_obs)):
-                            if same_pair_obs[j] == same_pair_obs[j - 1]:
-                                run_len += 1
-                                max_run = max(max_run, run_len)
-                            else:
-                                run_len = 1
-                        if max_run >= 4 and same_pair_obs and (max(same_pair_obs) > 2 * min(same_pair_obs)):
+                            a, b = same_pair_obs[j - 1], same_pair_obs[j]
+                            if a and b and (max(a, b) / min(a, b)) >= 1.8:
+                                big_jumps += 1
+                        extreme_range = (
+                            len(same_pair_obs) >= 10
+                            and max(same_pair_obs) / min(same_pair_obs) >= 3.5
+                        )
+                        if big_jumps >= 3 or extreme_range:
                             is_artifact = True
 
                     key = f"{origin}-{dest}-{depart}-{ret}"
