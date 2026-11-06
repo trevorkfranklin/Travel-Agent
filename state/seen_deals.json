@@ -4673,5 +4673,29 @@
     "discount_pct": 20.4,
     "tier": "Good deal",
     "first_seen": "2026-11-04"
+  },
+  {
+    "key": "IAH-MIA-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "MIA",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 108,
+    "baseline": 167,
+    "discount_pct": 35.3,
+    "tier": "Great deal",
+    "first_seen": "2026-11-06"
+  },
+  {
+    "key": "IAH-SJC-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "SJC",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 215,
+    "baseline": 269.5,
+    "discount_pct": 20.2,
+    "tier": "Good deal",
+    "first_seen": "2026-11-06"
   }
 ]
