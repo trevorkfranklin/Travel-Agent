@@ -4,16 +4,18 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-11-05"
+TODAY = "2026-11-06"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-11-05 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Nov 5) through Feb 5, 2027.
-# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Nov5-7), Nov21/22 (new Kids event
-# added 2026-11-02, was available in the 2026-11-01 run before that event existed), Dec5/6
-# (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027 (Kids
-# Jan15-17), Jan30/31 2027 (Kids Jan29-31).
-# Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend):
+# Weekends available per calendar check on 2026-11-06 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Nov 6) through Feb 6, 2027.
+# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Nov6-7), Nov21/22 (Kids Nov21-22),
+# Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
+# (Kids Jan15-17), Jan30/31 2027 (Kids Jan29-31), Feb6/7 2027 (Kids Feb5-7).
+# Identical set of available weekends to the 2026-11-05 run (no new Kids events added
+# overnight; window just shifted by one day, which only adds/drops unavailable edge weekends).
+# Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend, or the
+# Friday departure evening):
 #   Nov14-15: TAMU football vs Tennessee (Sat Nov14); Ren Fest (Nov14-15); Fallon soccer
 #     championship game early Sun morning (Nov15).
 #   Nov28-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day).
@@ -21,8 +23,8 @@ DEAL_THRESHOLD_PCT = 20
 #     Dec10-13 and overlaps this weekend directly - he'd already be in Cancun. Flag clearly.
 #     Also TAMU basketball vs Florida State (Sat Dec12).
 #   Jan2-3 (2027): TAMU basketball vs Auburn (Sat Jan2).
-#   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9).
-#   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23).
+#   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9, away game).
+#   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23, away game).
 AVAILABLE_WEEKENDS = [
     ("2026-11-13", "2026-11-15"),
     ("2026-11-27", "2026-11-29"),
@@ -33,12 +35,12 @@ AVAILABLE_WEEKENDS = [
 ]
 
 CONFLICT_NOTES = {
-    ("2026-11-13", "2026-11-15"): "TAMU football vs Tennessee (Sat Nov 14); Fallon soccer championship (Sun Nov 15 AM)",
-    ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening)",
-    ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13",
+    ("2026-11-13", "2026-11-15"): "TAMU football vs Tennessee (Sat Nov 14); Ren Fest (Nov 14-15); Fallon soccer championship (Sun Nov 15 AM)",
+    ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening, departure day)",
+    ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13; TAMU basketball vs Florida State (Sat Dec 12)",
     ("2027-01-01", "2027-01-03"): "TAMU basketball vs Auburn (Sat Jan 2)",
-    ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9)",
-    ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23)",
+    ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9, away game)",
+    ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23, away game)",
 }
 
 from fast_flights import FlightQuery, Passengers, create_query, get_flights
@@ -58,7 +60,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01BomdJTPkJBPzk7QnEmcyEt"
+    "Claude-Session: https://claude.ai/code/session_01BomdJRZ2MJik76nfXSFXUd"
 )
 
 
