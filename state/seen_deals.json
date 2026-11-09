@@ -4709,5 +4709,17 @@
     "discount_pct": 25.6,
     "tier": "Good deal",
     "first_seen": "2026-11-08"
+  },
+  {
+    "key": "IAH-SJU-2026-12-04-2026-12-06",
+    "origin": "IAH",
+    "destination": "SJU",
+    "depart_date": "2026-12-04",
+    "return_date": "2026-12-06",
+    "price": 245,
+    "baseline": 360,
+    "discount_pct": 31.9,
+    "tier": "Great deal",
+    "first_seen": "2026-11-09"
   }
 ]
