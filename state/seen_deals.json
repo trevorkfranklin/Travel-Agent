@@ -4745,5 +4745,17 @@
     "discount_pct": 22.8,
     "tier": "Good deal",
     "first_seen": "2026-11-13"
+  },
+  {
+    "key": "HOU-TPA-2027-01-22-2027-01-24",
+    "origin": "HOU",
+    "destination": "TPA",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 293,
+    "baseline": 375,
+    "discount_pct": 21.9,
+    "tier": "Good deal",
+    "first_seen": "2026-11-14"
   }
 ]
