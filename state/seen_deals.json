@@ -4757,5 +4757,17 @@
     "discount_pct": 21.9,
     "tier": "Good deal",
     "first_seen": "2026-11-14"
+  },
+  {
+    "key": "IAH-PWM-2027-01-01-2027-01-03",
+    "origin": "IAH",
+    "destination": "PWM",
+    "depart_date": "2027-01-01",
+    "return_date": "2027-01-03",
+    "price": 478,
+    "baseline": 615,
+    "discount_pct": 22.3,
+    "tier": "Good deal",
+    "first_seen": "2026-11-15"
   }
 ]
