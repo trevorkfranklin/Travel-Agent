@@ -4769,5 +4769,53 @@
     "discount_pct": 22.3,
     "tier": "Good deal",
     "first_seen": "2026-11-15"
+  },
+  {
+    "key": "IAH-ECP-2027-02-12-2027-02-14",
+    "origin": "IAH",
+    "destination": "ECP",
+    "depart_date": "2027-02-12",
+    "return_date": "2027-02-14",
+    "price": 369,
+    "baseline": 470.5,
+    "discount_pct": 21.6,
+    "tier": "Good deal",
+    "first_seen": "2026-11-16"
+  },
+  {
+    "key": "IAH-MCO-2027-02-12-2027-02-14",
+    "origin": "IAH",
+    "destination": "MCO",
+    "depart_date": "2027-02-12",
+    "return_date": "2027-02-14",
+    "price": 205,
+    "baseline": 360.0,
+    "discount_pct": 43.1,
+    "tier": "Great deal",
+    "first_seen": "2026-11-16"
+  },
+  {
+    "key": "IAH-TUS-2027-02-12-2027-02-14",
+    "origin": "IAH",
+    "destination": "TUS",
+    "depart_date": "2027-02-12",
+    "return_date": "2027-02-14",
+    "price": 403,
+    "baseline": 535.0,
+    "discount_pct": 24.7,
+    "tier": "Good deal",
+    "first_seen": "2026-11-16"
+  },
+  {
+    "key": "IAH-SNA-2027-02-12-2027-02-14",
+    "origin": "IAH",
+    "destination": "SNA",
+    "depart_date": "2027-02-12",
+    "return_date": "2027-02-14",
+    "price": 448,
+    "baseline": 579.0,
+    "discount_pct": 22.6,
+    "tier": "Good deal",
+    "first_seen": "2026-11-16"
   }
 ]
