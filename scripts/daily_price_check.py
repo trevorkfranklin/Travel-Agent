@@ -4,43 +4,41 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-11-06"
+TODAY = "2026-11-22"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-11-06 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Nov 6) through Feb 6, 2027.
-# Unavailable weekends (Kids-event overlap): Nov7/8 (Kids Nov6-7), Nov21/22 (Kids Nov21-22),
+# Weekends available per calendar check on 2026-11-22 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Nov 22) through Feb 22, 2027.
+# Unavailable weekends (Kids-event overlap): Nov21/22 (Kids Nov21-22, already past/today),
 # Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
-# (Kids Jan15-17), Jan30/31 2027 (Kids Jan29-31), Feb6/7 2027 (Kids Feb5-7).
-# Identical set of available weekends to the 2026-11-05 run (no new Kids events added
-# overnight; window just shifted by one day, which only adds/drops unavailable edge weekends).
+# (Kids Jan15-17), Jan30/31 2027 (Kids Jan29-31), Feb6/7 2027 (Kids Feb5-7), Feb20/21 2027
+# (Kids Feb19-21).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend, or the
 # Friday departure evening):
-#   Nov14-15: TAMU football vs Tennessee (Sat Nov14); Ren Fest (Nov14-15); Fallon soccer
-#     championship game early Sun morning (Nov15).
-#   Nov28-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day).
+#   Nov28-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day); Texas A&M @
+#     Marquette basketball (Fri Nov27 afternoon, departure day).
 #   Dec12-13: Trevor's own "Cancun (Haven Riviera Cancun)" trip (primary calendar) runs
 #     Dec10-13 and overlaps this weekend directly - he'd already be in Cancun. Flag clearly.
 #     Also TAMU basketball vs Florida State (Sat Dec12).
-#   Jan2-3 (2027): TAMU basketball vs Auburn (Sat Jan2).
+#   Jan2-3 (2027): none found.
 #   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9, away game).
 #   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23, away game).
+#   Feb13-14 (2027): TAMU basketball vs Georgia (Sat Feb13); Valentine's Day (Sun Feb14).
 AVAILABLE_WEEKENDS = [
-    ("2026-11-13", "2026-11-15"),
     ("2026-11-27", "2026-11-29"),
     ("2026-12-11", "2026-12-13"),
     ("2027-01-01", "2027-01-03"),
     ("2027-01-08", "2027-01-10"),
     ("2027-01-22", "2027-01-24"),
+    ("2027-02-12", "2027-02-14"),
 ]
 
 CONFLICT_NOTES = {
-    ("2026-11-13", "2026-11-15"): "TAMU football vs Tennessee (Sat Nov 14); Ren Fest (Nov 14-15); Fallon soccer championship (Sun Nov 15 AM)",
-    ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening, departure day)",
+    ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening, departure day); TAMU basketball @ Marquette (Fri Nov 27 afternoon)",
     ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13; TAMU basketball vs Florida State (Sat Dec 12)",
-    ("2027-01-01", "2027-01-03"): "TAMU basketball vs Auburn (Sat Jan 2)",
     ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9, away game)",
     ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23, away game)",
+    ("2027-02-12", "2027-02-14"): "TAMU basketball vs Georgia (Sat Feb 13); Valentine's Day (Sun Feb 14)",
 }
 
 from fast_flights import FlightQuery, Passengers, create_query, get_flights
@@ -60,7 +58,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01BomdJRZ2MJik76nfXSFXUd"
+    "Claude-Session: https://claude.ai/code/session_01BomdJQEgX8fQE8Du3vGoSh"
 )
 
 
@@ -212,13 +210,13 @@ def main():
 
         if i % 60 == 0 or i == total:
             save(PH_PATH, ph)
-            git_commit(f"Daily deal check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors)")
+            git_commit(f"Daily price check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors)")
             print(f"checkpoint {i}/{total} ok={ok_count} err={err_count} new_deals_so_far={len(new_deals)}", flush=True)
 
         if consecutive_errors >= 15:
             print(f"ABORTING at {i}/{total}: {consecutive_errors} consecutive errors (likely rate-limited)", flush=True)
             save(PH_PATH, ph)
-            git_commit(f"Daily deal check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors) - cut short, error clustering")
+            git_commit(f"Daily price check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors) - cut short, error clustering")
             break
 
         sleep_s = random.uniform(1.0, 2.2)
