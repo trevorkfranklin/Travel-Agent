@@ -5285,5 +5285,17 @@
     "discount_pct": 20.1,
     "tier": "Good deal",
     "first_seen": "2026-11-21"
+  },
+  {
+    "key": "IAH-PSP-2026-12-11-2026-12-13",
+    "origin": "IAH",
+    "destination": "PSP",
+    "depart_date": "2026-12-11",
+    "return_date": "2026-12-13",
+    "price": 301,
+    "baseline": 379,
+    "discount_pct": 20.6,
+    "tier": "Good deal",
+    "first_seen": "2026-11-23"
   }
 ]
