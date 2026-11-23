@@ -4,26 +4,26 @@ REPO = "/home/user/Travel-Agent"
 PH_PATH = f"{REPO}/state/price_history.json"
 SEEN_PATH = f"{REPO}/state/seen_deals.json"
 CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-11-22"
+TODAY = "2026-11-23"
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-11-22 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Nov 22) through Feb 22, 2027.
-# Unavailable weekends (Kids-event overlap): Nov21/22 (Kids Nov21-22, already past/today),
-# Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27 (Kids holiday block Dec18-28), Jan16/17 2027
-# (Kids Jan15-17), Jan30/31 2027 (Kids Jan29-31), Feb6/7 2027 (Kids Feb5-7), Feb20/21 2027
-# (Kids Feb19-21).
+# Weekends available per calendar check on 2026-11-23 (all calendars incl. Finn and Fallon,
+# re-fetched fresh this run). Lookahead window is today (Nov 23) through Feb 23, 2027.
+# Unavailable weekends (Kids-event overlap): Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27
+# (Kids holiday block Dec18-28), Jan16/17 2027 (Kids Jan15-17), Jan30/31 2027 (Kids Jan29-31),
+# Feb6/7 2027 (Kids Feb5-7), Feb20/21 2027 (Kids Feb19-21).
 # Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend, or the
 # Friday departure evening):
-#   Nov28-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day); Texas A&M @
+#   Nov27-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day); Texas A&M @
 #     Marquette basketball (Fri Nov27 afternoon, departure day).
-#   Dec12-13: Trevor's own "Cancun (Haven Riviera Cancun)" trip (primary calendar) runs
+#   Dec11-13: Trevor's own "Cancun (Haven Riviera Cancun)" trip (primary calendar) runs
 #     Dec10-13 and overlaps this weekend directly - he'd already be in Cancun. Flag clearly.
 #     Also TAMU basketball vs Florida State (Sat Dec12).
-#   Jan2-3 (2027): none found.
-#   Jan9-10 (2027): TAMU basketball @ South Carolina (Sat Jan9, away game).
-#   Jan23-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23, away game).
-#   Feb13-14 (2027): TAMU basketball vs Georgia (Sat Feb13); Valentine's Day (Sun Feb14).
+#   Jan1-3 (2027): TAMU basketball vs Auburn (Sat Jan2) - newly added to the sports calendar
+#     since yesterday's run (event last updated 2026-11-22).
+#   Jan8-10 (2027): TAMU basketball @ South Carolina (Sat Jan9, away game).
+#   Jan22-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23, away game).
+#   Feb12-14 (2027): TAMU basketball vs Georgia (Sat Feb13); Valentine's Day (Sun Feb14).
 AVAILABLE_WEEKENDS = [
     ("2026-11-27", "2026-11-29"),
     ("2026-12-11", "2026-12-13"),
@@ -36,6 +36,7 @@ AVAILABLE_WEEKENDS = [
 CONFLICT_NOTES = {
     ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening, departure day); TAMU basketball @ Marquette (Fri Nov 27 afternoon)",
     ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13; TAMU basketball vs Florida State (Sat Dec 12)",
+    ("2027-01-01", "2027-01-03"): "TAMU basketball vs Auburn (Sat Jan 2)",
     ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9, away game)",
     ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23, away game)",
     ("2027-02-12", "2027-02-14"): "TAMU basketball vs Georgia (Sat Feb 13); Valentine's Day (Sun Feb 14)",
@@ -58,7 +59,7 @@ def save(path, data):
 
 ATTRIBUTION = (
     "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01BomdJQEgX8fQE8Du3vGoSh"
+    "Claude-Session: https://claude.ai/code/session_01BomdJShTda4TmJjwjBMEnG"
 )
 
 
