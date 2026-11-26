@@ -5513,5 +5513,29 @@
     "discount_pct": 20.8,
     "tier": "Good deal",
     "first_seen": "2026-11-25"
+  },
+  {
+    "key": "IAH-RNO-2027-01-22-2027-01-24",
+    "origin": "IAH",
+    "destination": "RNO",
+    "depart_date": "2027-01-22",
+    "return_date": "2027-01-24",
+    "price": 226,
+    "baseline": 293,
+    "discount_pct": 22.9,
+    "tier": "Good deal",
+    "first_seen": "2026-11-26"
+  },
+  {
+    "key": "IAH-SJU-2027-02-12-2027-02-14",
+    "origin": "IAH",
+    "destination": "SJU",
+    "depart_date": "2027-02-12",
+    "return_date": "2027-02-14",
+    "price": 327,
+    "baseline": 411.5,
+    "discount_pct": 20.5,
+    "tier": "Good deal",
+    "first_seen": "2026-11-26"
   }
 ]
