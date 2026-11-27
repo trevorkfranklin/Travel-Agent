@@ -67,7 +67,7 @@ def main():
         todays = [o for o in obs if o["date"] == TODAY]
         for t in todays:
             depart, ret, price = t["depart_date"], t["return_date"], t["price"]
-            exact_pair_obs = [o for o in obs if o["depart_date"] == depart and o["return_date"] == ret]
+            exact_pair_obs = [o for o in obs if o["depart_date"] == depart and o["return_date"] == ret and o.get("price") is not None]
             prior = [o for o in exact_pair_obs if o["date"] != TODAY]
             if len(prior) >= 3:
                 baseline = statistics.median(o["price"] for o in prior)
@@ -88,6 +88,24 @@ def main():
 
             series = sorted(((o["date"], o["price"]) for o in exact_pair_obs))
             is_artifact = sanity_check_artifact(series)
+
+            # Extra guard found 2026-11-27: a pair relying on the seeded-range
+            # fallback baseline (fewer than 3 prior observations for this exact
+            # date pair) that undercuts the route's seeded_lowest_observed --
+            # the actual floor across 60 real days of Google Flights history,
+            # not just the typical range -- on what is effectively its first
+            # real-world check is far more likely a fast-flights sampling
+            # artifact for a brand-new far-future date than a genuine fare that
+            # beats every fare seen on that route in two months. Only applies
+            # to the fallback-baseline case; once a pair has >=3 real
+            # observations its own median baseline is trusted as-is.
+            seeded_low_all_time = info.get("seeded_lowest_observed")
+            if (
+                baseline_source == "seeded_typical_price_range low end"
+                and seeded_low_all_time
+                and price < seeded_low_all_time
+            ):
+                is_artifact = True
 
             record = {
                 "key": key, "origin": origin, "destination": dest,
