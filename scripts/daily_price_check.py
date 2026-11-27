@@ -1,84 +1,102 @@
-import json, os, random, statistics, subprocess, sys, time
+#!/usr/bin/env python3
+"""Daily fast-flights price check: every (route, weekend) pair, checkpointed."""
+import json
+import os
+import subprocess
+import sys
+import time
+import random
+import statistics
+from datetime import date, timedelta
 
 REPO = "/home/user/Travel-Agent"
-PH_PATH = f"{REPO}/state/price_history.json"
-SEEN_PATH = f"{REPO}/state/seen_deals.json"
-CONFIG_PATH = f"{REPO}/config.json"
-TODAY = "2026-11-23"
+PH_PATH = os.path.join(REPO, "state", "price_history.json")
+SUMMARY_PATH = os.path.join(REPO, "scripts", "run_summary.json")
+TODAY = date(2026, 11, 27)
+CHECKPOINT_EVERY = 40
+CONSEC_FAIL_STOP = 25  # circuit breaker: consecutive hard failures
+MAX_PAIRS = int(os.environ.get("MAX_PAIRS", "100000"))
 DEAL_THRESHOLD_PCT = 20
 
-# Weekends available per calendar check on 2026-11-23 (all calendars incl. Finn and Fallon,
-# re-fetched fresh this run). Lookahead window is today (Nov 23) through Feb 23, 2027.
-# Unavailable weekends (Kids-event overlap): Dec5/6 (Kids Dec4-6), Dec19/20 & Dec26/27
-# (Kids holiday block Dec18-28), Jan16/17 2027 (Kids Jan15-17), Jan30/31 2027 (Kids Jan29-31),
-# Feb6/7 2027 (Kids Feb5-7), Feb20/21 2027 (Kids Feb19-21).
-# Possible-conflict notes (non-Kids events overlapping Sat/Sun of an available weekend, or the
-# Friday departure evening):
-#   Nov27-29: Texas @ Texas A&M football (Fri Nov27 evening, departure day); Texas A&M @
-#     Marquette basketball (Fri Nov27 afternoon, departure day).
-#   Dec11-13: Trevor's own "Cancun (Haven Riviera Cancun)" trip (primary calendar) runs
-#     Dec10-13 and overlaps this weekend directly - he'd already be in Cancun. Flag clearly.
-#     Also TAMU basketball vs Florida State (Sat Dec12).
-#   Jan1-3 (2027): TAMU basketball vs Auburn (Sat Jan2) - newly added to the sports calendar
-#     since yesterday's run (event last updated 2026-11-22).
-#   Jan8-10 (2027): TAMU basketball @ South Carolina (Sat Jan9, away game).
-#   Jan22-24 (2027): Tillie's Birthday (Sat Jan23); TAMU basketball @ Ole Miss (Sat Jan23, away game).
-#   Feb12-14 (2027): TAMU basketball vs Georgia (Sat Feb13); Valentine's Day (Sun Feb14).
-AVAILABLE_WEEKENDS = [
-    ("2026-11-27", "2026-11-29"),
-    ("2026-12-11", "2026-12-13"),
-    ("2027-01-01", "2027-01-03"),
-    ("2027-01-08", "2027-01-10"),
-    ("2027-01-22", "2027-01-24"),
-    ("2027-02-12", "2027-02-14"),
-]
+# All Sat/Sun weekends in the 3-month lookahead, Friday-departure/Sunday-return trip.
+WEEKENDS = []
+d = TODAY
+end = date(2027, 2, 27)
+while d <= end:
+    if d.weekday() == 5:  # Saturday
+        fri = d - timedelta(days=1)
+        sun = d + timedelta(days=1)
+        WEEKENDS.append((fri.isoformat(), sun.isoformat()))
+    d += timedelta(days=1)
 
-CONFLICT_NOTES = {
-    ("2026-11-27", "2026-11-29"): "Texas @ Texas A&M football (Fri Nov 27 evening, departure day); TAMU basketball @ Marquette (Fri Nov 27 afternoon)",
-    ("2026-12-11", "2026-12-13"): "Trevor is already in Cancún (Haven Riviera) Dec 10-13; TAMU basketball vs Florida State (Sat Dec 12)",
-    ("2027-01-01", "2027-01-03"): "TAMU basketball vs Auburn (Sat Jan 2)",
-    ("2027-01-08", "2027-01-10"): "TAMU basketball @ South Carolina (Sat Jan 9, away game)",
-    ("2027-01-22", "2027-01-24"): "Tillie's Birthday; TAMU basketball @ Ole Miss (Sat Jan 23, away game)",
-    ("2027-02-12", "2027-02-14"): "TAMU basketball vs Georgia (Sat Feb 13); Valentine's Day (Sun Feb 14)",
+# All 14 weekends are available this run (calendar check on 2026-11-27 found no
+# "Kids"-titled event on Finn and Fallon calendar overlapping any Saturday/Sunday
+# in the lookahead window -- confirmed via RRULE: weekly-Thursday + monthly
+# 1st/3rd-Friday series, neither of which ever lands on Sat/Sun).
+AVAILABLE_WEEKENDS = list(WEEKENDS)
+
+# "Other event" conflicts per weekend (not exclusionary, just flagged in the email).
+CONFLICTS = {
+    ("2026-12-04", "2026-12-06"): "Texas A&M basketball vs Stanford (Sun 12/6)",
+    ("2026-12-11", "2026-12-13"): "Already booked: Cancun trip (Haven Riviera Cancun, Thu 12/10-Mon 12/14); Texas A&M basketball vs Florida St (Sat 12/12)",
+    ("2027-01-01", "2027-01-03"): "Texas A&M basketball vs Auburn (Sat 1/2, New Year's weekend)",
+    ("2027-01-15", "2027-01-17"): "Texas A&M basketball vs LSU (Sat 1/16)",
+    ("2027-01-22", "2027-01-24"): "Tillie's Birthday! (Sat 1/23); Texas A&M basketball vs Ole Miss (Sat 1/23)",
+    ("2027-01-29", "2027-01-31"): "Texas A&M basketball vs Vanderbilt (Sat 1/30)",
+    ("2027-02-12", "2027-02-14"): "Texas A&M basketball vs Georgia (Sat 2/13); Valentine's Day (Sun 2/14)",
+    ("2027-02-19", "2027-02-21"): "Texas A&M basketball vs Vanderbilt (Sat 2/20); Dentist appt Fri 2/19 10am",
 }
 
-from fast_flights import FlightQuery, Passengers, create_query, get_flights
+KNOWN_PARSER_INDEXERROR_ROUTES = {"IAH-SJD"}  # seen failing consistently 2026-10-30
 
 
-def load(path):
-    with open(path) as f:
+def load_ph():
+    with open(PH_PATH) as f:
         return json.load(f)
 
 
-def save(path, data):
-    tmp = path + ".tmp"
+def save_ph(d):
+    tmp = PH_PATH + ".tmp"
     with open(tmp, "w") as f:
-        json.dump(data, f, indent=2)
-    os.replace(tmp, path)
+        json.dump(d, f, indent=2)
+    os.replace(tmp, PH_PATH)
 
 
-ATTRIBUTION = (
-    "\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>\n"
-    "Claude-Session: https://claude.ai/code/session_01BomdJShTda4TmJjwjBMEnG"
-)
-
-
-def git_commit(message):
-    subprocess.run(["git", "add", "state/price_history.json", "state/seen_deals.json"], cwd=REPO, check=True)
-    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
-    if result.returncode == 0:
-        return
-    subprocess.run(["git", "commit", "-m", message + ATTRIBUTION], cwd=REPO, check=True)
+def git_checkpoint(msg):
+    subprocess.run(["git", "add", "state/price_history.json"], cwd=REPO, check=True)
+    r = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
+    if r.returncode == 0:
+        return  # nothing to commit
+    subprocess.run(["git", "commit", "-q", "-m", msg], cwd=REPO, check=True)
     for attempt in range(4):
-        r = subprocess.run(["git", "push", "-u", "origin", "HEAD:main"], cwd=REPO, capture_output=True, text=True)
+        r = subprocess.run(["git", "push", "-q", "origin", "HEAD:main"], cwd=REPO)
         if r.returncode == 0:
             return
-        print(f"push attempt {attempt+1} failed: {r.stderr.strip()[-300:]}", flush=True)
-        time.sleep(2 ** (attempt + 1))
-    print("WARN: push failed after retries", flush=True)
+        time.sleep(3 * (attempt + 1))
+    print("WARNING: push failed after retries", file=sys.stderr)
+
+
+def build_pairs(ph):
+    routes = ph["routes"]
+    pairs = []
+    for route_key in routes.keys():
+        for depart, ret in AVAILABLE_WEEKENDS:
+            pairs.append((route_key, depart, ret))
+    # priority: never-checked first, then oldest-last-checked
+    def sort_key(p):
+        route_key, depart, ret = p
+        obs = routes[route_key].get("observations", [])
+        matching = [o for o in obs if o["depart_date"] == depart and o["return_date"] == ret]
+        if not matching:
+            return (0, "")
+        last_date = max(o["date"] for o in matching)
+        return (1, last_date)
+    pairs.sort(key=sort_key)
+    return pairs
 
 
 def query_price(origin, dest, depart, ret):
+    from fast_flights import FlightQuery, Passengers, create_query, get_flights
     q = create_query(
         flights=[
             FlightQuery(date=depart, from_airport=origin, to_airport=dest),
@@ -92,147 +110,93 @@ def query_price(origin, dest, depart, ret):
     return min(f.price for f in result)
 
 
-def tier_for(discount_pct):
-    if discount_pct >= 50:
-        return "Exceptional deal"
-    if discount_pct >= 30:
-        return "Great deal"
-    if discount_pct >= 20:
-        return "Good deal"
-    return None
-
-
 def main():
-    ph = load(PH_PATH)
+    ph = load_ph()
     routes = ph["routes"]
-    seen = load(SEEN_PATH)
-    seen_keys = {d["key"] for d in seen}
+    pairs = build_pairs(ph)
+    print(f"Total pairs: {len(pairs)}", file=sys.stderr)
 
-    pairs = []
-    skipped_already_today = 0
-    for route_key, route in routes.items():
-        origin = route["origin"]
-        dest = route["destination"]
-        for depart, ret in AVAILABLE_WEEKENDS:
-            obs_for_pair = [
-                o for o in route.get("observations", [])
-                if o.get("depart_date") == depart and o.get("return_date") == ret
-            ]
-            if any(o.get("date") == TODAY for o in obs_for_pair):
-                skipped_already_today += 1
-                continue
-            has_obs = len(obs_for_pair) > 0
-            pairs.append((route_key, origin, dest, depart, ret, has_obs))
-    if skipped_already_today:
-        print(f"Resuming: skipping {skipped_already_today} pairs already checked today", flush=True)
-
-    pairs.sort(key=lambda p: p[5])
-
-    total = len(pairs)
+    processed = 0
     ok_count = 0
     err_count = 0
-    consecutive_errors = 0
-    new_deals = []
-    log_lines = []
+    consec_fail = 0
+    stopped_early = False
+    stop_reason = None
+    new_obs_count = 0
+    skipped_known_bad = 0
 
-    for i, (route_key, origin, dest, depart, ret, has_obs) in enumerate(pairs, 1):
-        try:
+    for i, (route_key, depart, ret) in enumerate(pairs):
+        if processed >= MAX_PAIRS:
+            stop_reason = f"MAX_PAIRS limit ({MAX_PAIRS}) reached"
+            break
+        origin, dest = route_key.split("-", 1)
+
+        if route_key in KNOWN_PARSER_INDEXERROR_ROUTES:
+            skipped_known_bad += 1
+            processed += 1
+            continue
+
+        price = None
+        last_err = None
+        for attempt in range(2):
             try:
                 price = query_price(origin, dest, depart, ret)
-            except Exception:
-                time.sleep(3)
-                price = query_price(origin, dest, depart, ret)
-            ok_count += 1
-            consecutive_errors = 0
+                break
+            except Exception as e:
+                last_err = e
+                if attempt == 0:
+                    time.sleep(2 + random.random() * 2)
+        processed += 1
 
-            route = routes[route_key]
-            obs_list = route.setdefault("observations", [])
-            same_pair_obs = [
-                o["price"] for o in obs_list
-                if o.get("depart_date") == depart and o.get("return_date") == ret
-            ]
-            obs_list.append({
-                "date": TODAY, "depart_date": depart, "return_date": ret,
-                "price": price, "source": "fast_flights_daily",
-            })
-
-            if len(same_pair_obs) >= 3:
-                baseline = statistics.median(same_pair_obs)
-            else:
-                baseline = route.get("seeded_typical_price_range", [None, None])[0]
-
-            if baseline:
-                discount_pct = round((baseline - price) / baseline * 100, 1)
-                tier = tier_for(discount_pct)
-                if tier:
-                    seeded_low = route.get("seeded_typical_price_range", [None, None])[0]
-                    # Scraper-artifact guard (see config.json observation_baseline_quality_note,
-                    # refined 2026-11-04): withhold only if price isn't actually below the
-                    # seeded low end, or the pair's observation series shows >=3 big jumps
-                    # (adjacent-observation ratio >=1.8x) or an extreme sustained range
-                    # (>=3.5x max/min) with >=10 observations.
-                    is_artifact = False
-                    if seeded_low is not None and price >= seeded_low:
-                        is_artifact = True
-                    else:
-                        big_jumps = 0
-                        for j in range(1, len(same_pair_obs)):
-                            a, b = same_pair_obs[j - 1], same_pair_obs[j]
-                            if a and b and (max(a, b) / min(a, b)) >= 1.8:
-                                big_jumps += 1
-                        extreme_range = (
-                            len(same_pair_obs) >= 10
-                            and max(same_pair_obs) / min(same_pair_obs) >= 3.5
-                        )
-                        if big_jumps >= 3 or extreme_range:
-                            is_artifact = True
-
-                    key = f"{origin}-{dest}-{depart}-{ret}"
-                    if key not in seen_keys and not is_artifact:
-                        new_deals.append({
-                            "key": key, "origin": origin, "destination": dest,
-                            "depart_date": depart, "return_date": ret,
-                            "price": price, "baseline": baseline,
-                            "discount_pct": discount_pct, "tier": tier,
-                            "first_seen": TODAY,
-                            "conflict_note": CONFLICT_NOTES.get((depart, ret)),
-                        })
-                        seen_keys.add(key)
-                    elif is_artifact:
-                        log_lines.append(
-                            f"WITHHELD (artifact-suspect) {route_key} {depart}->{ret} "
-                            f"${price} vs baseline ${baseline} seeded_low={seeded_low}"
-                        )
-            log_lines.append(f"OK {route_key} {depart}->{ret} ${price}")
-        except Exception as e:
+        if price is None:
             err_count += 1
-            consecutive_errors += 1
-            log_lines.append(f"ERR {route_key} {depart}->{ret} {e!r}")
+            consec_fail += 1
+            if isinstance(last_err, IndexError):
+                pass  # parser quirk, not a block signal
+            if consec_fail >= CONSEC_FAIL_STOP:
+                stop_reason = f"error clustering: {consec_fail} consecutive failures"
+                stopped_early = True
+                break
+        else:
+            ok_count += 1
+            consec_fail = 0
+            obs = routes[route_key].setdefault("observations", [])
+            obs.append({
+                "date": TODAY.isoformat(),
+                "depart_date": depart,
+                "return_date": ret,
+                "price": price,
+                "source": "fast_flights_daily",
+            })
+            new_obs_count += 1
+            routes[route_key]["last_checked_at"] = TODAY.isoformat()
 
-        if i % 60 == 0 or i == total:
-            save(PH_PATH, ph)
-            git_commit(f"Daily price check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors)")
-            print(f"checkpoint {i}/{total} ok={ok_count} err={err_count} new_deals_so_far={len(new_deals)}", flush=True)
+        if processed % CHECKPOINT_EVERY == 0:
+            save_ph(ph)
+            git_checkpoint(
+                f"Checkpoint: daily fast-flights observations (partial run in progress) "
+                f"[{processed}/{len(pairs)}] (ok={ok_count} err={err_count})"
+            )
+            print(f"[{processed}/{len(pairs)}] ok={ok_count} err={err_count}", file=sys.stderr)
 
-        if consecutive_errors >= 15:
-            print(f"ABORTING at {i}/{total}: {consecutive_errors} consecutive errors (likely rate-limited)", flush=True)
-            save(PH_PATH, ph)
-            git_commit(f"Daily price check {TODAY}: checkpoint [{i}/{total}] ({ok_count} ok, {err_count} errors) - cut short, error clustering")
-            break
+        time.sleep(1 + random.random())
 
-        sleep_s = random.uniform(1.0, 2.2)
-        if consecutive_errors > 0:
-            sleep_s += min(consecutive_errors * 1.5, 15)
-        time.sleep(sleep_s)
+    save_ph(ph)
 
-    save(PH_PATH, ph)
-
-    with open(f"{REPO}/scripts/new_deals_today.json", "w") as f:
-        json.dump(new_deals, f, indent=2)
-    with open(f"{REPO}/scripts/run_log.txt", "w") as f:
-        f.write("\n".join(log_lines))
-
-    print(f"DONE total={total} ok={ok_count} err={err_count} new_deals={len(new_deals)}")
+    summary = {
+        "date": TODAY.isoformat(),
+        "total_pairs": len(pairs),
+        "processed": processed,
+        "ok": ok_count,
+        "err": err_count,
+        "skipped_known_bad_routes": skipped_known_bad,
+        "new_observations": new_obs_count,
+        "stopped_early": stopped_early,
+        "stop_reason": stop_reason,
+    }
+    with open(SUMMARY_PATH, "w") as f:
+        json.dump(summary, f, indent=2)
+    print(json.dumps(summary, indent=2))
 
 
 if __name__ == "__main__":
