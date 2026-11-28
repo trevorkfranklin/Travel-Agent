@@ -4943,9 +4943,16 @@
           "return_date": "2027-02-28",
           "price": 372,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 372,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-ATL": {
       "origin": "HOU",
@@ -9881,9 +9888,23 @@
           "return_date": "2027-02-28",
           "price": 177,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 157,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 203,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-BNA": {
       "origin": "HOU",
@@ -14791,9 +14812,30 @@
           "return_date": "2027-01-24",
           "price": 332,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 342,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 342,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 342,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-BTV": {
       "origin": "HOU",
@@ -19631,9 +19673,16 @@
           "return_date": "2027-02-14",
           "price": 611,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 983,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-BZN": {
       "origin": "HOU",
@@ -34353,9 +34402,51 @@
           "return_date": "2027-01-24",
           "price": 367,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 717,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 437,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 352,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 367,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 367,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 352,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-CUN": {
       "origin": "HOU",
