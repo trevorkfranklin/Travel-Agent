@@ -39222,9 +39222,16 @@
           "return_date": "2027-01-10",
           "price": 639,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 634,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-CZM": {
       "origin": "HOU",
@@ -43738,9 +43745,37 @@
           "return_date": "2027-02-14",
           "price": 647,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 892,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 647,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 647,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 647,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-DEN": {
       "origin": "HOU",
@@ -53472,9 +53507,37 @@
           "return_date": "2027-02-14",
           "price": 368,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 543,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 367,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 368,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 362,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-EWR": {
       "origin": "HOU",
@@ -58325,9 +58388,51 @@
           "return_date": "2027-01-24",
           "price": 340,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 789,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 893,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 417,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 437,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 504,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 461,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-FCA": {
       "origin": "HOU",
@@ -63200,9 +63305,37 @@
           "return_date": "2027-01-10",
           "price": 772,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 794,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 772,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 870,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 1399,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-FLL": {
       "origin": "HOU",
@@ -67994,9 +68127,30 @@
           "return_date": "2027-01-10",
           "price": 288,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 671,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 137,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 243,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-JAC": {
       "origin": "HOU",
