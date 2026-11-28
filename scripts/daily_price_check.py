@@ -12,7 +12,7 @@ from datetime import date, timedelta
 REPO = "/home/user/Travel-Agent"
 PH_PATH = os.path.join(REPO, "state", "price_history.json")
 SUMMARY_PATH = os.path.join(REPO, "scripts", "run_summary.json")
-TODAY = date(2026, 11, 27)
+TODAY = date(2026, 11, 28)
 CHECKPOINT_EVERY = 40
 CONSEC_FAIL_STOP = 25  # circuit breaker: consecutive hard failures
 MAX_PAIRS = int(os.environ.get("MAX_PAIRS", "100000"))
@@ -21,7 +21,7 @@ DEAL_THRESHOLD_PCT = 20
 # All Sat/Sun weekends in the 3-month lookahead, Friday-departure/Sunday-return trip.
 WEEKENDS = []
 d = TODAY
-end = date(2027, 2, 27)
+end = date(2027, 2, 28)
 while d <= end:
     if d.weekday() == 5:  # Saturday
         fri = d - timedelta(days=1)
@@ -29,22 +29,30 @@ while d <= end:
         WEEKENDS.append((fri.isoformat(), sun.isoformat()))
     d += timedelta(days=1)
 
-# All 14 weekends are available this run (calendar check on 2026-11-27 found no
-# "Kids"-titled event on Finn and Fallon calendar overlapping any Saturday/Sunday
-# in the lookahead window -- confirmed via RRULE: weekly-Thursday + monthly
-# 1st/3rd-Friday series, neither of which ever lands on Sat/Sun).
-AVAILABLE_WEEKENDS = list(WEEKENDS)
+# Calendar re-check on 2026-11-28 (all calendars, including Finn and Fallon) found
+# that the 2026-11-27 run's claim ("no Kids event ever lands on Sat/Sun") was WRONG --
+# it apparently only looked at single-day entries and missed the multi-day "Kids"
+# blocks (e.g. Fri-Sun and the ~11-day winter-break block) that actually exist on the
+# calendar. Of the 14 raw Sat/Sun weekends in this window, 7 are kids-blocked, and the
+# first (11/28-11/29) has already passed its Friday-departure cutoff (today IS that
+# Saturday), leaving 6 genuinely available/bookable weekends. See the
+# kids_calendar_reassessment_note added to config.json for the full event list.
+AVAILABLE_WEEKENDS = [
+    ("2026-12-11", "2026-12-13"),
+    ("2027-01-01", "2027-01-03"),
+    ("2027-01-08", "2027-01-10"),
+    ("2027-01-22", "2027-01-24"),
+    ("2027-02-12", "2027-02-14"),
+    ("2027-02-26", "2027-02-28"),
+]
 
 # "Other event" conflicts per weekend (not exclusionary, just flagged in the email).
 CONFLICTS = {
-    ("2026-12-04", "2026-12-06"): "Texas A&M basketball vs Stanford (Sun 12/6)",
-    ("2026-12-11", "2026-12-13"): "Already booked: Cancun trip (Haven Riviera Cancun, Thu 12/10-Mon 12/14); Texas A&M basketball vs Florida St (Sat 12/12)",
-    ("2027-01-01", "2027-01-03"): "Texas A&M basketball vs Auburn (Sat 1/2, New Year's weekend)",
-    ("2027-01-15", "2027-01-17"): "Texas A&M basketball vs LSU (Sat 1/16)",
+    ("2026-12-11", "2026-12-13"): "Already booked: Cancun trip (Haven Riviera Cancun, Thu 12/10-Mon 12/14); Texas A&M basketball vs Florida State (Sat 12/12)",
+    ("2027-01-01", "2027-01-03"): "Texas A&M basketball vs Auburn (Sat 1/2); New Year's weekend",
     ("2027-01-22", "2027-01-24"): "Tillie's Birthday! (Sat 1/23); Texas A&M basketball vs Ole Miss (Sat 1/23)",
-    ("2027-01-29", "2027-01-31"): "Texas A&M basketball vs Vanderbilt (Sat 1/30)",
     ("2027-02-12", "2027-02-14"): "Texas A&M basketball vs Georgia (Sat 2/13); Valentine's Day (Sun 2/14)",
-    ("2027-02-19", "2027-02-21"): "Texas A&M basketball vs Vanderbilt (Sat 2/20); Dentist appt Fri 2/19 10am",
+    ("2027-02-26", "2027-02-28"): "Texas A&M basketball @ LSU (Sat 2/27)",
 }
 
 KNOWN_PARSER_INDEXERROR_ROUTES = {"IAH-SJD"}  # seen failing consistently 2026-10-30

@@ -8,18 +8,15 @@ import statistics
 from datetime import date
 
 REPO = "/home/user/Travel-Agent"
-TODAY = date(2026, 11, 27).isoformat()
+TODAY = date(2026, 11, 28).isoformat()
 DEAL_THRESHOLD_PCT = 20
 
 CONFLICTS = {
-    ("2026-12-04", "2026-12-06"): "Texas A&M basketball vs Stanford (Sun 12/6)",
-    ("2026-12-11", "2026-12-13"): "Already booked: Cancun trip (Thu 12/10-Mon 12/14); Texas A&M basketball vs Florida St (Sat 12/12)",
-    ("2027-01-01", "2027-01-03"): "Texas A&M basketball vs Auburn (Sat 1/2, New Year's weekend)",
-    ("2027-01-15", "2027-01-17"): "Texas A&M basketball vs LSU (Sat 1/16)",
+    ("2026-12-11", "2026-12-13"): "Already booked: Cancun trip (Haven Riviera Cancun, Thu 12/10-Mon 12/14); Texas A&M basketball vs Florida State (Sat 12/12)",
+    ("2027-01-01", "2027-01-03"): "Texas A&M basketball vs Auburn (Sat 1/2); New Year's weekend",
     ("2027-01-22", "2027-01-24"): "Tillie's Birthday! (Sat 1/23); Texas A&M basketball vs Ole Miss (Sat 1/23)",
-    ("2027-01-29", "2027-01-31"): "Texas A&M basketball vs Vanderbilt (Sat 1/30)",
     ("2027-02-12", "2027-02-14"): "Texas A&M basketball vs Georgia (Sat 2/13); Valentine's Day (Sun 2/14)",
-    ("2027-02-19", "2027-02-21"): "Texas A&M basketball vs Vanderbilt (Sat 2/20); Dentist appt Fri 2/19 10am",
+    ("2027-02-26", "2027-02-28"): "Texas A&M basketball @ LSU (Sat 2/27)",
 }
 
 
