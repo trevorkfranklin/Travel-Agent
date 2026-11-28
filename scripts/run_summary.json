@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-28",
+  "total_pairs": 660,
+  "processed": 185,
+  "ok": 56,
+  "err": 123,
+  "skipped_known_bad_routes": 6,
+  "new_observations": 56,
+  "stopped_early": true,
+  "stop_reason": "error clustering: 25 consecutive failures"
+}
