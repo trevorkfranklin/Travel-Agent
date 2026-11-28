@@ -72926,9 +72926,23 @@
           "return_date": "2027-02-14",
           "price": 963,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 693,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-01",
+          "return_date": "2027-01-03",
+          "price": 1588,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-LAX": {
       "origin": "HOU",
@@ -77803,9 +77817,23 @@
           "return_date": "2027-01-24",
           "price": 292,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 292,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 302,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-MBJ": {
       "origin": "HOU",
@@ -86865,9 +86893,23 @@
           "return_date": "2027-02-14",
           "price": 338,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-22",
+          "return_date": "2027-01-24",
+          "price": 253,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-12",
+          "return_date": "2027-02-14",
+          "price": 338,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-MEX": {
       "origin": "HOU",
@@ -91339,9 +91381,23 @@
           "return_date": "2027-02-14",
           "price": 461,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 621,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 741,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-MIA": {
       "origin": "HOU",
@@ -100997,9 +101053,30 @@
           "return_date": "2027-01-24",
           "price": 277,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 659,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-01-08",
+          "return_date": "2027-01-10",
+          "price": 267,
+          "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2027-02-26",
+          "return_date": "2027-02-28",
+          "price": 287,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-MYR": {
       "origin": "HOU",
@@ -105801,9 +105878,16 @@
           "return_date": "2027-02-14",
           "price": 413,
           "source": "fast_flights_daily"
+        },
+        {
+          "date": "2026-11-28",
+          "depart_date": "2026-12-11",
+          "return_date": "2026-12-13",
+          "price": 631,
+          "source": "fast_flights_daily"
         }
       ],
-      "last_checked_at": "2026-11-27"
+      "last_checked_at": "2026-11-28"
     },
     "HOU-NAS": {
       "origin": "HOU",
